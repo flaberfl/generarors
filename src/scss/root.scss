@@ -1,0 +1,22 @@
+// Подключение общих CSS-переменных
+:root {
+  //* Переменные
+  --header-height: 9.6rem;
+
+  //* Цвета
+  --clr-white: #fff;
+  --clr-black: #000;
+  --clr-accent: #c11720;
+  --clr-dark-grey: #666;
+  --clr-light-grey: #b4b4b4;
+
+  //== 992px ==//
+  @media (max-width:$tablet){
+    --header-height: 6.6rem;
+  }
+
+  //== 576px ==//
+  // @media (max-width: $mb-m) {
+  //   --header-height: 3.5625rem;
+  // }
+}
