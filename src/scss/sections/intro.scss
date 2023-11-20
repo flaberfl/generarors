@@ -1,11 +1,14 @@
 .intro {
   position: relative;
 
+  @include adaptiveValue("padding-top", 180, 80);
+  @include adaptiveValue("padding-bottom", 1200, 200);
+
   &::before {
     content: '';
     position: absolute;
     background: url('@img/main-back.png');
-    background-size: cover;
+    // background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
     width: 100%;
@@ -14,9 +17,62 @@
     right: 0;
     bottom: 0;
     top: 0;
-    mix-blend-mode: darken;
     z-index: -1;
     opacity: 0;
     transition: opacity 0.3s ease 0s;
+
+    .loaded & {
+      opacity: 1;
+    }
   }
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__title {
+    margin-bottom: toRem(37);
+  }
+
+  &__subtitle {
+    @include adaptiveValue("margin-bottom", 54, 68);
+  }
+
+  &__buttons {
+    position: relative;
+
+    display: flex;
+    gap: toRem(32);
+
+    z-index: 10;
+  }
+
+
+
+  &__media {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: toRem(-160);
+      filter: blur(50px);
+      width: toRem(605);
+      height: toRem(168);
+
+      // border-radius: toRem(605);
+      background: #000;
+    }
+  }
+
+  &__image {
+    position: absolute;
+
+    @include adaptiveValue("width", 1280, 578);
+    // max-width: 100%;
+    right: toRem(-260);
+    top: toRem(-61);
+  }
+
 }

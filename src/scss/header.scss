@@ -44,7 +44,11 @@
 	}
 
 	&__logo {
-		justify-self: start;
+		img {
+			max-width: 100%;
+			@include adaptiveValue("width", 160, 112);
+			@include adaptiveValue("height", 45, 32);
+		}
 	}
 
 	&__contact {

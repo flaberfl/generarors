@@ -3,33 +3,48 @@
 
 .button {
 	display: inline-flex;
-	padding: toRem(8);
-	min-height: toRem(64);
-	justify-content:center;
+
+	justify-content: center;
 	align-items: center;
-	border-radius: toRem(60);
+	@include adaptiveValue("height", 80, 60);
+	@include adaptiveValue("width", 260, 276);
+
 	background: $bgColor;
+	border-radius: $borderRadius;
+
+	font-size: toRem(16);
+	font-weight: 900;
 	color: #fff;
-	font-size: toRem(24);
-	font-weight: 700;
-	line-height: 1.33;
-	transition: all 0.3s;
+
+
 	@media (any-hover: hover) {
 		&:hover {
 			// background-color: $bgColorSemi;
 		}
 	}
-	&--white {}
+
+	&_catalog {
+		gap: toRem(26);
+		@include adaptiveValue("width", 279, 276);
+
+		border: 1px solid #E16C00;
+		background: transparent;
+		color: rgba(255, 255, 255, 0.97);
+		cursor: pointer;
+	}
+
 	&--min {}
+
 	&--icon {
-		span{
+		span {
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			padding-left: toRem(16);
 			gap: toRem(16);
-			&::after{
-				content:'';
+
+			&::after {
+				content: '';
 				background: url('@img/icons/phone.svg') center no-repeat;
 				flex: 0 0 toRem(48);
 				width: toRem(48);
@@ -39,6 +54,7 @@
 			}
 		}
 	}
+
 	&--fw {
 		width: 100%;
 	}

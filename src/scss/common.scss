@@ -1,1 +1,33 @@
 // Заголовки, загальні БЕМ блоки та інше...
+
+.title-h1 {
+	@include adaptiveValue("font-size", 70, 30);
+	font-weight: 900;
+	color: rgba(255, 255, 255, 0.97);
+	line-height: normal;
+}
+
+.subtitle-h2 {
+	position: relative;
+	padding-left: toRem(80);
+
+	@include adaptiveValue("font-size", 24, 18);
+	font-weight: 400;
+	letter-spacing: 1.2px;
+	color: rgba(255, 255, 255, 0.97);
+	line-height: normal;
+
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: toRem(10);
+		height: toRem(2);
+		@include adaptiveValue("width", 54, 32);
+		background: rgba(255, 255, 255, 0.97);
+	}
+
+	@media (max-width:$mobile) {
+		letter-spacing: 0.9px;
+	}
+}
