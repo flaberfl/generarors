@@ -8,7 +8,7 @@
 	justify-content:center;
 	align-items: center;
 	border-radius: toRem(60);
-	background-color: $bgColorLight;
+	background: $bgColor;
 	color: #fff;
 	font-size: toRem(24);
 	font-weight: 700;
@@ -16,7 +16,7 @@
 	transition: all 0.3s;
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: $bgColorSemi;
+			// background-color: $bgColorSemi;
 		}
 	}
 	&--white {}

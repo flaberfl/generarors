@@ -4,14 +4,17 @@
   --header-height: 9.6rem;
 
   //* Цвета
-  --clr-white: #fff;
-  --clr-black: #000;
-  --clr-accent: #c11720;
-  --clr-dark-grey: #666;
-  --clr-light-grey: #b4b4b4;
+  --main-color: #19212E;
+  --grey-color: #5D6376;
+  --orange-color: #E16C00; 
+  --hover-color: #FDA350;
+  --body-color: #F0F0F0;
+  --border-radius: toRem(40);
+  --btn-background: linear-gradient(94deg, #FBBF01 -1.4%, #E24C30 95.99%);
+
 
   //== 992px ==//
-  @media (max-width:$tablet){
+  @media (max-width:$tablet) {
     --header-height: 6.6rem;
   }
 
