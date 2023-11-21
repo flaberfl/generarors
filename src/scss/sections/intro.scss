@@ -64,6 +64,10 @@
 
       // border-radius: toRem(605);
       background: #000;
+
+      @media (max-width: em(1387)) {
+        bottom: toRem(-100);
+      }
     }
   }
 
@@ -106,6 +110,10 @@
     // bottom: 0;
 
     gap: toRem(130);
+
+    @media (max-width: em(1180)) {
+      display: none;
+    }
 
     span {
       position: relative;
