@@ -5,11 +5,20 @@
 	font-weight: 900;
 	color: rgba(255, 255, 255, 0.97);
 	line-height: normal;
+
+	@media (max-width:$tablet) {
+		text-align: center;
+	}
+
+	@media (max-width: em(600)) {
+		text-align: left;
+	}
 }
 
 .subtitle-h2 {
 	position: relative;
-	padding-left: toRem(80);
+	// padding-left: toRem(80);
+	@include adaptiveValue("padding-left", 80, 46);
 
 	@include adaptiveValue("font-size", 24, 18);
 	font-weight: 400;

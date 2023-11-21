@@ -2,7 +2,7 @@
   position: relative;
 
   @include adaptiveValue("padding-top", 180, 157);
-  @include adaptiveValue("padding-bottom", 1200, 200);
+  // @include adaptiveValue("padding-bottom", 1200, 100);
 
   &::before {
     content: '';
@@ -30,6 +30,11 @@
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
+
+    @media (max-width:$tablet) {
+      grid-template-columns: auto;
+      grid-template-rows: 1fr 1fr;
+    }
   }
 
   &__title {
@@ -44,10 +49,19 @@
     position: relative;
 
     display: flex;
-    // gap: toRem(32);
     @include adaptiveValue("gap", 32, 10);
 
     z-index: 20;
+
+    @media (max-width:$tablet) {
+      justify-content: center;
+    }
+
+    @media (max-width: em(680)) {
+      flex-direction: column;
+      column-gap: toRem(20);
+      align-items: center;
+    }
   }
 
 
@@ -68,18 +82,35 @@
       @media (max-width: em(1387)) {
         bottom: toRem(-100);
       }
+
+      @media (max-width:$tablet) {
+        display: none;
+      }
     }
   }
 
   &__main-image {
     position: absolute;
 
-    @include adaptiveValue("width", 1280, 578);
+    // @include adaptiveValue("width", 1280, 578);
+    @include adaptiveValue("width", 1280, 300);
     // max-width: 100%;
     right: toRem(-260);
     top: toRem(-61);
 
     z-index: 10;
+
+    @media (max-width:$tablet) {
+      top: toRem(30);
+
+      // right: 50%;
+
+      left: 50%;
+      transform: translate(-50%, 0) !important;
+
+      // width: 76%;
+      // width: toRem(600);
+    }
   }
 
   &__dec-image {
@@ -90,12 +121,31 @@
     &_1 {
       right: -821px;
       top: -16px;
+
+      @include adaptiveValue("width", 843, 328);
+
+      @media (max-width:$tablet) {
+        right: auto;
+        left: 68%;
+      }
     }
 
     &_2 {
       right: -774px;
-      top: 240px;
+      top: toRem(250);
       z-index: 20;
+      @include adaptiveValue("width", 778, 355);
+
+      @media (max-width:$tablet) {
+        top: toRem(120);
+        right: -51%;
+      }
+
+      @media (max-width: em(600)) {
+        top: toRem(60);
+        right: auto;
+        left: 80%;
+      }
     }
   }
 
