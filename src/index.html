@@ -9,7 +9,7 @@
 		@@include('html/_header.htm',{})
 		<main class="page">
 
-			<section class="intro">
+			<section class="intro" data-prlx-parent>
 				<div class="intro__container">
 					<div class="intro__content">
 						<h1 class="intro__title title-h1">
@@ -33,9 +33,12 @@
 					</div>
 
 					<div class="intro__media">
-						<img data-src="@img/intro/01.png" alt="Фото генератора" class="intro__main-image">
-						<img src="@img/intro/tree-b.png" alt="Крона дерева" class="intro__dec-image intro__dec-image_1">
-						<img src="@img/intro/tree.png" alt="Крона дерева" class="intro__dec-image intro__dec-image_2">
+						<img data-src="@img/intro/01.png" alt="Фото генератора" class="intro__main-image" data-prlx
+							data-direction="-1" data-coefficient="250">
+						<img src="@img/intro/tree-b.png" alt="Крона дерева" class="intro__dec-image intro__dec-image_1" data-prlx
+							data-direction="-1" data-coefficient="80">
+						<img src="@img/intro/tree.png" alt="Крона дерева" class="intro__dec-image intro__dec-image_2" data-prlx
+							data-direction="1" data-coefficient="100">
 					</div>
 
 				</div>

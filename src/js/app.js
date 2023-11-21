@@ -195,7 +195,7 @@ import './files/scroll/lazyload.js';
 // Модуль паралаксу
 // Документація: https://template.fls.guru/template-docs/paralaks-pri-skroli.html
 // Сніппет(HTML):
-// import './libs/parallax.js'
+import './libs/parallax.js'
 
 // Функції роботи скролом
 import * as flsScroll from "./files/scroll/scroll.js";
