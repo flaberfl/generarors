@@ -1,7 +1,7 @@
 .intro {
   position: relative;
 
-  @include adaptiveValue("padding-top", 180, 80);
+  @include adaptiveValue("padding-top", 180, 157);
   @include adaptiveValue("padding-bottom", 1200, 200);
 
   &::before {
@@ -44,7 +44,7 @@
     position: relative;
 
     display: flex;
-    gap: toRem(32);
+    // gap: toRem(32);
     @include adaptiveValue("gap", 32, 10);
 
     z-index: 20;

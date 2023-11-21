@@ -21,7 +21,7 @@
 		content: '';
 		position: absolute;
 		left: 0;
-		top: toRem(10);
+		top: toRem(12);
 		height: toRem(2);
 		@include adaptiveValue("width", 54, 32);
 		background: rgba(255, 255, 255, 0.97);
