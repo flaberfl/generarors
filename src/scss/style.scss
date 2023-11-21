@@ -23,9 +23,9 @@ $fontSize: toRem(22); // де 14(px) - розмір шрифту за замов
 
 $mainColor: var(--main-color);
 $colorGrey: var(--grey-color);
-$colorOrange:  var(--orange-color);
-$colorHover:  var(--hover-color);
-$bodyColor:  var(--body-color);
+$colorOrange: var(--orange-color);
+$colorHover: var(--hover-color);
+$bodyColor: var(--body-color);
 
 $borderRadius: var(--border-radius);
 $bgColor: var(--btn-background);
@@ -77,11 +77,28 @@ body {
 	// background-color: red;
 	// @include adaptiveValue("font-size", 22, 16);
 
+	&::before {
+		content: '';
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		z-index: 30;
+		// z-index: 1;
+		background: rgba(25, 33, 46, 0.70);
+		opacity: 0;
+		transition: all 0.3s ease 0s;
+	}
+
+
 	// Скролл заблоковано
 	.lock & {
 		overflow: hidden;
 		touch-action: none;
 		overscroll-behavior: none;
+
+		&::before {
+			opacity: 1;
+		}
 	}
 
 	// Сайт завантажений
