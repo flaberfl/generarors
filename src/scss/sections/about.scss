@@ -61,14 +61,10 @@
       @include adaptiveValue("padding-left", 160, 40);
       @include adaptiveValue("padding-top", 150, 40);
       padding-bottom: 0;
-      // justify-content: center;
-      // align-items: center;
-      // padding: 0;
     }
   }
 
   &__icon {
-
     @media (max-width:$mobile) {
       &_1 {
         img {
@@ -121,7 +117,116 @@
 
     @media (max-width:$mobile) {
       letter-spacing: 0.7px;
-
     }
   }
+}
+
+
+.about {
+
+  /* .about__wrapper */
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* .about__media */
+  &__media {}
+
+  /* .about__image */
+  &__image {}
+
+  /* .about__content */
+  &__content {}
+
+  /* .about__title */
+  &__title {
+    @include adaptiveValue("margin-bottom", 74, 37);
+  }
+
+  /* .about__text */
+  &__text {
+    .about__content & {
+      max-width: toRem(570);
+
+      @include adaptiveValue("margin-bottom", 40, 37);
+    }
+  }
+
+  /* .about__list */
+  &__list {
+    margin-left: toRem(-5);
+  }
+
+  /* .about__images */
+  &__images {}
+
+  /* .about__img */
+  &__img {
+
+    /* .about__img_1 */
+    &_1 {}
+
+    /* .about__img_2 */
+    &_2 {}
+  }
+
+  &__line {
+    @include adaptiveValue("width", 16, 10);
+    background-color: #BCC0CC;
+    height: toRem(1);
+  }
+
+}
+
+.title-h2 {}
+
+.list-about {
+
+  /* .list-about__item */
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: toRem(10);
+    position: relative;
+    // @include adaptiveValue("padding-left", 76, 50);
+
+    @include adaptiveValue("font-size", 22, 16);
+
+    line-height: normal;
+    letter-spacing: 1.1px;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 25, 12);
+    }
+
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   background: url('@img/check.svg') 0 0 no-repeat;
+    //   // left: 0;
+    //   top: 50%;
+    //   transform: translate(0, -50%);
+    //   width: toRem(40);
+    //   height: toRem(40);
+    // }
+
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+
+    //   top: 50%;
+    //   transform: translate(0, -50%);
+    //   @include adaptiveValue("width", 16, 10);
+    //   height: toRem(1);
+    //   background-color: #BCC0CC;
+    // }
+
+    @media (max-width:$mobile) {
+      letter-spacing: 0.8px;
+    }
+  }
+
+  /* .list-about__text */
+  &__text {}
 }

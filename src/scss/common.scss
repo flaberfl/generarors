@@ -40,3 +40,9 @@
 		letter-spacing: 0.9px;
 	}
 }
+
+.title-h2 {
+	@include adaptiveValue("font-size", 50, 30);
+	font-weight: 900;
+	line-height: normal;
+}
