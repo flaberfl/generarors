@@ -27,6 +27,7 @@
   }
 
   &__container {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
@@ -44,10 +45,10 @@
 
     display: flex;
     gap: toRem(32);
+    @include adaptiveValue("gap", 32, 10);
 
-    z-index: 10;
+    z-index: 20;
   }
-
 
 
   &__media {
@@ -66,13 +67,32 @@
     }
   }
 
-  &__image {
+  &__main-image {
     position: absolute;
 
     @include adaptiveValue("width", 1280, 578);
     // max-width: 100%;
     right: toRem(-260);
     top: toRem(-61);
+
+    z-index: 10;
+  }
+
+  &__dec-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    &_1 {
+      right: -821px;
+      top: -16px;
+    }
+
+    &_2 {
+      right: -774px;
+      top: 240px;
+      z-index: 20;
+    }
   }
 
 }
