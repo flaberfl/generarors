@@ -56,6 +56,15 @@
     @media (min-width: em(1130)) and (max-width: em(1200)) {
       padding-left: toRem(30);
     }
+
+    @media (max-width:$mobile) {
+      @include adaptiveValue("padding-left", 160, 40);
+      @include adaptiveValue("padding-top", 150, 40);
+      padding-bottom: 0;
+      // justify-content: center;
+      // align-items: center;
+      // padding: 0;
+    }
   }
 
   &__icon {
