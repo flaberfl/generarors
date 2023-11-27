@@ -10,19 +10,6 @@
   /* .about__container */
   &__container {
     position: relative;
-
-    &::before {
-      // content: '';
-      // position: absolute;
-      // background: url('@img/about/about-tree-b.png') 0 0 no-repeat;
-      // // height: 100%;
-      // bottom: 0;
-      // left: 10%;
-      // @include adaptiveValue("width", 497, 332);
-      // @include adaptiveValue("height", 429, 286);
-      // width: toRem(497);
-
-    }
   }
 
   /* .about__items */
@@ -153,7 +140,6 @@
 
     @media (max-width:$mobile) {
       grid-template-columns: 1fr;
-
     }
   }
 
@@ -194,13 +180,6 @@
     margin-left: toRem(-5);
   }
 
-  /* .about__images */
-  &__images {
-    // position: relative;
-    // position: absolute;
-
-  }
-
   /* .about__img */
   &__img {
     position: absolute;
@@ -217,8 +196,8 @@
 
       @media (max-width:$mobile) {
         left: auto;
-        right: -100px;
-        bottom: -380px;
+        right: toRem(-100);
+        bottom: toRem(-380);
       }
     }
 
@@ -227,12 +206,12 @@
       position: absolute;
       left: 0;
       left: 23%;
-      bottom: -280px;
+      bottom: toRem(-280);
 
       @media (max-width:$mobile) {
         left: auto;
-        right: -100px;
-        bottom: -212px;
+        right: toRem(-100);
+        bottom: toRem(-212);
       }
 
       @media (max-width: em(500)) {
@@ -246,7 +225,6 @@
     background-color: #BCC0CC;
     height: toRem(1);
   }
-
 }
 
 .list-about {
@@ -256,9 +234,7 @@
   /* .list-about__item */
   &__item {
     position: relative;
-
     @include adaptiveValue("padding-left", 78, 50);
-
 
     @include adaptiveValue("font-size", 22, 16);
     line-height: normal;
