@@ -1,0 +1,71 @@
+.stages {
+
+  /* .stages_line */
+  &_line {}
+
+  /* .stages__container */
+  &__container {}
+
+  /* .stages__content */
+  &__content {}
+
+  /* .stages__title */
+  &__title {}
+
+  /* .stages__list */
+  &__list {}
+
+  /* .stages__item */
+  &__item {}
+
+  /* .stages__box */
+  &__box {}
+
+  /* .stages__number */
+  &__number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("width", 37, 23);
+    @include adaptiveValue("height", 37, 23);
+    @include adaptiveValue("border-radius", 12, 6);
+    background-color: $whiteColor;
+    
+    &::before {
+      counter-reset: headings;
+      position: absolute;
+      font-size: toRem(16);
+      color: $colorOrange;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.8px;
+      counter-increment: numbers;
+      content: counter(numbers);
+
+      @media (max-width:$mobile) {
+        font-size: toRem(14);
+        letter-spacing: 0.7px;
+      }
+    }
+  }
+
+  /* .stages__text */
+  &__text {
+    @include adaptiveValue("font-size", 20, 16);
+    color: $colorGrey;
+    line-height: normal;
+    letter-spacing: 1px;
+
+    @media (max-width:$mobile) {
+      letter-spacing: .8px;
+    }
+  }
+
+  /* .stages__media */
+  &__media {}
+
+  /* .stages__image */
+  &__image {}
+}
+
+.title-h2 {}
