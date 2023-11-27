@@ -28,29 +28,29 @@
 
 .item-types {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  justify-content: end;
+  // justify-content: space-between;
   @include adaptiveValue("height", 315, 301);
   @include adaptiveValue("width", 335, 320);
-  // @include adaptiveValue("padding-bottom", 57, 54);
-  // height: 100%;
+  @include adaptiveValue("padding-bottom", 57, 54);
+  height: 100%;
 
-  // gap: toRem(33);
+  gap: toRem(33);
 
   border-radius: 50px;
   border: 6px solid #F0F0F0;
 
   /* .item-types__image */
   &__image {
-    text-align: center;
-    // margin-bottom: toRem(33);
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
+
   /* .item-types__title */
   &__title {
-    flex: 0 1 auto;
-    margin-top: toRem(33);
+    // margin-top: toRem(33);
 
     font-size: toRem(14);
     font-weight: 700;
