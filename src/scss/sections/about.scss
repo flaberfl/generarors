@@ -7,9 +7,6 @@
     @include adaptiveValue("margin-top", -210, -280);
   }
 
-  
-
-
   /* .about__container */
   &__container {
     position: relative;
@@ -118,7 +115,6 @@
       &::before {
         content: '';
         position: absolute;
-        // left: toRem(72);
         left: 0;
         top: 50%;
         @include adaptiveValue("width", 54, 36);
@@ -153,6 +149,12 @@
   &__wrapper {
     display: grid;
     grid-template-columns: 1fr 49.3%;
+    gap: toRem(20);
+
+    @media (max-width:$mobile) {
+      grid-template-columns: 1fr;
+
+    }
   }
 
   /* .about__media */
@@ -160,12 +162,18 @@
 
   /* .about__image */
   &__image {
+    max-width: 100%;
     margin-left: toRem(-59);
   }
 
   /* .about__content */
   &__content {
-    padding-top: 73px;
+    padding-top: toRem(73);
+
+    @media (max-width:$mobile) {
+      grid-row-start: 1;
+      padding-top: 0;
+    }
   }
 
   /* .about__title */
@@ -177,7 +185,6 @@
   &__text {
     .about__content & {
       max-width: toRem(570);
-
       @include adaptiveValue("margin-bottom", 50, 37);
     }
   }
@@ -188,24 +195,49 @@
   }
 
   /* .about__images */
-  &__images {}
+  &__images {
+    // position: relative;
+    // position: absolute;
+
+  }
 
   /* .about__img */
   &__img {
     position: absolute;
     max-width: 100%;
+    z-index: 20;
+
+    @media (max-width:$mobile) {}
 
     /* .about__img_1 */
     &_1 {
+      position: absolute;
       left: 12%;
-      // bottom: -44%;
       bottom: toRem(-390);
+
+      @media (max-width:$mobile) {
+        left: auto;
+        right: -100px;
+        bottom: -380px;
+      }
     }
 
     /* .about__img_2 */
     &_2 {
-      left: 15.2%;
-      bottom: toRem(-500);
+      position: absolute;
+      left: 0;
+      left: 23%;
+      bottom: -280px;
+
+      @media (max-width:$mobile) {
+        left: auto;
+        right: -100px;
+        bottom: -212px;
+      }
+
+      @media (max-width: em(500)) {
+        max-width: 80%;
+      }
     }
   }
 
@@ -218,6 +250,8 @@
 }
 
 .list-about {
+  position: relative;
+  z-index: 30;
 
   /* .list-about__item */
   &__item {
