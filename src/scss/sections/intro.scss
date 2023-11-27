@@ -3,12 +3,6 @@
 
   @include adaptiveValue("padding-top", 180, 157);
   @include adaptiveValue("padding-bottom", 300, 200);
-  // padding-bottom: toRem(30);
-
-  @media (max-width:$mobileSmall) {
-    //  padding-bottom: toRem(0); 
-  }
-
 
   &::before {
     content: '';
@@ -89,6 +83,11 @@
         bottom: toRem(-100);
       }
 
+      @media (max-width: em(1250)) {
+        bottom: toRem(-50);
+      }
+
+
       @media (max-width:$tablet) {
         display: none;
       }
@@ -97,10 +96,7 @@
 
   &__main-image {
     position: absolute;
-
-    // @include adaptiveValue("width", 1280, 578);
     @include adaptiveValue("width", 1280, 300);
-    // max-width: 100%;
     right: toRem(-260);
     top: toRem(-61);
 
@@ -108,14 +104,8 @@
 
     @media (max-width:$tablet) {
       top: toRem(30);
-
-      // right: 50%;
-
       left: 50%;
       transform: translate(-50%, 0) !important;
-
-      // width: 76%;
-      // width: toRem(600);
     }
   }
 
@@ -125,8 +115,8 @@
     bottom: 0;
 
     &_1 {
-      right: -821px;
-      top: -16px;
+      right: toRem(-821);
+      top: toRem(-16);
 
       @include adaptiveValue("width", 843, 328);
 
@@ -137,7 +127,7 @@
     }
 
     &_2 {
-      right: -774px;
+      right: toRem(-774);
       top: toRem(250);
       z-index: 20;
       @include adaptiveValue("width", 778, 355);
