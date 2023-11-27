@@ -13,13 +13,29 @@
   &__title {}
 
   /* .stages__list */
-  &__list {}
+  &__list {
+    counter-reset: numbers;
+  }
 
   /* .stages__item */
-  &__item {}
+  &__item {
+    position: relative;
+    @include adaptiveValue("padding-left", 75, 50);
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 25, 12);
+    }
+  }
 
   /* .stages__box */
-  &__box {}
+  &__box {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 0;
+    top: toRem(-5);
+    @include adaptiveValue("gap", 10, 6);
+  }
 
   /* .stages__number */
   &__number {
@@ -30,9 +46,8 @@
     @include adaptiveValue("height", 37, 23);
     @include adaptiveValue("border-radius", 12, 6);
     background-color: $whiteColor;
-    
+
     &::before {
-      counter-reset: headings;
       position: absolute;
       font-size: toRem(16);
       color: $colorOrange;

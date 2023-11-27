@@ -46,3 +46,9 @@
 	font-weight: 900;
 	line-height: normal;
 }
+
+.list-line {
+	@include adaptiveValue("width", 16, 10);
+	background-color: #BCC0CC;
+	height: toRem(1);
+}

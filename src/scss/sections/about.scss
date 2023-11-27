@@ -219,12 +219,6 @@
       }
     }
   }
-
-  &__line {
-    @include adaptiveValue("width", 16, 10);
-    background-color: #BCC0CC;
-    height: toRem(1);
-  }
 }
 
 .list-about {
