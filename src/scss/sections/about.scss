@@ -2,6 +2,14 @@
   overflow: hidden;
   padding-bottom: toRem(148);
 
+  @media (max-width: em(680)) {
+    margin-top: -210px;
+    @include adaptiveValue("margin-top", -210, -280);
+  }
+
+  
+
+
   /* .about__container */
   &__container {
     position: relative;

@@ -2,7 +2,13 @@
   position: relative;
 
   @include adaptiveValue("padding-top", 180, 157);
-  @include adaptiveValue("padding-bottom", 1200, 100);
+  @include adaptiveValue("padding-bottom", 300, 200);
+  // padding-bottom: toRem(30);
+
+  @media (max-width:$mobileSmall) {
+    //  padding-bottom: toRem(0); 
+  }
+
 
   &::before {
     content: '';
