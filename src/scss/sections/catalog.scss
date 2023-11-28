@@ -34,14 +34,28 @@
       @include adaptiveValue("font-size", 20, 16);
       color: $colorOrange;
     }
-
-    // @media (max-width: em(1270)){
-    //  flex: 0 1 50%;   
-    // }
   }
 
   /* .catalog__items */
-  &__items {}
+  &__items {
+    display: grid;
+    // grid-template-columns: repeat(auto-fill, 400px);
+    // grid-auto-rows: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    justify-content: center;
+    gap: toRem(20);
+
+    @include adaptiveValue("margin-bottom", 57, 37);
+
+    @media (max-width:$tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: em(680)) {
+      grid-template-columns: auto;
+    }
+  }
 
   /* .catalog__item */
   &__item {}
@@ -51,15 +65,20 @@
   display: grid;
   justify-items: center;
   @include adaptiveValue("gap", 20, 10);
-  @include adaptiveValue("width", 453, 313);
-  @include adaptiveValue("height", 519, 257);
+  // @include adaptiveValue("width", 453, 313);
+  max-width: toRem(453);
+  // @include adaptiveValue("height", 519, 257);
+  max-height: toRem(519);
   // padding-bottom: toRem(42);
-  @include adaptiveValue("padding-bottom", 42, 25);
   @include adaptiveValue("padding-top", 60, 46);
+  // @include adaptiveValue("padding-bottom", 42, 0, 1920, 992);
+  padding-bottom: toRem(42);
 
 
   border-radius: toRem(50);
   border: toRem(6) solid #F0F0F0;
+
+  @media (min-width:$tablet) {}
 
   // &:hover {
   //   box-shadow: $shadow;
@@ -85,6 +104,24 @@
   /* .item-catalog__badge */
   &__badge {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("width", 77, 53);
+    @include adaptiveValue("height", 77, 53);
+    top: -18%;
+    right: 5%;
+
+    border-radius: 50%;
+    background-color: $mainColor;
+
+    font-size: toRem(16);
+    color: #fff;
+    line-height: normal;
+
+    @media (max-width:$mobile) {
+      font-size: toRem(14);
+    }
   }
 
   &__content {

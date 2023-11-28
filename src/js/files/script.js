@@ -9,9 +9,9 @@ const cards = Array.from(document.querySelectorAll('.item-catalog'));
 
 
 window.addEventListener('resize', event => {
-  if (event.target.window.innerWidth > 989) response1();
-  if (event.target.window.innerWidth <= 989 && event.target.window.innerWidth > 659) response2();
-  if (event.target.window.innerWidth <= 659) response3();
+  if (event.target.window.innerWidth > 992) response1();
+  if (event.target.window.innerWidth <= 992 && event.target.window.innerWidth > 680) response2();
+  if (event.target.window.innerWidth <= 680) response3();
 })
 
 function openCatalog() {
@@ -22,13 +22,13 @@ function openCatalog() {
 }
 
 function response1() {
-  if (window.innerWidth > 989) {
+  if (window.innerWidth > 992) {
 
     cards.forEach((item, index) => {
       item.classList.add('hidden')
-      if (index <= 8) {
+      if (index <= 2) {
         item.classList.remove('hidden')
-      } else if (index > 8) {
+      } else if (index > 2) {
         btn.classList.remove('hidden');
       }
       openCatalog()
@@ -39,13 +39,13 @@ response1()
 
 
 function response2() {
-  if (window.innerWidth <= 989 && window.innerWidth > 659) {
+  if (window.innerWidth <= 992 && window.innerWidth > 680) {
 
     cards.forEach((item, index) => {
       item.classList.add('hidden')
-      if (index <= 5) {
+      if (index <= 3) {
         item.classList.remove('hidden')
-      } else if (index > 5) {
+      } else if (index > 3) {
         btn.classList.remove('hidden');
       }
       openCatalog()
@@ -56,7 +56,7 @@ response2()
 
 
 function response3() {
-  if (window.innerWidth <= 659) {
+  if (window.innerWidth <= 680) {
 
     cards.forEach((item, index) => {
       item.classList.add('hidden')

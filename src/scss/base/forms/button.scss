@@ -63,3 +63,15 @@
 .hidden {
 	display: none !important;
 }
+
+.show-more {
+	width: toRem(260);
+	margin: 0 auto;
+	display: flex;
+
+	background: transparent;
+	border: 1px solid $colorOrange;
+	font-weight: 700;
+	color: $mainColor;
+
+}
