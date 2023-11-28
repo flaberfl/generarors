@@ -64,7 +64,7 @@
 .item-catalog {
   display: grid;
   justify-items: center;
-  @include adaptiveValue("gap", 20, 10);
+  @include adaptiveValue("gap", 20, 15);
   // @include adaptiveValue("width", 453, 313);
   max-width: toRem(453);
   // @include adaptiveValue("height", 519, 257);

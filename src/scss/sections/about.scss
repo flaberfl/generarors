@@ -170,8 +170,12 @@
   /* .about__text */
   &__text {
     .about__content & {
-      max-width: toRem(570);
       @include adaptiveValue("margin-bottom", 50, 37);
+      max-width: toRem(570) !important;
+
+      @media (max-width:$mobile) {
+        max-width: 100% !important;
+      }
     }
   }
 
