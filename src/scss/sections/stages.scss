@@ -17,7 +17,6 @@
 
   /* .stages__content */
   &__content {
-    // grid-area: 1 / 1;
   }
 
   /* .stages__title */
@@ -95,10 +94,8 @@
 
   /* .stages__media */
   &__media {
-    // grid-area: 1 / 2;
-    // position: relative;
-    // padding-top: toRem(25);
     @include adaptiveValue("padding-top", 25, 200, 1920, 992);
+
     text-align: center;
 
     @media (max-width:$tablet) {
@@ -113,9 +110,6 @@
 
   /* .stages__image */
   &__image {
-    // position: absolute;
-    // max-width: 100%;
-
     @media (min-width: em(1600)) {
       transform: translate(-.6%, 0px);
     }

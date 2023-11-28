@@ -43,14 +43,13 @@
   @include adaptiveValue("padding-bottom", 57, 54);
   gap: toRem(33);
 
-  border-radius: 50px;
-  border: 6px solid #F0F0F0;
+  border-radius: toRem(50);
+  border: toRem(6) solid #F0F0F0;
 
   transition: all 0.3s ease 0s;
 
   &:hover {
-    box-shadow: 0px 22px 40px 0px rgba(0, 0, 0, 0.19);
-    // border: transparent;
+    box-shadow: $shadow;
     border: 0px solid #F0F0F0;
   }
 

@@ -33,29 +33,33 @@
 		cursor: pointer;
 	}
 
-	&--min {}
+	// &--min {}
 
-	&--icon {
-		span {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			padding-left: toRem(16);
-			gap: toRem(16);
+	// &--icon {
+	// 	span {
+	// 		display: flex;
+	// 		align-items: center;
+	// 		justify-content: center;
+	// 		padding-left: toRem(16);
+	// 		gap: toRem(16);
 
-			&::after {
-				content: '';
-				background: url('@img/icons/phone.svg') center no-repeat;
-				flex: 0 0 toRem(48);
-				width: toRem(48);
-				height: toRem(48);
-				border-radius: 50%;
-				background-color: #fff;
-			}
-		}
-	}
+	// 		&::after {
+	// 			content: '';
+	// 			background: url('@img/icons/phone.svg') center no-repeat;
+	// 			flex: 0 0 toRem(48);
+	// 			width: toRem(48);
+	// 			height: toRem(48);
+	// 			border-radius: 50%;
+	// 			background-color: #fff;
+	// 		}
+	// 	}
+	// }
 
-	&--fw {
-		width: 100%;
-	}
+	// &--fw {
+	// 	width: 100%;
+	// }
+}
+
+.hidden {
+	display: none !important;
 }

@@ -1,0 +1,113 @@
+.catalog {
+
+  @include adaptiveValue("padding-top", 105, 60);
+
+  background-color: #fff;
+
+  /* .catalog__container */
+  &__container {}
+
+  /* .catalog__title */
+  &__title {
+    @include adaptiveValue("margin-bottom", 64, 51);
+  }
+
+  /* .catalog__header */
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: toRem(50);
+    column-gap: toRem(66);
+    row-gap: toRem(16);
+    flex-wrap: wrap;
+  }
+
+  /* .catalog__label */
+  &__label {
+    font-size: toRem(16);
+    color: #BCC0CC;
+    font-weight: 900;
+    line-height: normal;
+
+    &:first-child {
+      @include adaptiveValue("font-size", 20, 16);
+      color: $colorOrange;
+    }
+
+    // @media (max-width: em(1270)){
+    //  flex: 0 1 50%;   
+    // }
+  }
+
+  /* .catalog__items */
+  &__items {}
+
+  /* .catalog__item */
+  &__item {}
+}
+
+.item-catalog {
+  display: grid;
+  justify-items: center;
+  @include adaptiveValue("gap", 20, 10);
+  @include adaptiveValue("width", 453, 313);
+  @include adaptiveValue("height", 519, 257);
+  // padding-bottom: toRem(42);
+  @include adaptiveValue("padding-bottom", 42, 25);
+  @include adaptiveValue("padding-top", 60, 46);
+
+
+  border-radius: toRem(50);
+  border: toRem(6) solid #F0F0F0;
+
+  // &:hover {
+  //   box-shadow: $shadow;
+  //   border: 0px solid #F0F0F0;
+  // }
+
+  /* .item-catalog__image */
+  &__image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("padding-right", 80, 40);
+    @include adaptiveValue("padding-left", 80, 40);
+    // margin-bottom: toRem(42);
+
+    img {
+      max-width: 100%;
+      filter: drop-shadow(3px 9px 10px #000);
+    }
+  }
+
+  /* .item-catalog__badge */
+  &__badge {
+    position: absolute;
+  }
+
+  &__content {
+    display: grid;
+    gap: toRem(10);
+    @include adaptiveValue("gap", 10, 4);
+    text-align: center;
+  }
+
+  /* .item-catalog__name */
+  &__name {
+    font-size: toRem(16);
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  /* .item-catalog__price */
+  &__price {
+    font-size: toRem(20);
+    font-weight: 900;
+    line-height: normal;
+  }
+
+  /* .item-catalog__button */
+  &__button {}
+}
