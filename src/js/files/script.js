@@ -8,68 +8,68 @@ const btn = document.querySelector('.show-more');
 const cards = Array.from(document.querySelectorAll('.item-catalog'));
 
 
-window.addEventListener('resize', event => {
-  if (event.target.window.innerWidth > 992) response1();
-  if (event.target.window.innerWidth <= 992 && event.target.window.innerWidth > 680) response2();
-  if (event.target.window.innerWidth <= 680) response3();
-})
+// window.addEventListener('resize', event => {
+//   if (event.target.window.innerWidth > 992) response1();
+//   if (event.target.window.innerWidth <= 992 && event.target.window.innerWidth > 680) response2();
+//   if (event.target.window.innerWidth <= 680) response3();
+// })
 
-function openCatalog() {
-  btn.addEventListener('click', () => {
-    cards.forEach(item => item.classList.remove('hidden'));
-    btn.classList.add('hidden');
-  })
-}
+// function openCatalog() {
+//   btn.addEventListener('click', () => {
+//     cards.forEach(item => item.classList.remove('hidden-content'));
+//     btn.classList.add('hidden-content');
+//   })
+// }
 
-function response1() {
-  if (window.innerWidth > 992) {
+// function response1() {
+//   if (window.innerWidth > 992) {
 
-    cards.forEach((item, index) => {
-      item.classList.add('hidden')
-      if (index <= 2) {
-        item.classList.remove('hidden')
-      } else if (index > 2) {
-        btn.classList.remove('hidden');
-      }
-      openCatalog()
-    })
-  }
-}
-response1()
-
-
-function response2() {
-  if (window.innerWidth <= 992 && window.innerWidth > 680) {
-
-    cards.forEach((item, index) => {
-      item.classList.add('hidden')
-      if (index <= 3) {
-        item.classList.remove('hidden')
-      } else if (index > 3) {
-        btn.classList.remove('hidden');
-      }
-      openCatalog()
-    })
-  }
-}
-response2()
+//     cards.forEach((item, index) => {
+//       item.classList.add('hidden-content')
+//       if (index <= 2) {
+//         item.classList.remove('hidden-content')
+//       } else if (index > 2) {
+//         btn.classList.remove('hidden-content');
+//       }
+//       openCatalog()
+//     })
+//   }
+// }
+// response1()
 
 
-function response3() {
-  if (window.innerWidth <= 680) {
+// function response2() {
+//   if (window.innerWidth <= 992 && window.innerWidth > 680) {
 
-    cards.forEach((item, index) => {
-      item.classList.add('hidden')
-      if (index <= 2) {
-        item.classList.remove('hidden')
-      } else if (index > 2) {
-        btn.classList.remove('hidden');
-      }
-      openCatalog()
-    })
-  }
-}
-response3()
+//     cards.forEach((item, index) => {
+//       item.classList.add('hidden-content')
+//       if (index <= 3) {
+//         item.classList.remove('hidden-content')
+//       } else if (index > 3) {
+//         btn.classList.remove('hidden-content');
+//       }
+//       openCatalog()
+//     })
+//   }
+// }
+// response2()
+
+
+// function response3() {
+//   if (window.innerWidth <= 680) {
+
+//     cards.forEach((item, index) => {
+//       item.classList.add('hidden-content')
+//       if (index <= 2) {
+//         item.classList.remove('hidden-content')
+//       } else if (index > 2) {
+//         btn.classList.remove('hidden-content');
+//       }
+//       openCatalog()
+//     })
+//   }
+// }
+// response3()
 
 
 

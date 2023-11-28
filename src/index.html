@@ -279,86 +279,291 @@
 				</div>
 			</section>
 
+
+			<div data-tabs class="tabs">
+				<nav data-tabs-titles class="tabs__navigation">
+					<button type="button" class="tabs__title _tab-active">Таб №1</button>
+					<button type="button" class="tabs__title">Таб №2</button>
+					<button type="button" class="tabs__title">Таб №3</button>
+				</nav>
+				<div data-tabs-body class="tabs__content">
+					<div class="tabs__body">
+						Вміст першого таба
+					</div>
+					<div class="tabs__body">
+						Вміст другого таба
+					</div>
+					<div class="tabs__body">
+						Вміст третього таба
+					</div>
+				</div>
+			</div>
+
+
 			<section class="catalog">
 				<div class="catalog__container">
 					<h2 class="catalog__title title-h2">Каталог готовых решений</h2>
-					<div class="catalog__header">
-						<h4 class="catalog__label">6 кВт в Кожухе GT 1200 winter</h4>
-						<h4 class="catalog__label">7 кВт в Кожухе GT 1200 winter</h4>
-						<h4 class="catalog__label">8 кВт в Кожухе GT 1200 winter</h4>
-						<h4 class="catalog__label">10 кВт в Кожухе GT 1200 winter</h4>
-					</div>
-					<div class="catalog__items">
+					<div data-tabs class="catalog__tabs">
+						<nav data-tabs-titles class="catalog__header">
+							<button type="button" class="catalog__label _tab-active">6 кВт в Кожухе GT 1200 winter</button>
+							<button type="button" class="catalog__label">7 кВт в Кожухе GT 1200 winter</button>
+							<button type="button" class="catalog__label">8 кВт в Кожухе GT 1200 winter</button>
+							<button type="button" class="catalog__label">10 кВт в Кожухе GT 1200 winter</button>
+						</nav>
+						
+						<div data-tabs-body class="catalog__tabs-content">
 
-						<div class="catalog__item item-catalog">
-							<div class="item-catalog__image">
-								<img data-src="@img/catalog/01.png" alt="Генератор">
-								<span class="item-catalog__badge">NEW</span>
-							</div>
-							<div class="item-catalog__content">
-								<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
-								<span class="item-catalog__price">219 000 ₽</span>
-							</div>
-							<button type="button" class="item-catalog__button button">Заказать</button>
-						</div>
-						<div class="catalog__item item-catalog">
-							<div class="item-catalog__image">
-								<img data-src="@img/catalog/02.png" alt="Генератор">
-								<span class="item-catalog__badge">HIT</span>
-							</div>
-							<div class="item-catalog__content">
-								<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
-								<span class="item-catalog__price">219 000 ₽</span>
-							</div>
-							<button type="button" class="item-catalog__button button">Заказать</button>
-						</div>
-						<div class="catalog__item item-catalog">
-							<div class="item-catalog__image">
-								<img data-src="@img/catalog/03.png" alt="Генератор">
-								<span class="item-catalog__badge">-10%</span>
-							</div>
-							<div class="item-catalog__content">
-								<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
-								<span class="item-catalog__price">219 000 ₽</span>
-							</div>
-							<button type="button" class="item-catalog__button button">Заказать</button>
-						</div>
-						<div class="catalog__item item-catalog">
-							<div class="item-catalog__image">
-								<img data-src="@img/catalog/01.png" alt="Генератор">
-								<span class="item-catalog__badge">NEW</span>
-							</div>
-							<div class="item-catalog__content">
-								<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
-								<span class="item-catalog__price">219 000 ₽</span>
-							</div>
-							<button type="button" class="item-catalog__button button">Заказать</button>
-						</div>
-						<div class="catalog__item item-catalog">
-							<div class="item-catalog__image">
-								<img data-src="@img/catalog/02.png" alt="Генератор">
-								<span class="item-catalog__badge">HIT</span>
-							</div>
-							<div class="item-catalog__content">
-								<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
-								<span class="item-catalog__price">219 000 ₽</span>
-							</div>
-							<button type="button" class="item-catalog__button button">Заказать</button>
-						</div>
-						<div class="catalog__item item-catalog">
-							<div class="item-catalog__image">
-								<img data-src="@img/catalog/03.png" alt="Генератор">
-								<span class="item-catalog__badge">-10%</span>
-							</div>
-							<div class="item-catalog__content">
-								<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
-								<span class="item-catalog__price">219 000 ₽</span>
-							</div>
-							<button type="button" class="item-catalog__button button">Заказать</button>
-						</div>
+							<div class="catalog__tabs-body">
+								<div class="catalog__items">
 
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/01.png" alt="Генератор">
+											<span class="item-catalog__badge">NEW</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/02.png" alt="Генератор">
+											<span class="item-catalog__badge">HIT</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/03.png" alt="Генератор">
+											<span class="item-catalog__badge">-10%</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/01.png" alt="Генератор">
+											<span class="item-catalog__badge">NEW</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/02.png" alt="Генератор">
+											<span class="item-catalog__badge">HIT</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/03.png" alt="Генератор">
+											<span class="item-catalog__badge">-10%</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+
+								</div>
+								<button class="show-more hidden button" type="button">Больше генераторов</button>
+							</div>
+							<div class="catalog__tabs-body">
+								<div class="catalog__items">
+
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/01.png" alt="Генератор">
+											<span class="item-catalog__badge">NEW</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/02.png" alt="Генератор">
+											<span class="item-catalog__badge">HIT</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+
+								</div>
+								<button class="show-more hidden button" type="button">Больше генераторов</button>
+							</div>
+							<div class="catalog__tabs-body">
+								<div class="catalog__items">
+
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/01.png" alt="Генератор">
+											<span class="item-catalog__badge">NEW</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/02.png" alt="Генератор">
+											<span class="item-catalog__badge">HIT</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/03.png" alt="Генератор">
+											<span class="item-catalog__badge">-10%</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/01.png" alt="Генератор">
+											<span class="item-catalog__badge">NEW</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/02.png" alt="Генератор">
+											<span class="item-catalog__badge">HIT</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/03.png" alt="Генератор">
+											<span class="item-catalog__badge">-10%</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+
+								</div>
+								<button class="show-more hidden button" type="button">Больше генераторов</button>
+							</div>
+							<div class="catalog__tabs-body">
+								<div class="catalog__items">
+
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/01.png" alt="Генератор">
+											<span class="item-catalog__badge">NEW</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/02.png" alt="Генератор">
+											<span class="item-catalog__badge">HIT</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/03.png" alt="Генератор">
+											<span class="item-catalog__badge">-10%</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/01.png" alt="Генератор">
+											<span class="item-catalog__badge">NEW</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/02.png" alt="Генератор">
+											<span class="item-catalog__badge">HIT</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+									<div class="catalog__item item-catalog">
+										<div class="item-catalog__image">
+											<img data-src="@img/catalog/03.png" alt="Генератор">
+											<span class="item-catalog__badge">-10%</span>
+										</div>
+										<div class="item-catalog__content">
+											<h5 class="item-catalog__name">Elemax SH 7600 EX-RS</h5>
+											<div class="item-catalog__price"><span>219 000</span> ₽</div>
+										</div>
+										<button type="button" class="item-catalog__button button">Заказать</button>
+									</div>
+
+								</div>
+								<button class="show-more hidden button" type="button">Больше генераторов</button>
+							</div>
+
+						</div>
 					</div>
-					<button class="show-more hidden button" type="button">Больше генераторов</button>
 				</div>
 			</section>
 
