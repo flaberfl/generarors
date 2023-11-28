@@ -26,6 +26,11 @@
     @media (max-width:$mobile) {
       gap: toRem(18);
     }
+
+    @media (max-width: em(1044)) {
+      max-width: toRem(760);
+      margin: 0 auto;
+    }
   }
 }
 
