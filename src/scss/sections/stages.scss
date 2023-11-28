@@ -6,7 +6,7 @@
   /* .stages__container */
   &__container {
     display: grid;
-    grid-template-columns: 51.5% 1fr;
+    grid-template-columns: 52% 1fr;
   }
 
   /* .stages__content */
@@ -20,6 +20,7 @@
   /* .stages__list */
   &__list {
     counter-reset: numbers;
+    max-width: toRem(690);
   }
 
   /* .stages__item */
@@ -28,7 +29,7 @@
     @include adaptiveValue("padding-left", 75, 50);
 
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 25, 12);
+      @include adaptiveValue("margin-bottom", 24, 12);
     }
   }
 
@@ -82,10 +83,17 @@
   }
 
   /* .stages__media */
-  &__media {}
+  &__media {
+    position: relative;
+    padding-top: toRem(25);
+  }
 
   /* .stages__image */
-  &__image {}
-}
+  &__image {
+    position: absolute;
 
-.title-h2 {}
+    @media (max-width: em(1600)) {
+      max-width: 100%;
+    }
+  }
+}
