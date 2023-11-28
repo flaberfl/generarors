@@ -1,4 +1,6 @@
 .stages {
+  @include adaptiveValue("padding-top", 120, 92);
+  @include adaptiveValue("padding-bottom", 120, 92);
 
   /* .stages_line */
   &_line {}
@@ -7,10 +9,16 @@
   &__container {
     display: grid;
     grid-template-columns: 52% 1fr;
+
+    @media (max-width:$tablet) {
+      grid-template-columns: auto;
+    }
   }
 
   /* .stages__content */
-  &__content {}
+  &__content {
+    // grid-area: 1 / 1;
+  }
 
   /* .stages__title */
   &__title {
@@ -20,7 +28,10 @@
   /* .stages__list */
   &__list {
     counter-reset: numbers;
-    max-width: toRem(690);
+
+    @media (min-width:$tablet) {
+      max-width: toRem(690);
+    }
   }
 
   /* .stages__item */
@@ -84,14 +95,25 @@
 
   /* .stages__media */
   &__media {
-    position: relative;
+    // grid-area: 1 / 2;
+    // position: relative;
     // padding-top: toRem(25);
     @include adaptiveValue("padding-top", 25, 200, 1920, 992);
+    text-align: center;
+
+    @media (max-width:$mobile){
+       padding-top: toRem(0); 
+    }
   }
 
   /* .stages__image */
   &__image {
-    position: absolute;
+    // position: absolute;
+    // max-width: 100%;
+
+    @media (min-width: em(1600)) {
+      transform: translate(-.6%, 0px);
+    }
 
     @media (max-width: em(1600)) {
       max-width: 100%;
