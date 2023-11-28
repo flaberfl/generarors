@@ -85,7 +85,8 @@
   /* .stages__media */
   &__media {
     position: relative;
-    padding-top: toRem(25);
+    // padding-top: toRem(25);
+    @include adaptiveValue("padding-top", 25, 200, 1920, 992);
   }
 
   /* .stages__image */
