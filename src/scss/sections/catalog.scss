@@ -1,6 +1,7 @@
 .catalog {
 
   @include adaptiveValue("padding-top", 105, 60);
+  @include adaptiveValue("padding-bottom", 105, 60);
 
   background-color: #fff;
 
@@ -149,65 +150,4 @@
 
   /* .item-catalog__button */
   &__button {}
-}
-
-
-.catalog {
-
-  /* .catalog__banner */
-  &__banner {
-    position: relative;
-    @include adaptiveValue("padding-top", 26, 12);
-    @include adaptiveValue("padding-bottom", 26, 12);
-    @include adaptiveValue("padding-right", 26, 12);
-    @include adaptiveValue("padding-left", 26, 12);
-    aspect-ratio: 1400/333;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      top: 0;
-      border-radius: 50px;
-      background: rgba(59, 67, 79, 0.80);
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      border-radius: 50px;
-      background: rgba(59, 67, 79, 0.80);
-      width: 100%;
-      height: 100%;
-    }
-
-
-    img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      top: 0;
-    }
-  }
-
-  /* .catalog__media-box */
-  &__border {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-  }
-
-  /* .catalog__border */
-  &__border {}
 }
