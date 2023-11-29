@@ -30,7 +30,9 @@
     font-weight: 900;
     line-height: normal;
 
-    &:first-child {
+    transition: all 0.3s;
+
+    &._tab-active {
       @include adaptiveValue("font-size", 20, 16);
       color: $colorOrange;
     }
@@ -64,7 +66,7 @@
 .item-catalog {
   display: grid;
   justify-items: center;
-  @include adaptiveValue("gap", 20, 15);
+  @include adaptiveValue("gap", 27, 15);
   // @include adaptiveValue("width", 453, 313);
   max-width: toRem(453);
   // @include adaptiveValue("height", 519, 257);
