@@ -30,7 +30,7 @@
     font-weight: 900;
     line-height: normal;
 
-    transition: all 0.3s;
+    transition: all 0.3s ease-in 0s;
 
     &._tab-active {
       @include adaptiveValue("font-size", 20, 16);
@@ -149,4 +149,15 @@
 
   /* .item-catalog__button */
   &__button {}
+}
+
+.catalog {
+  &__banner {
+
+    background: url('@img/catalog/banner-clean.png') 0 0 no-repeat;
+    img {
+      max-width: 100%;
+    }
+  }
+
 }
