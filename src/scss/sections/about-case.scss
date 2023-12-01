@@ -1,4 +1,6 @@
 .about-case {
+  @include adaptiveValue("padding-top", 282, 449);
+  @include adaptiveValue("padding-bottom", 116, 86);
 
   /* .about-case__container */
   &__container {
@@ -120,7 +122,7 @@
 
 .list-about-case {
   position: relative;
-  z-index: 30;
+  z-index: 20;
 
   /* .list-about__item */
   &__item {
