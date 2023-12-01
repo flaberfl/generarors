@@ -1,0 +1,45 @@
+.list-about-case {
+  position: relative;
+  z-index: 30;
+
+  /* .list-about__item */
+  &__item {
+    position: relative;
+    @include adaptiveValue("padding-left", 78, 50);
+
+    @include adaptiveValue("font-size", 22, 16);
+    line-height: normal;
+    letter-spacing: 1.1px;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 25, 12);
+    }
+
+    @media (max-width:$mobile) {
+      letter-spacing: 0.8px;
+    }
+  }
+
+  &__box {
+    position: absolute;
+    left: 0;
+    top: toRem(-8);
+    display: flex;
+    align-items: center;
+    gap: toRem(6);
+    @include adaptiveValue("gap", 6, 2);
+  }
+
+  /* .list-about__text */
+  &__text {
+
+    @include adaptiveValue("font-size", 22, 16);
+    color: $colorGrey;
+    line-height: normal;
+    letter-spacing: 1.1px;
+
+    @media (max-width:$mobile) {
+      letter-spacing: 0.8px;
+    }
+  }
+}
