@@ -23,11 +23,15 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 18px;
-    row-gap: 30px;
+    row-gap: 20px;
   }
 
   /* .catalog-cases__item */
   &__item {}
+
+  &__button {
+    margin-top: toRem(30);
+  }
 }
 
 .item-catalog-cases {
