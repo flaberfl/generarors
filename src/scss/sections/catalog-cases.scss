@@ -25,6 +25,7 @@
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    column-gap: 15px;
   }
 
   /* .catalog-cases__item */
@@ -37,11 +38,38 @@
   align-items: center;
   text-align: center;
   padding-top: toRem(50);
-  padding-bottom: toRem(50);
+  padding-bottom: toRem(30);
+  height: 100%;
+
+  gap: 50px;
+  border-radius: 50px;
+
+  background-color: #fff;
+
+  transition: all 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow: 0px 22px 40px 0px rgba(0, 0, 0, 0.19);
+
+      .item-catalog-cases__button {
+        opacity: 1;
+      }
+
+      .item-catalog-cases__content {
+        padding-bottom: toRem(130);
+      }
+    }
+  }
+
 
   /* .item-catalog-cases__image */
   &__image {
     position: relative;
+
+    img {
+      max-width: 100%;
+    }
   }
 
   /* .item-catalog-cases__badge */
@@ -52,8 +80,8 @@
     align-items: center;
     @include adaptiveValue("width", 77, 53);
     @include adaptiveValue("height", 77, 53);
-    top: -18%;
-    right: 5%;
+    top: -13%;
+    right: -7.2%;
 
     border-radius: 50%;
     background-color: $mainColor;
@@ -68,7 +96,11 @@
   }
 
   /* .item-catalog-cases__content */
-  &__content {}
+  &__content {
+    position: relative;
+
+    transition: all 0.3s;
+  }
 
   &__descr,
   &__name {
@@ -82,22 +114,48 @@
 
   /* .item-catalog-cases__descr */
 
-
   &__descr {}
 
   /* .item-catalog-cases__price */
   &__price {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
+    // gap: toRem(22);
+
+    margin-top: 30px;
+
+    position: relative;
+    text-align: center;
   }
 
   /* .item-catalog-cases__old-price */
-  &__old-price {}
+  &__old-price {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+
+    font-size: toRem(16);
+    color: #E10000;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: line-through;
+  }
 
   /* .item-catalog-cases__current-price */
-  &__current-price {}
+  &__current-price {
+    @include adaptiveValue("font-size", 20, 16);
+    font-weight: 900;
+    line-height: normal;
+  }
 
   &__button {
+    transform: translate(-50%, 20%);
+    position: absolute;
+    left: 50%;
     display: none;
+    text-align: center;
+    margin-top: toRem(10);
+    opacity: 0;
   }
 }
