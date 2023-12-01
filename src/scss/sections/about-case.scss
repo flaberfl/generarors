@@ -1,3 +1,34 @@
+.about-case {
+  /* .about-case__container */
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 49%;
+    // gap: 60px;
+  }
+  /* .about-case__media */
+  &__media {
+  }
+  /* .about-case__badge */
+  &__badge {
+  }
+  /* .about-case__content */
+  &__content {
+  }
+  /* .about-case__title */
+  &__title {
+  }
+  /* .about-case__list */
+  &__list {
+  }
+  /* .about-case__line */
+  &__line {
+  }
+  /* .about-case__slogan */
+  &__slogan {
+  }
+}
+
+
 .list-about-case {
   position: relative;
   z-index: 30;

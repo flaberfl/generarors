@@ -1,7 +1,8 @@
 .catalog {
 
   @include adaptiveValue("padding-top", 105, 60);
-  @include adaptiveValue("padding-bottom", 105, 60);
+  // @include adaptiveValue("padding-bottom", 105, 60);
+  padding-bottom: 122px;
 
   background-color: #fff;
 
