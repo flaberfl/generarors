@@ -1,30 +1,61 @@
 .about-case {
+
   /* .about-case__container */
   &__container {
     display: grid;
     grid-template-columns: 1fr 49%;
+    align-items: center;
+    // grid-template-columns: repeat(2, 1fr);
     // gap: 60px;
   }
+
   /* .about-case__media */
-  &__media {
+  &__image {
+    position: relative;
+
+    img {
+      transform: translate(-10%, 0px);
+      max-width: 100%;
+    }
   }
+
   /* .about-case__badge */
   &__badge {
+    position: absolute;
   }
+
   /* .about-case__content */
-  &__content {
-  }
+  &__content {}
+
   /* .about-case__title */
   &__title {
+    @include adaptiveValue("margin-bottom", 85, 30);
   }
+
   /* .about-case__list */
   &__list {
+    margin-left: toRem(-8);
   }
-  /* .about-case__line */
-  &__line {
-  }
+
   /* .about-case__slogan */
   &__slogan {
+    @include adaptiveValue("margin-top", 73, 20);
+    padding-left: toRem(30);
+    border-left: toRem(5) solid $colorOrange;
+
+    @include adaptiveValue("font-size", 20, 16);
+    line-height: normal;
+    letter-spacing: 1px;
+
+    @media (min-width:$mobile) {
+      padding-top: toRem(6);
+      padding-bottom: toRem(3);
+      margin-left: toRem(10);
+    }
+
+    @media (max-width:$mobile) {
+      letter-spacing: 0.8px;
+    }
   }
 }
 
