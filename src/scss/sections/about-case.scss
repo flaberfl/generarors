@@ -3,6 +3,8 @@
   /* .about-case__container */
   &__container {
     display: grid;
+    justify-items: center;
+    row-gap: 60px;
 
     @media (min-width:$tablet) {
       align-items: center;
@@ -11,28 +13,38 @@
   }
 
   /* .about-case__media */
-  &__image {
+  &__media {
     position: relative;
 
     @media (max-width:$tablet) {
       grid-area: 2/1;
     }
+  }
+
+  &__image {
+    @media (min-width:$tablet) {
+      transform: translate(-16.6%, 3%);
+    }
 
     img {
       max-width: 100%;
 
-      @media (min-width:$tablet) {
-        transform: translate(-15%, 3%);
+      @media (max-width:$tablet) {
+        max-width: 470px;
+      }
+
+      @media (max-width: em(550)) {
+        max-width: 100%;
       }
     }
   }
 
+
   /* .about-case__badge */
   &__badge {
     position: absolute;
-
-    right: 11%;
-    top: -11%;
+    right: -6.6%;
+    top: -13.8%;
     display: flex;
     justify-content: center;
     align-items: center;
