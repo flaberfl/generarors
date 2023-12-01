@@ -25,7 +25,8 @@
   &__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 15px;
+    column-gap: 18px;
+    row-gap: 30px;
   }
 
   /* .catalog-cases__item */
@@ -149,12 +150,18 @@
     line-height: normal;
   }
 
+  // &__footer {
+  //   position: absolute;
+  // }
+
   &__button {
-    transform: translate(-50%, 20%);
+    transform: translate(-50%, 0%);
     position: absolute;
     left: 50%;
     text-align: center;
-    margin-top: toRem(10);
+    margin-top: toRem(20);
     opacity: 0;
+
+    transition: all 0.3s;
   }
 }
