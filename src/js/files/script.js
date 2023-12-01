@@ -71,7 +71,3 @@ function response3() {
 }
 response3()
 
-
-
-
-
