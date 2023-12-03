@@ -63,19 +63,6 @@
   color: $colorGrey;
   line-height: normal;
   letter-spacing: 1.1px;
-
-  // white-space: nowrap;
-}
-
-.quiz {
-
-  /* .quiz__container */
-  &__container {}
-
-  /* .quiz__title */
-  &__title {
-    @include adaptiveValue("margin-bottom", 56, 38);
-  }
 }
 
 .quiz-form {
@@ -89,12 +76,12 @@
     grid-template-columns: repeat(2, 1fr);
     gap: toRem(20);
     align-items: center;
+    padding-right: toRem(20);
   }
 
   /* .quiz-form__media */
   &__media {
     position: relative;
-    // aspect-ratio: 688 / 751;
   }
 
   /* .quiz-form__background */
@@ -105,9 +92,7 @@
   /* .quiz-form__image */
   &__image {
     transform: translate(0, 4.4%);
-    max-width: 100% // bottom: 0;
-
-      // right: 0;
+    max-width: 100%;
   }
 
   /* .quiz-form__content */
@@ -122,6 +107,13 @@
     @include adaptiveValue("font-size", 26, 20);
     font-weight: 900;
     line-height: normal;
+
+    ._finish & {
+      max-width: toRem(570);
+      @include adaptiveValue("margin-bottom", 47, 30);
+
+      @include adaptiveValue("font-size", 32, 26);
+    }
   }
 
   /* .quiz-form__options */
@@ -147,6 +139,10 @@
   /* .quiz-form__button */
   &__button {
     max-width: toRem(164);
+
+    ._finish & {
+      max-width: toRem(242);
+    }
   }
 
   /* .quiz-form__progress-box */
@@ -198,6 +194,30 @@
     }
 
   }
+
+  &__line {
+    &:not(:last-child) {
+      margin-bottom: toRem(20);
+    }
+
+    &_name {
+      background: url('@img/quize/name.svg') 0 0 no-repeat;
+      width: 100%;
+    }
+  }
+
+  &__input {
+    @include adaptiveValue("height", 80, 60);
+    padding: toRem(10) toRem(29);
+    width: 100%;
+
+    border-radius: toRem(20);
+    background: #F5F5F5;
+
+    font-size: toRem(16);
+    font-weight: 400;
+    line-height: normal;
+  }
 }
 
 .wpcf7-form-control {}
@@ -237,20 +257,11 @@
     background-color: $colorOrange;
     height: 100%;
     border-radius: toRem(6);
-
-    &:last-child {
-      // width: 100%;
-    }
   }
-
-  // &__numbers {}
 
   /* .progress-box__value */
   &__values {
-    // display: grid;
-    // grid-template-columns: repeat(4, 1fr);
     display: flex;
-
   }
 
   &__number {
