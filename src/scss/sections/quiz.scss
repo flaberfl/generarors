@@ -155,11 +155,15 @@
   &__badge {
     position: absolute;
     display: flex;
+
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
     @include adaptiveValue("width", 108, 78);
     @include adaptiveValue("height", 108, 78);
-    max-width: 100%;
+    padding: toRem(18) 0;
+
     background-color: $mainColor;
     filter: drop-shadow(0px 10px 8px rgba(0, 0, 0, 0.25));
     border-radius: 50%;
@@ -175,12 +179,22 @@
     }
 
     span {
-      display: block;
       @include adaptiveValue("font-size", 38, 22);
     }
 
     &_5 {
-      top: 20%;
+      bottom: 22%;
+      right: 49%;
+    }
+
+    &_10 {
+      bottom: 35%;
+      right: 15%;
+    }
+
+    &_15 {
+      bottom: 50%;
+      right: 39%;
     }
 
   }
