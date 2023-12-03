@@ -77,6 +77,7 @@
     gap: toRem(20);
     align-items: center;
     padding-right: toRem(20);
+    @include adaptiveValue("padding-right", 118, 20, 1920, 992);
   }
 
   /* .quiz-form__media */
@@ -131,9 +132,18 @@
     max-width: toRem(573);
     padding: toRem(20);
     @include adaptiveValue("gap", 35, 15);
+    width: 100%;
 
     border-radius: toRem(50);
     box-shadow: $shadow;
+
+    ._finish & {
+      max-width: none;
+      justify-content: space-between;
+      padding: 0;
+
+      box-shadow: none;
+    }
   }
 
   /* .quiz-form__button */
@@ -192,17 +202,36 @@
       bottom: 50%;
       right: 39%;
     }
-
   }
 
   &__line {
+    position: relative;
+
     &:not(:last-child) {
       margin-bottom: toRem(20);
     }
 
     &_name {
-      background: url('@img/quize/name.svg') 0 0 no-repeat;
-      width: 100%;
+      &::before {
+        content: '';
+        position: absolute;
+        background: url('@img/quize/name.svg') center right no-repeat;
+        right: toRem(28);
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+    }
+
+    &_tel {
+      &::before {
+        content: '';
+        position: absolute;
+        background: url('@img/quize/tel.svg') center right no-repeat;
+        right: toRem(28);
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
@@ -238,6 +267,10 @@
     font-size: toRem(14);
     color: $colorGrey;
     line-height: normal;
+
+    ._finish & {
+      visibility: hidden;
+    }
   }
 
   /* .progress-box__bar */
