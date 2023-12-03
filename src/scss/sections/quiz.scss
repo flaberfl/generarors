@@ -1,0 +1,99 @@
+.quiz {
+
+  /* .quiz__container */
+  &__container {}
+
+  /* .quiz__title */
+  &__title {
+    @include adaptiveValue("margin-bottom", 56, 38);
+  }
+}
+
+.quiz-form {
+  background-color: #fff;
+  border-radius: toRem(50);
+  overflow: hidden;
+
+  /* .quiz-form__fieldset */
+  &__fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: toRem(20);
+    align-items: center;
+  }
+
+  /* .quiz-form__media */
+  &__media {
+    position: relative;
+    background: url('@img/quize/house-background.png') 0 0 no-repeat;
+    background-position: 100%;
+    background-size: cover;
+    padding-top: toRem(200);
+  }
+
+  /* .quiz-form__background */
+  &__background {
+    // max-width: 100%;
+    // transform: translate(0, 4.4%);
+
+  }
+
+  /* .quiz-form__image */
+  &__image {
+    // position: absolute;
+    max-width: 100%;
+    // object-fit: cover;
+    // bottom: 0;
+
+    // right: 0;
+  }
+
+  /* .quiz-form__content */
+  &__content {}
+
+  /* .quiz-form__title */
+  &__title {
+    @include adaptiveValue("margin-bottom", 64, 44);
+
+    @include adaptiveValue("font-size", 26, 20);
+    font-weight: 900;
+    line-height: normal;
+  }
+
+  /* .quiz-form__options */
+  &__options {}
+
+  /* .quiz-form__progress-wrapper */
+  &__progress-wrapper {}
+
+  /* .quiz-form__button */
+  &__button {}
+
+  /* .quiz-form__progress-box */
+  &__progress-box {}
+}
+
+.wpcf7-form-control {}
+
+.wpcf7-radio {}
+
+.wpcf7-list-item {}
+
+.wpcf7-list-item-label {}
+
+.button {}
+
+.progress-box {
+
+  /* .progress-box__text */
+  &__text {}
+
+  /* .progress-box__bar */
+  &__bar {}
+
+  /* .progress-box__progress */
+  &__progress {}
+
+  /* .progress-box__value */
+  &__value {}
+}
