@@ -64,10 +64,21 @@
   &__options {}
 
   /* .quiz-form__progress-wrapper */
-  &__progress-wrapper {}
+  &__progress-wrapper {
+    display: flex;
+    align-items: center;
+    max-width: toRem(573);
+    padding: toRem(20);
+    @include adaptiveValue("gap", 35, 15);
+
+    border-radius: toRem(50);
+    box-shadow: $shadow;
+  }
 
   /* .quiz-form__button */
-  &__button {}
+  &__button {
+    max-width: toRem(164);
+  }
 
   /* .quiz-form__progress-box */
   &__progress-box {}
@@ -81,19 +92,57 @@
 
 .wpcf7-list-item-label {}
 
-.button {}
-
 .progress-box {
+  @include adaptiveValue("width", 304, 247);
 
   /* .progress-box__text */
-  &__text {}
+  &__text {
+    margin-bottom: toRem(17);
+
+    font-size: toRem(14);
+    color: $colorGrey;
+    line-height: normal;
+  }
 
   /* .progress-box__bar */
-  &__bar {}
+  &__bar {
+    margin-bottom: toRem(11);
+    width: 100%;
+    height: toRem(10);
+
+    border-radius: toRem(6);
+    background: #D9D9D9;
+  }
 
   /* .progress-box__progress */
-  &__progress {}
+  &__progress {
+    width: 25%;
+    background-color: $colorOrange;
+    height: 100%;
+    border-radius: toRem(6);
+
+  }
+
+  // &__numbers {}
 
   /* .progress-box__value */
-  &__value {}
+  &__values {
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    display: flex;
+
+  }
+
+  &__number {
+    margin-right: 23.3%;
+
+    font-size: toRem(14);
+    font-weight: 900;
+    line-height: normal;
+    color: #BCC0CC;
+
+    &._active{
+      color: $colorOrange;
+    }
+  }
 }
