@@ -93,7 +93,7 @@
 
   /* .quiz-form__media */
   &__media {
-    // position: relative;
+    position: relative;
     // aspect-ratio: 688 / 751;
   }
 
@@ -151,6 +151,39 @@
 
   /* .quiz-form__progress-box */
   &__progress-box {}
+
+  &__badge {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("width", 108, 78);
+    @include adaptiveValue("height", 108, 78);
+    max-width: 100%;
+    background-color: $mainColor;
+    filter: drop-shadow(0px 10px 8px rgba(0, 0, 0, 0.25));
+    border-radius: 50%;
+
+    @include adaptiveValue("font-size", 22, 18);
+    color: $colorOrange;
+    line-height: normal;
+    letter-spacing: 1.1px;
+    text-align: center;
+
+    @media (max-width:$mobile) {
+      letter-spacing: .8px;
+    }
+
+    span {
+      display: block;
+      @include adaptiveValue("font-size", 38, 22);
+    }
+
+    &_5 {
+      top: 20%;
+    }
+
+  }
 }
 
 .wpcf7-form-control {}
@@ -178,6 +211,7 @@
     margin-bottom: toRem(11);
     width: 100%;
     height: toRem(10);
+    display: flex;
 
     border-radius: toRem(6);
     background: #D9D9D9;
@@ -190,6 +224,9 @@
     height: 100%;
     border-radius: toRem(6);
 
+    &:last-child {
+      // width: 100%;
+    }
   }
 
   // &__numbers {}
