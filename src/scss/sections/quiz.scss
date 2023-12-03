@@ -48,16 +48,23 @@
     left: toRem(50);
     top: 50%;
   }
+
+  label {
+    display: flex;
+  }
 }
 
 // Текст радио кнопки
 .wpcf7-list-item-label {
-  margin-left: toRem(57);
+  margin-left: toRem(62);
+  // display: inline-flex;
 
   font-size: toRem(22);
   color: $colorGrey;
   line-height: normal;
   letter-spacing: 1.1px;
+
+  // white-space: nowrap;
 }
 
 .quiz {
@@ -86,36 +93,31 @@
 
   /* .quiz-form__media */
   &__media {
-    position: relative;
-    background: url('@img/quize/house-background.png') 0 0 no-repeat;
-    background-position: 100%;
-    background-size: cover;
-    padding-top: toRem(200);
+    // position: relative;
+    // aspect-ratio: 688 / 751;
   }
 
   /* .quiz-form__background */
   &__background {
-    // max-width: 100%;
-    // transform: translate(0, 4.4%);
-
+    max-width: 100%;
   }
 
   /* .quiz-form__image */
   &__image {
-    // position: absolute;
-    max-width: 100%;
-    // object-fit: cover;
-    // bottom: 0;
+    transform: translate(0, 4.4%);
+    max-width: 100% // bottom: 0;
 
-    // right: 0;
+      // right: 0;
   }
 
   /* .quiz-form__content */
-  &__content {}
+  &__content {
+    padding-top: toRem(43);
+  }
 
   /* .quiz-form__title */
   &__title {
-    @include adaptiveValue("margin-bottom", 64, 44);
+    @include adaptiveValue("margin-bottom", 69, 44);
 
     @include adaptiveValue("font-size", 26, 20);
     font-weight: 900;
@@ -126,6 +128,8 @@
   &__options {
     display: grid;
     gap: toRem(25);
+
+    @include adaptiveValue("margin-bottom", 63, 50);
   }
 
   /* .quiz-form__progress-wrapper */
