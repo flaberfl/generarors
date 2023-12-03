@@ -1,3 +1,65 @@
+// Прячем нативные кнопки RADIO
+.wpcf7-radio input[type=radio] {
+  position: relative;
+  visibility: hidden;
+}
+
+.wpcf7-radio label {
+  position: relative;
+  cursor: pointer;
+}
+
+// Бэкграунд радио кнопки
+.wpcf7-radio input[type="radio"]+span:before {
+  display: block;
+  position: absolute;
+  content: '';
+
+  width: toRem(37);
+  height: toRem(37);
+
+  border-radius: toRem(12);
+  left: 0;
+
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: transparent;
+  border: toRem(1) solid #BCC0CC;
+}
+
+// Галочка при нажатии на кнопку
+.wpcf7-radio input[type=radio]:checked+span:before {
+  height: toRem(38);
+  box-shadow: 0px 7px 12px 0px rgba(0, 0, 0, 0.19);
+  background: url('@img/quize/check.svg') center center no-repeat;
+  border-radius: toRem(12);
+}
+
+// Дефис между кнопкой и текстом
+.wpcf7-list-item {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-color: #BCC0CC;
+    width: toRem(16);
+    height: toRem(2);
+    left: toRem(50);
+    top: 50%;
+  }
+}
+
+// Текст радио кнопки
+.wpcf7-list-item-label {
+  margin-left: toRem(57);
+
+  font-size: toRem(22);
+  color: $colorGrey;
+  line-height: normal;
+  letter-spacing: 1.1px;
+}
+
 .quiz {
 
   /* .quiz__container */
@@ -61,7 +123,10 @@
   }
 
   /* .quiz-form__options */
-  &__options {}
+  &__options {
+    display: grid;
+    gap: toRem(25);
+  }
 
   /* .quiz-form__progress-wrapper */
   &__progress-wrapper {
@@ -141,7 +206,7 @@
     line-height: normal;
     color: #BCC0CC;
 
-    &._active{
+    &._active {
       color: $colorOrange;
     }
   }
