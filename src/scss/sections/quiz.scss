@@ -1,3 +1,11 @@
+.quiz {
+  @include adaptiveValue("padding-top", 290, 488);
+
+  &__title {
+    @include adaptiveValue("margin-bottom", 60, 38);
+  }
+}
+
 // Прячем нативные кнопки RADIO
 .wpcf7-radio input[type=radio] {
   position: relative;
@@ -57,9 +65,8 @@
 // Текст радио кнопки
 .wpcf7-list-item-label {
   margin-left: toRem(62);
-  // display: inline-flex;
 
-  font-size: toRem(22);
+  @include adaptiveValue("font-size", 22, 16);
   color: $colorGrey;
   line-height: normal;
   letter-spacing: 1.1px;
@@ -67,10 +74,16 @@
 
 .quiz-form {
   background-color: #fff;
-  border-radius: toRem(50);
   overflow: hidden;
 
-  padding-bottom: toRem(64);
+  @media (min-width:$tablet) {
+    border-radius: toRem(50);
+  }
+
+  @media (max-width:$tablet) {
+    margin-left: toRem(-15);
+    margin-right: toRem(-15);
+  }
 
   /* .quiz-form__fieldset */
   &__fieldset {
@@ -78,16 +91,25 @@
     grid-template-columns: repeat(2, 1fr);
     gap: toRem(20);
     align-items: center;
-    // padding-right: toRem(20);
+    overflow: hidden;
+    padding-bottom: toRem(64);
+
+    @media (max-width:$tablet) {
+      grid-template-columns: auto;
+      justify-content: center;
+    }
 
     opacity: 0;
     position: absolute;
-    z-index: -20;
-    transition: all .6s ease 0s;
     transform: scale(.8);
 
 
+    z-index: -20;
+    transition: all .3s ease 0s;
+
+
     &._active {
+
       opacity: 1;
       position: relative;
       z-index: 100;
@@ -95,13 +117,17 @@
     }
 
     &._finish {
-      @include adaptiveValue("padding-right", 118, 20, 1920, 992);
+      @include adaptiveValue("padding-right", 118, 20, 1, 1920, 992);
     }
   }
 
   /* .quiz-form__media */
   &__media {
     position: relative;
+
+    @media (max-width:$tablet) {
+      margin: 0 auto;
+    }
   }
 
   /* .quiz-form__background */
@@ -113,11 +139,25 @@
   &__image {
     transform: translate(0, 4.4%);
     max-width: 100%;
+
+    @media (max-width:$tablet) {
+      max-width: toRem(460);
+    }
+
+    @media (max-width: em(550)) {
+      max-width: 100%;
+    }
   }
 
   /* .quiz-form__content */
   &__content {
     padding-top: toRem(135);
+    max-width: toRem(600);
+
+    @media (max-width:$tablet) {
+      grid-area: 1/1;
+      padding: toRem(50) toRem(20) 0 toRem(20);
+    }
   }
 
   /* .quiz-form__title */
@@ -140,7 +180,6 @@
   &__options {
     display: grid;
     gap: toRem(25);
-
     @include adaptiveValue("margin-bottom", 63, 50);
   }
 
@@ -153,7 +192,7 @@
     @include adaptiveValue("gap", 35, 15);
     width: 100%;
 
-    border-radius: toRem(50);
+    @include adaptiveValue("border-radius", 50, 30);
     box-shadow: $shadow;
 
     ._finish & {
@@ -169,13 +208,21 @@
   &__button {
     max-width: toRem(164);
 
+    @media (max-width: em(550)) {
+      margin-top: toRem(32);
+    }
+
     ._finish & {
       max-width: toRem(242);
     }
   }
 
   /* .quiz-form__progress-box */
-  &__progress-box {}
+  &__progress-box {
+    @media (max-width: em(550)) {
+      width: 100% !important;
+    }
+  }
 
   &__badge {
     position: absolute;
@@ -338,7 +385,6 @@
   }
 }
 
-
 .checkbox_cf7 {
   display: flex;
   align-items: flex-start;
@@ -359,7 +405,6 @@ input[type="checkbox"] {
   gap: toRem(20);
 }
 
-
 .wpcf7-acceptance .wpcf7-list-item span:before,
 .checkbox__label:before {
   content: "";
@@ -375,7 +420,6 @@ input[type="checkbox"] {
   position: relative;
   padding-left: toRem(20);
   padding-top: toRem(9);
-
 
   font-size: toRem(14);
   line-height: normal;
