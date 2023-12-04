@@ -71,3 +71,54 @@ function response3() {
 }
 response3()
 
+
+
+// Функционал квиза
+
+const quiz = document.querySelector('.quiz-form');
+const quizItems = quiz.querySelectorAll('.quiz-form__fieldset');
+const btnsNext = quiz.querySelectorAll('.button_next');
+
+
+
+let count = 0;
+quizItems[count].classList.add('_active');
+
+btnsNext.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    count++;
+    initQuiz();
+  });
+
+  btn.disabled = true;
+
+  if (btn.classList.contains('quiz-form__button_start')) {
+    btn.disabled = false;
+  }
+});
+
+function initQuiz() {
+  quizItems.forEach((element, i) => {
+    element.classList.remove('_active')
+    if (i === count) {
+      element.classList.add('_active')
+    }
+  })
+}
+
+quizItems.forEach((quizItem, quizItemIndex) => {
+
+  quizItem.addEventListener('change', (e) => {
+    const target = e.target;
+    const inputsChecked = quizItem.querySelectorAll('input[type="checkbox"]:checked');
+
+    if (inputsChecked.length > 0) {
+      // разблокировать кнопку именно эту
+      btnsNext[quizItemIndex].disabled = false;
+    } else {
+      // заблокировать эту кнопку
+      btnsNext[quizItemIndex].disabled = true;
+    }
+  })
+});
