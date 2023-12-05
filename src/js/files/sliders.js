@@ -73,7 +73,6 @@ function initSliders() {
 				clickable: true,
 			},
 
-
 			navigation: {
 				prevEl: '.our-works-button-prev',
 				nextEl: '.our-works-button-next',
@@ -81,6 +80,11 @@ function initSliders() {
 
 			// Брейкпоінти
 			breakpoints: {
+				360: {
+					// centeredSlides: true,
+					slidesPerView: 1,
+					spaceBetween: 20,
+				},
 				640: {
 					// centeredSlides: true,
 					slidesPerView: 1,

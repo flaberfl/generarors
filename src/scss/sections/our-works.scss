@@ -1,5 +1,6 @@
 .our-works {
   @include adaptiveValue("padding-top", 105, 60);
+  @include adaptiveValue("padding-bottom", 365, 208);
 
   background-color: #fff;
 
@@ -187,4 +188,12 @@
   background: url('@img/our-works/arr-right.svg') center center no-repeat;
   background-color: rgba(255, 255, 255, 0.4);
   right: 5%;
+}
+
+.our-works__pagination {
+  display: none;
+
+  @media (max-width:$mobile) {
+    display: block;
+  }
 }
