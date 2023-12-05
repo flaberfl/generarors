@@ -1,5 +1,6 @@
 .quiz {
   @include adaptiveValue("padding-top", 290, 488);
+  @include adaptiveValue("padding-bottom", 157, 67);
 
   &__title {
     @include adaptiveValue("margin-bottom", 60, 38);
