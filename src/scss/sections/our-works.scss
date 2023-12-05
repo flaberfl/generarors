@@ -193,7 +193,27 @@
 .our-works__pagination {
   display: none;
 
+  bottom: toRem(-45) !important;
+
   @media (max-width:$mobile) {
     display: block;
+  }
+}
+
+.swiper-pagination-bullet {
+  width: toRem(13) !important;
+  height: toRem(13) !important;
+
+  // background-color: #D9D9D9 !important;
+}
+
+.swiper-pagination-bullet {
+
+  margin-right: toRem(7) !important;
+  margin-left: toRem(7) !important;
+
+  &.swiper-pagination-bullet-active {
+    background-color: $colorOrange !important;
+
   }
 }
