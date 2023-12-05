@@ -47,6 +47,29 @@
     }
   }
 
+  &__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include adaptiveValue("width", 148, 77);
+    @include adaptiveValue("height", 148, 77);
+
+    background: url('@img/our-works/play.svg') center center no-repeat;
+    background-color: rgba(255, 255, 255, 0.97);
+
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
+    z-index: 20;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background: url('@img/our-works/circle.svg') center center no-repeat;
+    }
+  }
+
 
   &__text {
     text-align: center;
