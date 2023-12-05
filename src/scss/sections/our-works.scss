@@ -19,6 +19,10 @@
   &__box {
     position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     border-radius: toRem(50);
     // aspect-ratio: 1164 / 720;
     // width: 100%;
@@ -36,6 +40,7 @@
       }
     }
 
+
     &::before {
       transition: opacity .6s;
       content: '';
@@ -47,7 +52,31 @@
     }
   }
 
+  &__decor-circle {
+
+    .swiper-slide-active & {
+      opacity: 1;
+    }
+
+    position: absolute;
+
+    opacity: 0;
+    animation: moving 6s infinite linear;
+
+    @media (max-width:$tablet) {
+      width: toRem(180);
+      height: toRem(180);
+    }
+  }
+
   &__button {
+    transition: all 0.6s;
+
+    .swiper-slide-active & {
+      opacity: .8;
+      pointer-events: all;
+    }
+
     position: absolute;
     top: 50%;
     left: 50%;
@@ -59,14 +88,17 @@
     background: url('@img/our-works/play.svg') center center no-repeat;
     background-color: rgba(255, 255, 255, 0.97);
 
+    pointer-events: none;
     border-radius: 50%;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
+    opacity: 0;
     z-index: 20;
 
-    &::before {
-      content: '';
-      position: absolute;
-      background: url('@img/our-works/circle.svg') center center no-repeat;
+    @media (any-hover: hover) {
+      &:hover {
+        // transform: scale(1.02);
+        opacity: 1;
+      }
     }
   }
 
