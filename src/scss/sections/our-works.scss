@@ -3,8 +3,13 @@
 
   background-color: #fff;
 
+
   &__title {
     margin-bottom: toRem(100);
+  }
+
+  &__slider {
+    position: relative;
   }
 
   &__image {
@@ -92,4 +97,37 @@
 .swiper {
   // max-width: toRem(1920) !important;
   overflow: visible !important;
+}
+
+.our-works-button-prev,
+.our-works-button-next {
+  position: absolute;
+  @include adaptiveValue("width", 80, 49);
+  @include adaptiveValue("height", 80, 49);
+
+  border-radius: 50%;
+
+  top: 40%;
+  transform: translate(0px, -50%);
+  z-index: 10;
+
+  transition: all 0.6s;
+
+  &:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.06));
+    background-color: rgba(255, 255, 255, 0.97);
+  }
+}
+
+.our-works-button-prev {
+  left: 5%;
+  background: url('@img/our-works/arr-left.svg') center center no-repeat;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.our-works-button-next {
+  background-color: red;
+  background: url('@img/our-works/arr-right.svg') center center no-repeat;
+  background-color: rgba(255, 255, 255, 0.4);
+  right: 5%;
 }

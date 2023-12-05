@@ -40,7 +40,7 @@ function initSliders() {
 			centeredSlides: true,
 			spaceBetween: -60,
 			loop: true,
-			grabCursor: true,
+			// grabCursor: true,
 			//autoHeight: true,
 			speed: 800,
 			centeredSlides: true,
@@ -75,8 +75,8 @@ function initSliders() {
 
 
 			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
+				prevEl: '.our-works-button-prev',
+				nextEl: '.our-works-button-next',
 			},
 			/*
 			// Брейкпоінти
