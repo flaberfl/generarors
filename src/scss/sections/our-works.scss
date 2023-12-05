@@ -2,7 +2,6 @@
   margin-bottom: toRem(100);
 }
 
-
 .our-works__image {
   max-width: 100%;
 }
@@ -10,7 +9,8 @@
 .our-works__slide {
   position: relative;
   overflow: hidden;
-  border-radius: 50px;
+  border-radius: toRem(50);
+  // aspect-ratio: 1164 / 720;
   scale: .8;
 
   &.swiper-slide-active {
@@ -28,7 +28,6 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    // border-radius: 50px;
     opacity: 0;
     background: rgba(59, 67, 79, 0.80);
   }
