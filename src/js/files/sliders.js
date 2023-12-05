@@ -36,8 +36,8 @@ function initSliders() {
 			modules: [Navigation, Pagination],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1.5,
 			centeredSlides: true,
+			slidesPerView: 1.5,
 			spaceBetween: -60,
 			loop: true,
 			// grabCursor: true,
@@ -78,28 +78,31 @@ function initSliders() {
 				prevEl: '.our-works-button-prev',
 				nextEl: '.our-works-button-next',
 			},
-			/*
+
 			// Брейкпоінти
 			breakpoints: {
 				640: {
+					// centeredSlides: true,
 					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
+					spaceBetween: 20,
 				},
 				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
+					centeredSlides: true,
+					slidesPerView: 1.5,
+					spaceBetween: -40,
 				},
 				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
+					centeredSlides: true,
+					slidesPerView: 1.5,
+					spaceBetween: -60,
 				},
 				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
+					centeredSlides: true,
+					slidesPerView: 1.5,
+					spaceBetween: -60,
 				},
 			},
-			*/
+
 			// Події
 			on: {
 

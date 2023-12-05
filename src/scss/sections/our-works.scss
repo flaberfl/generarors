@@ -24,21 +24,7 @@
     align-items: center;
 
     border-radius: toRem(50);
-    // aspect-ratio: 1164 / 720;
-    // width: 100%;
-    // height: 100%;
     @include adaptiveValue("margin-bottom", 43, 21);
-
-    scale: .8;
-
-    .swiper-slide-active & {
-      transition: scale .6s;
-      scale: 1;
-
-      &::before {
-        opacity: 1;
-      }
-    }
 
 
     &::before {
@@ -47,8 +33,24 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      opacity: 0;
       background: rgba(59, 67, 79, 0.80);
+
+      @media (min-width:$mobile) {
+        opacity: 0;
+      }
+    }
+
+    @media (min-width:$mobile) {
+      scale: .8;
+
+      .swiper-slide-active & {
+        transition: scale .6s;
+        scale: 1;
+
+        &::before {
+          opacity: 1;
+        }
+      }
     }
   }
 
