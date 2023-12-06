@@ -6,24 +6,29 @@
 	display: grid;
 	gap: 15px;
 }
+
 // Спойлер
 .spollers__item {
 	font-size: toRem(20);
 }
+
 // Заголовок спойлера
 .spollers__title {
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	border: 1px solid #eee;
 	padding: toRem(10) toRem(15);
-	border-radius: toRem(5);
+
+	@include adaptiveValue("border-radius", 40, 30);
+
 	position: relative;
 	list-style: none;
-	&::marker {
-	}
+
+	&::marker {}
+
 	._spoller-init & {
 		cursor: pointer;
+
 		&::before,
 		&::after {
 			content: "";
@@ -35,20 +40,25 @@
 			width: 15px;
 			transition: transform 0.5s ease 0s;
 		}
+
 		&::before {
 			transform: translate(-75%, -50%) rotate(40deg);
 		}
+
 		&::after {
 			transform: translate(0, -50%) rotate(-40deg);
 		}
+
 		&._spoller-active {
 			&::before {
 				transform: translateX(-75%) rotate(-40deg);
 			}
+
 			&::after {
 				transform: rotate(40deg);
 			}
 		}
+
 		/*
 		._spoller-init & {
 			position: relative;
@@ -84,6 +94,7 @@
 		*/
 	}
 }
+
 // Контент спойлера
 .spollers__body {
 	padding: toRem(20);
