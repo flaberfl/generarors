@@ -1,0 +1,14 @@
+.section-map {
+
+  /* .section-map__container */
+  &__container {}
+
+  /* .section-map__map */
+  &__map {}
+}
+
+.map {
+  height: toRem(860);
+
+  background-color: lawngreen;
+}
