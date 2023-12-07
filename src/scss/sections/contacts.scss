@@ -7,7 +7,19 @@
   &__title {}
 
   /* .contacts__list */
-  &__list {}
+  &__list {
+    max-width: toRem(388);
+    border-radius: toRem(50);
+    border: toRem(6) solid rgba(255, 255, 255, 0.97);
+    
+    @include adaptiveValue("padding-top", 60, 30);
+    @include adaptiveValue("padding-right", 62, 27);
+    @include adaptiveValue("padding-bottom", 70, 35);
+    @include adaptiveValue("padding-left", 76, 22);
+
+
+    background: #FFF;
+  }
 
   /* .contacts__item */
   &__item {}
