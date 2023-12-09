@@ -80,12 +80,19 @@
 		@include adaptiveValue("padding-top", 26, 12);
 		@include adaptiveValue("padding-bottom", 26, 12);
 		// aspect-ratio: 1400/333;
-		background: url('@img/catalog/banner-1.jpg') center / cover no-repeat;
 		// overflow: hidden;
 
 		// border: 1px solid #fff;
 		border-radius: toRem(50);
 		z-index: 30;
+
+		.banner_1 & {
+			background: url('@img/catalog/banner-1.jpg') center / cover no-repeat;
+		}
+
+		.banner_2 & {
+			background: url('@img/catalog/banner-2.jpg') center / cover no-repeat;
+		}
 	}
 
 	&__title {
@@ -186,11 +193,23 @@
 		&_1 {
 			right: 2.5%;
 			top: -39%;
+
+			.banner_2 & {
+				right: 2.5%;
+				top: 6%;
+				rotate: 192deg;
+			}
 		}
 
 		&_2 {
 			right: -3.3%;
 			top: -25.3%;
+
+			.banner_2 & {
+				right: -5.7%;
+				top: 2.9%;
+				rotate: 125deg;
+			}
 		}
 	}
 
