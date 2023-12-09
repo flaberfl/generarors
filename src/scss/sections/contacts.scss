@@ -8,31 +8,91 @@
 
   /* .contacts__list */
   &__list {
-    max-width: toRem(388);
+    max-width: toRem(572);
+    display: grid;
+    gap: toRem(27);
     border-radius: toRem(50);
     border: toRem(6) solid rgba(255, 255, 255, 0.97);
-    
-    @include adaptiveValue("padding-top", 60, 30);
+
+    @include adaptiveValue("padding-top", 54, 30);
     @include adaptiveValue("padding-right", 62, 27);
     @include adaptiveValue("padding-bottom", 70, 35);
-    @include adaptiveValue("padding-left", 76, 22);
-
+    @include adaptiveValue("padding-left", 73, 22);
 
     background: #FFF;
   }
 
   /* .contacts__item */
-  &__item {}
+  &__item {
+    display: flex;
+    align-items: start;
+  }
 
   /* .contacts__icon */
-  &__icon {}
+  &__icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("gap", 20, 12);
+
+    @media (max-width:$mobile){
+      padding-top: toRem(6); 
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      height: toRem(2);
+      @include adaptiveValue("width", 18, 11);
+      right: 0;
+      background-color: #BCC0CC;
+    }
+
+    img {
+
+      @media (max-width:$mobile){
+        max-width: 36%;
+      }
+    }
+  }
 
   /* .contacts__address */
-  &__address {}
+  &__value {
+    @include adaptiveValue("padding-left", 19, 10);
+    padding-top: toRem(6);
 
-  /* .contacts__time */
-  &__time {}
+    @include adaptiveValue("font-size", 20, 16);
+    letter-spacing: 1px;
 
-  /* .contacts__callme */
-  &__callme {}
+    line-height: normal;
+
+    @media (max-width:$mobile) {
+      letter-spacing: 0.8px;
+    }
+
+    span {
+      display: block;
+      margin-bottom: toRem(8);
+
+      font-size: toRem(16);
+      color: $colorGrey;
+      line-height: normal;
+      letter-spacing: 0.8px;
+
+      @media (max-width:$mobile) {
+        font-size: toRem(14);
+        letter-spacing: 0.7px;
+      }
+    }
+  }
+
+  &__mail {
+    padding-top: toRem(9);
+    display: block;
+
+    @include adaptiveValue("font-size", 20, 16);
+    text-decoration: underline !important;
+    letter-spacing: 1px !important;
+    color: $mainColor !important;
+  }
 }
