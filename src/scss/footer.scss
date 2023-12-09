@@ -1,12 +1,20 @@
 //====================================================================================================
 
 .footer {
-  // position: relative;
+  position: relative;
   z-index: 10;
   // background-color: #000;
-  padding-bottom: toRem(40);
-  padding-top: toRem(40);
+  // padding-bottom: toRem(40);
+  // padding-top: toRem(40);
+  @include adaptiveValue("padding-bottom", 40, 20);
+  @include adaptiveValue("padding-top", 40, 20);
+  height: 100%;
+  // background: linear-gradient(180deg, rgba(25, 33, 46, 0.00) 0%, rgba(25, 33, 46, 0.88) 65.1%);
+  // background-color: rgba(25, 33, 46, 0.88);
 
+  @media (max-width: em(530)) {
+    background-color: $mainColor;
+  }
 
   /* .footer__container */
   &__container {
