@@ -1,10 +1,14 @@
 .contacts {
+  padding-top: toRem(150);
+  padding-bottom: toRem(45);
 
   /* .contacts__container */
   &__container {}
 
   /* .contacts__title */
   &__title {
+    margin-bottom: toRem(53);
+
     color: #fff;
   }
 

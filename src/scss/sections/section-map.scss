@@ -1,4 +1,11 @@
 .section-map {
+  position: absolute;
+  background: url('@img/map/map.png') center top no-repeat;
+  aspect-ratio: 2024 / 860;
+  width: 100%;
+  height: 100%;
+
+  z-index: -1;
 
   /* .section-map__container */
   &__container {}
@@ -8,7 +15,11 @@
 }
 
 .map {
-  position: absolute;
+
+  img {
+    max-width: 100%;
+  }
+
   // height: toRem(860);
   // // clip-path: ellipse(50% 35%);
   // // background-color: lawngreen;
