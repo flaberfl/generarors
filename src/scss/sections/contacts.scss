@@ -4,7 +4,9 @@
   &__container {}
 
   /* .contacts__title */
-  &__title {}
+  &__title {
+    color: #fff;
+  }
 
   /* .contacts__list */
   &__list {
@@ -35,8 +37,8 @@
     align-items: center;
     @include adaptiveValue("gap", 20, 12);
 
-    @media (max-width:$mobile){
-      padding-top: toRem(6); 
+    @media (max-width:$mobile) {
+      padding-top: toRem(6);
     }
 
     &::before {
@@ -50,7 +52,7 @@
 
     img {
 
-      @media (max-width:$mobile){
+      @media (max-width:$mobile) {
         max-width: 36%;
       }
     }
