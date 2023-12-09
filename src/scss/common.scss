@@ -91,15 +91,35 @@
 		}
 
 		.banner_2 & {
+			min-height: toRem(333);
+
 			background: url('@img/catalog/banner-2.jpg') center / cover no-repeat;
+		}
+
+		.banner_3 & {
+			@include adaptiveValue("height", 497, 579);
+			// min-height: toRem(497);
+			background: url('@img/catalog/banner-3.jpg') center / cover no-repeat;
 		}
 	}
 
 	&__title {
-		color: #fff;
+		color: $whiteColor;
 
+		word-wrap: break-word;
+
+		.banner_3 & {
+			max-width: toRem(808);
+		}
+	
 		@media (max-width:$tablet) {
 			margin-bottom: toRem(34);
+		}
+
+		@media (max-width: em(480)) {
+			.banner_3 & {
+				max-width: toRem(280);
+			}
 		}
 	}
 

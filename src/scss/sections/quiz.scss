@@ -280,12 +280,15 @@
 
     &_name,
     &_tel {
-      &::before {
-        content: '';
-        position: absolute;
-        right: toRem(28);
-        top: 50%;
-        transform: translate(0, -50%);
+      @media (min-width:em(480)) {
+
+        &::before {
+          content: '';
+          position: absolute;
+          right: toRem(28);
+          top: 50%;
+          transform: translate(0, -50%);
+        }
       }
     }
 
