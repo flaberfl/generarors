@@ -1,5 +1,6 @@
 .contacts {
-  padding-top: toRem(150);
+  // padding-top: toRem(150);
+  @include adaptiveValue("padding-top", 150, 60);
   padding-bottom: toRem(45);
 
   /* .contacts__container */

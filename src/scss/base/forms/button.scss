@@ -73,5 +73,70 @@
 	border: 1px solid $colorOrange;
 	font-weight: 700;
 	color: $mainColor;
+}
 
+.button__up-box {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include adaptiveValue("width", 128, 76);
+	@include adaptiveValue("height", 128, 76);
+
+	background-color: #F0F0F0;
+	border-radius: 50%;
+
+	img {
+		// @include adaptiveValue("width", 24, 14);
+		@include adaptiveValue("height", 24, 14);
+
+		z-index: 10;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		@include adaptiveValue("width", 80, 48);
+		@include adaptiveValue("height", 80, 48);
+		background: linear-gradient(94deg, #FBBF01 -1.4%, #E24C30 95.99%);
+		border-radius: 50%;
+	}
+}
+
+.button__up {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	right: -1.2%;
+	// left: 50.4%;
+	transform: translate(0%, 16%);
+
+	@include adaptiveValue("gap", 132, 90);
+
+	@media (max-width: em(670)) {
+		transform: translate(0%, 216%);
+	}
+
+	span {
+		position: relative;
+		display: inline-block;
+		transform: rotate(90deg);
+		@include adaptiveValue("font-size", 16, 12);
+		font-weight: 700;
+		line-height: normal;
+		color: #BCC0CC;
+
+		&::before {
+			content: "";
+			position: absolute;
+			background-color: #BCC0CC;
+			@include adaptiveValue("width", 27, 19);
+			height: 1px;
+			left: -46px;
+			@include adaptiveValue("left", -46, -34);
+			top: 50%;
+		}
+	}
 }

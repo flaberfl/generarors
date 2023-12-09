@@ -9,7 +9,9 @@
   z-index: -1;
 
   /* .section-map__container */
-  &__container {}
+  &__container {
+    position: relative;
+  }
 
   /* .section-map__map */
   &__map {}
