@@ -181,7 +181,9 @@
 
   /* .about__list */
   &__list {
-    margin-left: toRem(-5);
+    @media (min-width:$mobile) {
+      margin-left: toRem(-5);
+    }
   }
 
   /* .about__img */
@@ -228,6 +230,8 @@
 .list-about {
   position: relative;
   z-index: 30;
+  display: grid;
+  @include adaptiveValue("gap", 25, 20);
 
   /* .list-about__item */
   &__item {
@@ -239,7 +243,7 @@
     letter-spacing: 1.1px;
 
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 25, 12);
+      // @include adaptiveValue("margin-bottom", 25, 12);
     }
 
     @media (max-width:$mobile) {
@@ -251,10 +255,17 @@
     position: absolute;
     left: 0;
     top: toRem(-8);
+    @include adaptiveValue("top", -8, -1);
     display: flex;
     align-items: center;
     gap: toRem(6);
     @include adaptiveValue("gap", 6, 2);
+
+
+    img {
+      @include adaptiveValue("width", 45, 23);
+      @include adaptiveValue("height", 45, 23);
+    }
   }
 
   /* .list-about__text */

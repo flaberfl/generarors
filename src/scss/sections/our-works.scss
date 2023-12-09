@@ -1,12 +1,12 @@
 .our-works {
   @include adaptiveValue("padding-top", 105, 60);
-  @include adaptiveValue("padding-bottom", 365, 208);
+  @include adaptiveValue("padding-bottom", 365, 130);
 
   background-color: #fff;
 
 
   &__title {
-    margin-bottom: toRem(100);
+    @include adaptiveValue("margin-bottom", 73, 35);
   }
 
   &__slider {
