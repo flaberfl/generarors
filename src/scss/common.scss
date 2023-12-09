@@ -56,231 +56,121 @@
 // rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 
 
 .banner {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	@include adaptiveValue("height", 333, 426);
-
-	@include adaptiveValue("padding-right", 26, 12);
-	@include adaptiveValue("padding-left", 26, 12);
-	@include adaptiveValue("padding-top", 26, 12);
-	@include adaptiveValue("padding-bottom", 26, 12);
-	// aspect-ratio: 1400/333;
-	background: url('@img/catalog/banner-2.jpg') center / cover no-repeat;
-	overflow: hidden;
-
-	border-radius: toRem(50);
-
-	// &::before {
-	// 	content: '';
-	// 	position: absolute;
-	// 	// background: url('@img/catalog/deco.svg') 0 0 no-repeat;
-	// 	background: url('@img/catalog/decor-p.png') center / cover no-repeat;
-
-	// 	// background-size: cover;
-	// 	// padding-right: 56.75%;
-	// 	// background-position: 100%;
-	// 	width: 100%;
-	// 	height: 100%;
-	// }
 
 
-	// img {
+	&__container {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include adaptiveValue("height", 333, 426);
 
-	// 	// top: 50%;
-	// 	// transform: translate(0, -50%);
-	// 	left: 26px;
-	// 	right: 26px;
-	// 	bottom: 26px;
-	// 	top: 26px;
-	// 	position: absolute;
-	// 	// width: 100%;
-	// 	// height: 100%;
-	// 	// object-fit: cover;
+		@include adaptiveValue("padding-right", 26, 12);
+		@include adaptiveValue("padding-left", 26, 12);
+		@include adaptiveValue("padding-top", 26, 12);
+		@include adaptiveValue("padding-bottom", 26, 12);
+		// aspect-ratio: 1400/333;
+		background: url('@img/catalog/banner-1.jpg') center / cover no-repeat;
+		overflow: hidden;
 
-	// }
+		border: 1px solid #fff;
+		border-radius: toRem(50);
+	}
 
+	&__title {
+		color: #fff;
 
+		@media (max-width:$tablet) {
+			margin-bottom: toRem(34);
+		}
+	}
 
 	/* .banner__border */
 	&__border {
-
-
-
-		// position: absolute;
-		// width: 100%;
-		// height: 100%;
-		// // @include adaptiveValue("height", 333, 426);
-		// @include adaptiveValue("height", 333, 426);
-
-		// width: 100%;
-		// height: 100%;
-
-
-
-		// background: radial-gradient(circle at 100% 100%, #000000 0, #000000 7px, transparent 7px) 0% 0%/9px 9px no-repeat,
-		// 	radial-gradient(circle at 0 100%, #000000 0, #000000 7px, transparent 7px) 100% 0%/9px 9px no-repeat,
-		// 	radial-gradient(circle at 100% 0, #000000 0, #000000 7px, transparent 7px) 0% 100%/9px 9px no-repeat,
-		// 	radial-gradient(circle at 0 0, #000000 0, #000000 7px, transparent 7px) 100% 100%/9px 9px no-repeat,
-		// 	linear-gradient(#000000, #000000) 50% 50%/calc(100% - 4px) calc(100% - 18px) no-repeat,
-		// 	linear-gradient(#000000, #000000) 50% 50%/calc(100% - 18px) calc(100% - 4px) no-repeat,
 		// 	linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 9%, rgba(255, 255, 255, 0) 62%, #ffffff 100%);
 		// border-radius: 9px;
 		// padding: 10px;
 		// box-sizing: border-box;
-
-
 	}
 
 	/* .banner__body */
 	&__body {
-		position: relative;
-		overflow: hidden;
 		display: flex;
+		align-items: center;
 
+		height: 100%;
+		width: 100%;
+
+		border: 1px solid #fff;
+		border-radius: toRem(50);
 		// border: 2px solid transparent;
 		// border-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 9%, rgba(255, 255, 255, 0) 62%, #ffffff 100%);
 		// border-image-slice: 1;
 
+		// clip-path: circle(100% at 100% 100%);
+		// clip-path: url('#smile');
+		// clip-path: inset(50px);
+		// min-height: 100%;
 
-		// &::before {
+		// &_img {
 		// 	content: '';
-		// 	position: absolute;
-		// 	background: url('@img/catalog/decor-p.png') no-repeat;
+		// 	position: relative;
+		// 	border-radius: 50px;
+		// 	background: radial-gradient(circle at 100% 100%, #000000 0, #000000 7px, transparent 7px) 0% 0%/9px 9px no-repeat, linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 9%, rgba(255, 255, 255, 0) 62%, #ffffff 100%);
 		// 	width: 100%;
 		// 	height: 100%;
-		// 	background-position: 100%;
-		// 	background-size: cover;
+		// 	z-index: 50;
+
+		// 	&-mask {
+		// 		position: absolute;
+		// 		display: block;
+		// 		width: 100%;
+		// 		height: 100%;
+		// 		overflow: hidden;
+
+		// 		z-index: 100;
+
+
+
+		// 		mask-image: url("@img/catalog/ddd.svg");
+		// 		mask-repeat: no-repeat;
+		// 		// mask-position: center;
+		// 		// mask-size: 60%;
+
+
+
+		// 		// &::after {
+		// 		// 	content: '';
+		// 		// 	width: 100px;
+		// 		// 	height: 100px;
+
+		// 		// 	border-radius: 100px;
+		// 		// 	background: rgba(0, 0, 0, 0);
+		// 		// 	position: absolute;
+		// 		// 	top: -100px;
+		// 		// 	left: -40px;
+		// 		// 	border: 40px solid rgba(255, 255, 255, 1);
+		// 		// }
+
+		// 	}
 		// }
-
-		// display: block;
-		// width: 100px;
-		// height: 50px;
-		// top: -50px;
-		// left: 0;
-		// overflow: hidden;
-		// position: absolute;
-
-
-		// clip-path: circle(100% at 100% 100%);
-		clip-path: url('#smile');
-		// clip-path: inset(50px);
-		min-height: 100%;
-	
-		&_img {
-			content: '';
-			position: relative;
-			border-radius: 50px;
-			background: radial-gradient(circle at 100% 100%, #000000 0, #000000 7px, transparent 7px) 0% 0%/9px 9px no-repeat, linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 9%, rgba(255, 255, 255, 0) 62%, #ffffff 100%);
-			// background-color: black;
-			width: 100%;
-			height: 100%;
-			z-index: 50;
-
-			&-mask {
-				position: absolute;
-				display: block;
-				width: 100%;
-				height: 100%;
-				overflow: hidden;
-
-				z-index: 100;
-
-
-
-				mask-image: url("@img/catalog/ddd.svg");
-				mask-repeat: no-repeat;
-				// mask-position: center;
-				// mask-size: 60%;
-
-
-
-				// &::after {
-				// 	content: '';
-				// 	width: 100px;
-				// 	height: 100px;
-
-				// 	border-radius: 100px;
-				// 	background: rgba(0, 0, 0, 0);
-				// 	position: absolute;
-				// 	top: -100px;
-				// 	left: -40px;
-				// 	border: 40px solid rgba(255, 255, 255, 1);
-				// }
-
-			}
-
-
-			// flex: 1 1 auto;
-			// position: absolute;
-			// width: 100%;
-			// max-width: 100%;
-			// object-fit: cover;
-
-			// top: 0;
-			// bottom: 0;
-			// mask: url(#circle);
-
-			border-radius: 50px;
-
-
-			&::after {
-				content: '';
-				position: absolute;
-
-			}
-		}
-
-
-
-		// border: 2px solid transparent;
-
-		// background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='1350' height='279' viewBox='0 0 1350 279' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3crect x='1' y='1' width='1348' height='277' rx='39' stroke='url(%23paint0_linear_1_268)' stroke-opacity='0.97' stroke-width='2'/%3e%3cdefs%3e%3clinearGradient id='paint0_linear_1_268' x1='1314.5' y1='-0.000206758' x2='1.60582e-05' y2='268' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='white'/%3e%3cstop offset='0.385417' stop-color='white' stop-opacity='0'/%3e%3cstop offset='0.697917' stop-color='white'/%3e%3cstop offset='1' stop-color='white' stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e ");
-		// background-repeat: no-repeat;
-		// background: url('@img/catalog/deco.svg') 0 0 no-repeat;
-		// background-size: cover;
-		// padding-top: 56.75%;
-		// background-position: top;
-		// background-position: center;
-		// background-size: 100%;
-		// background-origin: padding-box;
-		// background-position: right 100% top 100%;
-
-
-		// 	linear-gradient(#fff, #fff) 50% 50%/calc(100% - 4px) calc(100% - 18px) no-repeat,
-		// 	linear-gradient(#fff, #fff) 50% 50%/calc(100% - 18px) calc(100% - 4px) no-repeat,
-		// 	linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 9%, rgba(255, 255, 255, 0) 62%, #ffffff 100%);
-		// border-radius: 50px;
-		// padding: 10px;
-		// box-sizing: border-box;
-
-
-		display: flex;
-		align-items: center;
-		// position: absolute;
-		// @include adaptiveValue("padding-right", 101, 20);
-		// @include adaptiveValue("padding-left", 106, 20);
-		// @include adaptiveValue("padding-top", 26, 12);
-		// @include adaptiveValue("padding-bottom", 26, 12);
-		// width: %;
-		// height: auto;
-		height: 100%;
-		width: 100%;
 
 		@media (min-width:$tablet) {
 			column-gap: toRem(126);
+			padding-right: toRem(25);
 		}
 
 		@media (max-width:$tablet) {
 			flex-direction: column;
 			gap: toRem(50);
+			justify-content: center;
 		}
 	}
 
 	/* .banner__text-block */
 	&__text-block {
-		// position: absolute;
+		@include adaptiveValue("padding-left", 80, 29);
+		padding-right: toRem(20);
 	}
 
 	/* .banner__title */
