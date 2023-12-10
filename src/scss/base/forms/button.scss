@@ -109,14 +109,19 @@
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-	right: -1.2%;
-	// left: 50.4%;
-	transform: translate(0%, 16%);
+	right: -0.9%;
+	transform: translate(0%, -38%);
 
 	@include adaptiveValue("gap", 132, 90);
 
+	// z-index: 20;
+
 	@media (max-width: em(670)) {
-		transform: translate(0%, 216%);
+		transform: translate(0%, 152%);
+	}
+	
+	@media (max-width: em(530)){
+		transform: translate(0%, 245%);
 	}
 
 	span {

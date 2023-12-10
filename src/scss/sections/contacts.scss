@@ -4,7 +4,9 @@
   padding-bottom: toRem(45);
 
   /* .contacts__container */
-  &__container {}
+  &__container {
+    position: relative;
+  }
 
   /* .contacts__title */
   &__title {
