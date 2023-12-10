@@ -75,6 +75,10 @@ body::after {
 	max-width: toRem(1164);
 	border-radius: toRem(50);
 
+	.thanks-popup & {
+		background-color: #FFF;
+	}
+
 	.lock & {
 		visibility: visible;
 	}
@@ -113,8 +117,11 @@ body::after {
 		@media (min-width:$mobile) {
 			position: absolute;
 			bottom: -90px;
-			left: -27%;
 			z-index: -1;
+
+			.submit-popup & {
+				left: -27%;
+			}
 		}
 
 		@media (max-width:$mobile) {
