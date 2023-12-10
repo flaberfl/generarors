@@ -99,7 +99,7 @@
 		}
 
 		.banner_3 & {
-			@include adaptiveValue("height", 497, 579);
+			@include adaptiveValue("height", 497, 630);
 			// min-height: toRem(497);
 			background: url('@img/catalog/banner-3.jpg') center / cover no-repeat;
 		}
@@ -276,4 +276,56 @@
 			flex: 0 0 auto;
 		}
 	}
+}
+
+// Анимации
+
+
+[anim-up-down] {
+	// transform: translate(rem(0), rem(20));
+	transform: translate(toRem(0), toRem(30));
+	opacity: 0;
+	transition: all $animSpeed ease 0s;
+
+	&._watcher-view {
+		transform: none;
+		opacity: 1;
+	}
+}
+
+
+[delay10] {
+	transition: all $animSpeed ease .1s;
+}
+
+[delay20] {
+	transition: all $animSpeed ease .2s;
+}
+
+[delay30] {
+	transition: all $animSpeed ease .3s;
+}
+
+[delay40] {
+	transition: all $animSpeed ease .4s;
+}
+
+[delay50] {
+	transition: all $animSpeed ease .5s;
+}
+
+[delay60] {
+	transition: all $animSpeed ease .6s;
+}
+
+[delay70] {
+	transition: all $animSpeed ease .7s;
+}
+
+[delay80] {
+	transition: all $animSpeed ease .8s;
+}
+
+[delay120] {
+	transition: all $animSpeed ease 1.2s;
 }

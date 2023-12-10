@@ -457,6 +457,11 @@ body::after {
 			letter-spacing: 0.7px;
 		}
 
+		@media (max-width: em(675)){
+			  flex-direction: column;
+				align-items: flex-start;
+		}
+
 	}
 
 	/* .catalog-popup__name */

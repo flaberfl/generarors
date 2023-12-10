@@ -1,7 +1,7 @@
 //====================================================================================================
 .header {
 	position: absolute;
-	z-index: 30;
+	z-index: 600;
 	width: 100%;
 	top: 0;
 	left: 0;
@@ -25,11 +25,12 @@
 		._header-scroll & {
 			transform: translateY(-100%);
 			// min-height: calc(var(--header-height) - toRem(30));
-			background-color: rgba(255, 255, 255, 0.2);
+			background-color: rgba(0, 0, 0, 0.8);
 			// padding-bottom: toRem(30);
 		}
 
 		.header.header--light._header-scroll & {
+			// filter: blur(5px);
 			background-color: rgba(0, 0, 0, 0.9);
 		}
 
