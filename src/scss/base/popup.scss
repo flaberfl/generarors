@@ -62,6 +62,8 @@ body::after {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-left: toRem(20);
+	padding-right: toRem(20);
 }
 
 .popup__content {
@@ -75,7 +77,8 @@ body::after {
 	max-width: toRem(1164);
 	border-radius: toRem(50);
 
-	.thanks-popup & {
+	.thanks-popup &,
+	.catalog-popup & {
 		background-color: #FFF;
 	}
 
@@ -96,7 +99,7 @@ body::after {
 
 	@media (max-width:$mobile) {
 		grid-template-columns: 1fr;
-		gap: toRem(40);
+		// gap: toRem(40);
 	}
 
 	@media (min-width:$mobile) {
@@ -217,12 +220,17 @@ body::after {
 }
 
 .popup__wrap-btn {
-	text-align: center;
+	margin-top: toRem(45);
+
+	@media (max-width:$mobile) {
+		text-align: center;
+	}
 }
 
 .submit-popup {
 	&__button {
 		@include adaptiveValue("margin-top", 39, 23);
+		margin-bottom: toRem(70);
 	}
 }
 
@@ -244,4 +252,64 @@ body::after {
 	width: 100%;
 	height: 100%;
 	border-radius: 50px;
+}
+
+.order-popup {
+	&__image {
+		@media (max-width:$mobile) {
+			display: none;
+		}
+	}
+}
+
+.order-popup__button {
+
+	@media (max-width:$mobile) {
+		margin-bottom: toRem(50);
+	}
+
+}
+
+.catalog-popup {
+	&__header {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+		@include adaptiveValue("gap", 58, 20);
+	}
+
+	&__body {
+		@include adaptiveValue("padding-left", 97, 25);
+		@include adaptiveValue("padding-top", 95, 55);
+		@include adaptiveValue("padding-right", 119, 26);
+
+	}
+
+	&__title {
+
+		margin-bottom: toRem(42);
+		max-width: toRem(372);
+
+		@include adaptiveValue("font-size", 36, 20);
+		font-weight: 900;
+		line-height: normal;
+	}
+
+	&__image {
+		max-width: 100%;
+	}
+
+	&__quantity {
+		display: flex;
+		align-items: center;
+		gap: toRem(47);
+
+		@include adaptiveValue("margin-bottom", 46, 49);
+	}
+
+	&__price {
+		@include adaptiveValue("font-size", 30, 24);
+		font-weight: 900;
+		line-height: normal;
+	}
 }

@@ -41,7 +41,10 @@
 							data-placeholder="Контактный телефон" inputmode="numeric">
 					</div>
 
-					<button type="submit" class="submit-popup__button button">Отправить</button>
+					<div class="popup__wrap-btn">
+						<button type="submit" class="submit-popup__button button">Отправить</button>
+					</div>
+
 
 				</form>
 
@@ -57,8 +60,8 @@
 
 
 <div id="order-popup" aria-hidden="true" class="popup order-popup popup_show1">
-	<div class="submit-popup__wrapper popup__wrapper">
-		<div class="submit-popup__content popup__content">
+	<div class="order-popup__wrapper popup__wrapper">
+		<div class="order-popup__content popup__content">
 			<button data-close type="button" class="popup__close">
 				<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path
@@ -70,11 +73,12 @@
 				</svg>
 			</button>
 
-			<div class="submit-popup__body popup__body">
+			<div class="order-popup__body popup__body">
 
 				<form class="form popup__form" action="#" data-dev data-popup-message="#thanks-popup">
-					<h2 class="form__title popup__title title-h2">Заказать</h2>
-					<h3 class="form__subtitle popup__subtitle">Для заказа этого кожуха введите</h3>
+					<h2 class="form__title popup__title title-h2">Отправить</h2>
+					<h3 class="form__subtitle popup__subtitle">Для заказа этого кожуха введите
+						свои данные</h3>
 					<div class="form__line form__line_name">
 						<label class="form__label" for="yourname">*</label>
 						<input class="form__input form__input_name popup__input input" aria-required="true" aria-invalid="false"
@@ -88,13 +92,13 @@
 
 
 					<div class="popup__wrap-btn">
-						<button type="submit" class="submit-popup__button button">Отправить</button>
+						<button type="submit" class="order-popup__button button">Отправить</button>
 
 					</div>
 
 				</form>
 
-				<div class="submit-popup__image popup__image">
+				<div class="order-popup__image popup__image">
 
 					<div class="popup__cases">
 						<div class="item-catalog-cases__image">
@@ -161,9 +165,6 @@
 
 
 
-
-
-
 <div id="video" aria-hidden="true" class="popup__video popup">
 	<div class="popup__wrapper">
 		<div class="popup__content video-popup__content">
@@ -175,6 +176,77 @@
 			<div data-youtube-place="" class="popup__text">
 
 			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="catalog-popup" aria-hidden="true" class="popup catalog-popup popup_show1">
+	<div class="catalog-popup_wrapper popup__wrapper">
+		<div class="catalog-popup__content popup__content">
+			<button data-close type="button" class="popup__close">
+				<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M0.586133 0.585786C1.36718 -0.195262 2.63351 -0.195262 3.41456 0.585786L20.3851 17.5563C21.1662 18.3374 21.1662 19.6037 20.3851 20.3848C19.6041 21.1658 18.3377 21.1658 17.5567 20.3848L0.586134 3.41421C-0.194915 2.63317 -0.194915 1.36683 0.586133 0.585786Z"
+						fill="#19212E" />
+					<path
+						d="M20.3848 0.585786C19.6037 -0.195262 18.3374 -0.195262 17.5563 0.585786L0.585787 17.5563C-0.195262 18.3374 -0.195262 19.6037 0.585786 20.3848C1.36683 21.1658 2.63316 21.1658 3.41421 20.3848L20.3848 3.41421C21.1658 2.63317 21.1658 1.36683 20.3848 0.585786Z"
+						fill="#19212E" />
+				</svg>
+			</button>
+
+			<div class="catalog-popup__body popup__body1">
+
+				<div class="catalog-popup__header">
+					<div class="catalog-popup__media">
+						<img src="@img/popup/generator.png" alt="" class="catalog-popup__image">
+					</div>
+
+					<form class="form popup__form" action="#" data-dev data-popup-message="#thanks-popup">
+						<h2 class="form__title catalog-popup__title">Бензиновый генератор A-iPower A9000EAX</h2>
+
+						<div class="catalog-popup__quantity">
+							<div data-quantity class="quantity">
+								<button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+								<div class="quantity__input">
+									<input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+								</div>
+								<button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+							</div>
+							<div class="catalog-popup__price">110 000 ₽</div>
+						</div>
+
+
+						<div class="form__line form__line_name">
+							<label class="form__label" for="yourname">*</label>
+							<input class="form__input form__input_name popup__input input" aria-required="true" aria-invalid="false"
+								placeholder="Ваше имя" type="text" name="yourname" data-placeholder="Ваше имя">
+						</div>
+						<div class="form__line form__line_phone">
+							<label class="form__label" for="yourphone">*</label>
+							<input type="text" name="yourphone" class="form__input popup__input input"
+								placeholder="Контактный телефон" data-placeholder="Контактный телефон" inputmode="numeric">
+						</div>
+
+						<button type="submit" class="submit-popup__button button">Заказать</button>
+
+					</form>
+
+				</div>
+
+				<ul class="catalog-popup__list">
+					<li class="catalog-popup__item">
+						<div class="catalog-popup__name">Производитель</div>
+						<div class="catalog-popup__value">A-iPower</div>
+					</li>
+
+				</ul>
+
+
+			</div>
+
+
 		</div>
 	</div>
 </div>
