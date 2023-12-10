@@ -10,6 +10,13 @@
 		// padding-right: toRem(63);
 		@include adaptiveValue("padding-right", 63, 25);
 
+		.catalog-popup & {
+
+			@media (max-width:$tablet) {
+				padding-right: 0;
+			}
+		}
+
 
 		&:not(:last-child) {
 			margin-bottom: toRem(16);
@@ -17,7 +24,9 @@
 		}
 	}
 
-	&__input {}
+	&__input {
+		padding-right: toRem(65) !important;
+	}
 
 	&__button {}
 
@@ -35,6 +44,13 @@
 		// @include adaptiveValue("right", 39, 21);
 		right: toRem(120);
 		@include adaptiveValue("right", 120, 50);
+
+		.catalog-popup & {
+
+			@media (max-width:$tablet) {
+				@include adaptiveValue("right", 60, 20);
+			}
+		}
 	}
 }
 
