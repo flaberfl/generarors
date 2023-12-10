@@ -1,19 +1,43 @@
 //<FORM>
 // Сніппет (HTML):
 .form {
-	&__row {
-	}
-	&__column {
-	}
+	&__row {}
+
+	&__column {}
+
 	&__line {
+		position: relative;
+		// padding-right: toRem(63);
+		@include adaptiveValue("padding-right", 63, 25);
+
+
+		&:not(:last-child) {
+			margin-bottom: toRem(16);
+
+		}
 	}
-	&__input {
-	}
-	&__button {
-	}
-	&__error {
+
+	&__input {}
+
+	&__button {}
+
+	&__error {}
+
+	&__label {
+		position: absolute;
+		top: 50%;
+
+		transform: translate(0px, -50%);
+		font-size: toRem(22);
+		font-weight: 500;
+		color: #F81000;
+		line-height: normmal;
+		// @include adaptiveValue("right", 39, 21);
+		right: toRem(120);
+		@include adaptiveValue("right", 120, 50);
 	}
 }
+
 //</FORM>
 
 // <BUTTONS>

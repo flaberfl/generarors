@@ -140,13 +140,17 @@
   &__image {
     transform: translate(0, 4.4%);
     max-width: 100%;
-
+    
     @media (max-width:$tablet) {
       max-width: toRem(460);
     }
-
+    
     @media (max-width: em(550)) {
       max-width: 100%;
+    }
+    
+    ._finish & {
+      transform: translate(0, 12.7%);
     }
   }
 
