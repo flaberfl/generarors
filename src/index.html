@@ -20,15 +20,16 @@
 						</h2>
 
 						<div class="intro__buttons">
-							<button type="submit" class="intro__button button">Оставить заявку</button>
-							<div class="intro__button button button_catalog">
+
+							<button type="submit" class="intro__button button" data-popup="#submit-popup">Оставить заявку</button>
+							<button data-goto=".catalog" class="intro__button button button_catalog">
 								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd"
 										d="M0 10V20H10H20V10V0H10H0V10ZM18.8281 10V18.8281H10H1.17188V10V1.17188H10H18.8281V10ZM2.34375 5.87891V9.41406H5.87891H9.41406V5.87891V2.34375H5.87891H2.34375V5.87891ZM10.5859 5.87891V9.41406H14.1211H17.6562V5.87891V2.34375H14.1211H10.5859V5.87891ZM8.24219 4.70703V5.89844H5.87891H3.51562V4.70703V3.51562H5.87891H8.24219V4.70703ZM16.4844 4.70703V5.89844H14.1211H11.7578V4.70703V3.51562H14.1211H16.4844V4.70703ZM8.24219 7.65625V8.24219H5.87891H3.51562V7.65625V7.07031H5.87891H8.24219V7.65625ZM16.4844 7.65625V8.24219H14.1211H11.7578V7.65625V7.07031H14.1211H16.4844V7.65625ZM2.34375 14.1211V17.6562H5.87891H9.41406V14.1211V10.5859H5.87891H2.34375V14.1211ZM10.5859 14.1211V17.6562H14.1211H17.6562V14.1211V10.5859H14.1211H10.5859V14.1211ZM8.24219 12.9492V14.1406H5.87891H3.51562V12.9492V11.7578H5.87891H8.24219V12.9492ZM16.4844 12.9492V14.1406H14.1211H11.7578V12.9492V11.7578H14.1211H16.4844V12.9492ZM8.24219 15.8984V16.4844H5.87891H3.51562V15.8984V15.3125H5.87891H8.24219V15.8984ZM16.4844 15.8984V16.4844H14.1211H11.7578V15.8984V15.3125H14.1211H16.4844V15.8984Z"
 										fill="#E16C00" />
 								</svg>
 								Смотреть каталог
-							</div>
+							</button>
 						</div>
 					</div>
 
@@ -565,7 +566,7 @@
 									Оставьте телефон, подберем вариант для Вашего случая
 								</h3>
 							</div>
-							<button class="banner__button button">Оставить заявку</button>
+							<button class="banner__button button" data-popup="#submit-popup">Оставить заявку</button>
 						</div>
 					</div>
 				</div>
@@ -669,7 +670,9 @@
 
 							</div>
 							<div class="item-catalog-cases__footer">
-								<button type="button" class="item-catalog-cases__button  button">Заказать</button>
+
+								<button type="button" class="item-catalog-cases__button button"
+									data-popup="#order-popup">Заказать</button>
 							</div>
 						</li>
 						<li class="catalog-cases__item item-catalog-cases">
@@ -695,7 +698,8 @@
 
 							</div>
 							<div class="item-catalog-cases__footer">
-								<button type="button" class="item-catalog-cases__button  button">Заказать</button>
+								<button type="button" class="item-catalog-cases__button button"
+									data-popup="#order-popup">Заказать</button>
 							</div>
 						</li>
 						<li class="catalog-cases__item item-catalog-cases">
@@ -721,7 +725,8 @@
 
 							</div>
 							<div class="item-catalog-cases__footer">
-								<button type="button" class="item-catalog-cases__button  button">Заказать</button>
+								<button type="button" class="item-catalog-cases__button  button"
+									data-popup="#order-popup">Заказать</button>
 							</div>
 						</li>
 						<li class="catalog-cases__item item-catalog-cases">
@@ -747,7 +752,8 @@
 
 							</div>
 							<div class="item-catalog-cases__footer">
-								<button type="button" class="item-catalog-cases__button  button">Заказать</button>
+								<button type="button" class="item-catalog-cases__button  button"
+									data-popup="#order-popup">Заказать</button>
 							</div>
 						</li>
 						<li class="catalog-cases__item item-catalog-cases">
@@ -773,7 +779,8 @@
 
 							</div>
 							<div class="item-catalog-cases__footer">
-								<button type="button" class="item-catalog-cases__button  button">Заказать</button>
+								<button type="button" class="item-catalog-cases__button  button"
+									data-popup="#order-popup">Заказать</button>
 							</div>
 						</li>
 						<li class="catalog-cases__item item-catalog-cases">
@@ -799,7 +806,8 @@
 
 							</div>
 							<div class="item-catalog-cases__footer">
-								<button type="button" class="item-catalog-cases__button  button">Заказать</button>
+								<button type="button" class="item-catalog-cases__button button"
+									data-popup="#order-popup">Заказать</button>
 							</div>
 						</li>
 
@@ -821,7 +829,7 @@
 									Получите консультацию и бесплатный выезд для энергоаудита
 								</h3>
 							</div>
-							<button class="banner__button button">Оставить заявку</button>
+							<button class="banner__button button" data-popup="#submit-popup">Оставить заявку</button>
 						</div>
 					</div>
 				</div>
@@ -832,7 +840,7 @@
 			<section class="quiz">
 				<div class="quiz__container">
 					<h2 class="quiz__title title-h2">Поможем подобрать решение</h2>
-					<form action="#" class="quiz-form">
+					<form action="#" class="quiz-form" data-dev data-popup-message="#thanks-popup">
 
 						<fieldset class="quiz-form__fieldset">
 							<div class="quiz-form__media">
@@ -1238,7 +1246,7 @@
 									Доверьте работу квалифицированным специалистам
 								</h3>
 							</div>
-							<button class="banner__button button">Оставить заявку</button>
+							<button class="banner__button button" data-popup="#submit-popup">Оставить заявку</button>
 						</div>
 					</div>
 				</div>
@@ -1312,7 +1320,7 @@
 			<section class="contacts">
 				<div class="contacts__container">
 					<div class="button__up">
-						<a href="#" data-goto="#intro" class="button__up-box">
+						<a href="#" data-goto=".intro" class="button__up-box">
 							<img src="@img/icons/arrow-up.svg" alt="Стрелка вверх">
 						</a>
 						<span>подняться вверх</span>
