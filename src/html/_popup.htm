@@ -10,7 +10,7 @@
 </div> -->
 
 
-<div id="submit-popup" aria-hidden="true" class="popup submit-popup popup_show">
+<div id="submit-popup" aria-hidden="true" class="popup submit-popup popup_show1">
 	<div class="submit-popup__wrapper popup__wrapper">
 		<div class="submit-popup__content popup__content">
 			<button data-close type="button" class="popup__close">
@@ -56,6 +56,77 @@
 </div>
 
 
+<div id="order-popup" aria-hidden="true" class="popup order-popup popup_show">
+	<div class="submit-popup__wrapper popup__wrapper">
+		<div class="submit-popup__content popup__content">
+			<button data-close type="button" class="popup__close">
+				<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M0.586133 0.585786C1.36718 -0.195262 2.63351 -0.195262 3.41456 0.585786L20.3851 17.5563C21.1662 18.3374 21.1662 19.6037 20.3851 20.3848C19.6041 21.1658 18.3377 21.1658 17.5567 20.3848L0.586134 3.41421C-0.194915 2.63317 -0.194915 1.36683 0.586133 0.585786Z"
+						fill="#19212E" />
+					<path
+						d="M20.3848 0.585786C19.6037 -0.195262 18.3374 -0.195262 17.5563 0.585786L0.585787 17.5563C-0.195262 18.3374 -0.195262 19.6037 0.585786 20.3848C1.36683 21.1658 2.63316 21.1658 3.41421 20.3848L20.3848 3.41421C21.1658 2.63317 21.1658 1.36683 20.3848 0.585786Z"
+						fill="#19212E" />
+				</svg>
+			</button>
+
+			<div class="submit-popup__body popup__body">
+
+				<form class="form popup__form" action="#" data-dev data-popup-message="#thanks-popup">
+					<h2 class="form__title popup__title title-h2">Заказать</h2>
+					<h3 class="form__subtitle popup__subtitle">Для заказа этого кожуха введите</h3>
+					<div class="form__line form__line_name">
+						<label class="form__label" for="yourname">*</label>
+						<input class="form__input form__input_name popup__input input" aria-required="true" aria-invalid="false"
+							placeholder="Ваше имя" type="text" name="yourname" data-placeholder="Ваше имя">
+					</div>
+					<div class="form__line form__line_phone">
+						<label class="form__label" for="yourphone">*</label>
+						<input type="text" name="yourphone" class="form__input popup__input input" placeholder="Контактный телефон"
+							data-placeholder="Контактный телефон" inputmode="numeric">
+					</div>
+
+					
+					<div class="popup__wrap-btn">
+						<button type="submit" class="submit-popup__button button">Отправить</button>
+
+					</div>
+
+				</form>
+
+				<div class="submit-popup__image popup__image">
+
+					<div class="popup__cases">
+						<div class="item-catalog-cases__image">
+							<img src="@img/catalog-cases/01.png" alt="Фото кожуха">
+						</div>
+
+						<div class="item-catalog-cases__content popup__cases-content">
+							<h5 class="item-catalog-cases__name">
+								Кожух GT 1200 winter
+							</h5>
+							<h5 class="item-catalog-cases__descr">
+								На любой 1-цилинровый генератор
+							</h5>
+							<div class="item-catalog-cases__price">
+								<span class="item-catalog-cases__current-price">
+									110 000 ₽
+								</span>
+							</div>
+
+						</div>
+
+					</div>
+
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
 <div id="thanks-popup" aria-hidden="true" class="popup thanks-popup popup_show1">
 	<div class="submit-popup__wrapper popup__wrapper">
 		<div class="submit-popup__content popup__content">
@@ -91,7 +162,7 @@
 
 
 
-<div id="thanks-popup" aria-hidden="true" class="popup thanks-popup">
+<!-- <div id="thanks-popup" aria-hidden="true" class="popup thanks-popup">
 	<div class="thanks-popup__wrapper popup__wrapper">
 		<div class="thanks-popup__content popup__content">
 			<button data-close type="button" class="popup__close">
@@ -109,4 +180,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
