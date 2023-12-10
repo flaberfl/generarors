@@ -3,6 +3,8 @@
 
 .button {
 	display: inline-flex;
+	position: relative;
+	z-index: 50;
 
 	justify-content: center;
 	align-items: center;
@@ -119,8 +121,8 @@
 	@media (max-width: em(670)) {
 		transform: translate(0%, 152%);
 	}
-	
-	@media (max-width: em(530)){
+
+	@media (max-width: em(530)) {
 		transform: translate(0%, 245%);
 	}
 
