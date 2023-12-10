@@ -79,6 +79,10 @@ body::after {
 		background-color: #FFF;
 	}
 
+	.popup__video & {
+		background-color: #000;
+	}
+
 	.lock & {
 		visibility: visible;
 	}
@@ -220,4 +224,24 @@ body::after {
 	&__button {
 		@include adaptiveValue("margin-top", 39, 23);
 	}
+}
+
+
+.video-popup__content {
+
+	// min-height: 80vh;
+	position: relative;
+
+	aspect-ratio: 16 / 9;
+
+}
+
+
+.video-popup__content iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50px;
 }

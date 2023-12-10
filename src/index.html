@@ -837,12 +837,12 @@
 
 			</section>
 
-			<section class="quiz">
+			<section class="quiz" id="quiz">
 				<div class="quiz__container">
 					<h2 class="quiz__title title-h2">Поможем подобрать решение</h2>
-					<form action="#" class="quiz-form" data-dev data-popup-message="#thanks-popup">
+					<form class="quiz-form" action="#" data-dev data-popup-message="#thanks-popup">
 
-						<fieldset class="quiz-form__fieldset">
+						<fieldset class="quiz-form__fieldset quiz-form__fieldset_start">
 							<div class="quiz-form__media">
 								<img class="quiz-form__image" data-src="@img/quize/011.png" alt="Дом">
 							</div>
@@ -1097,7 +1097,7 @@
 								</div>
 
 								<div class="quiz-form__progress-wrapper">
-									<button type="submit" class="button quiz-form__button button_next"
+									<button id="quiz-submit" type="submit" class="button quiz-form__button button_next"
 										data-da=".quiz-form__content_send,550">Оставить заявку</button>
 									<div class="quiz-form__progress-box progress-box">
 										<div class="progress-box__text">Вопрос</div>
@@ -1137,7 +1137,7 @@
 									<img data-src="@img/our-works/01.jpg" alt="" class="our-works__image">
 
 									<button class="our-works__button" type="button" data-popup="#video"
-										data-popup-youtube="6S5Zw2WuyFE"></button>
+										data-popup-youtube="mmBEZ3x-QRo"></button>
 
 									<img src="@img/our-works/circle.svg" alt="" class="our-works__decor-circle">
 
@@ -1154,7 +1154,7 @@
 									<img src="@img/our-works/01.jpg" alt="" class="our-works__image">
 
 									<button class="our-works__button" type="button" data-popup="#video"
-										data-popup-youtube="6S5Zw2WuyFE"></button>
+										data-popup-youtube="mmBEZ3x-QRo"></button>
 
 									<img src="@img/our-works/circle.svg" alt="" class="our-works__decor-circle">
 
@@ -1171,7 +1171,7 @@
 									<img src="@img/our-works/01.jpg" alt="" class="our-works__image">
 
 									<button class="our-works__button" type="button" data-popup="#video"
-										data-popup-youtube="6S5Zw2WuyFE"></button>
+										data-popup-youtube="mmBEZ3x-QRo"></button>
 
 									<img src="@img/our-works/circle.svg" alt="" class="our-works__decor-circle">
 
@@ -1188,7 +1188,7 @@
 									<img src="@img/our-works/01.jpg" alt="" class="our-works__image">
 
 									<button class="our-works__button" type="button" data-popup="#video"
-										data-popup-youtube="6S5Zw2WuyFE"></button>
+										data-popup-youtube="mmBEZ3x-QRo"></button>
 
 									<img src="@img/our-works/circle.svg" alt="" class="our-works__decor-circle">
 
@@ -1205,7 +1205,7 @@
 									<img src="@img/our-works/01.jpg" alt="" class="our-works__image">
 
 									<button class="our-works__button" type="button" data-popup="#video"
-										data-popup-youtube="6S5Zw2WuyFE"></button>
+										data-popup-youtube="mmBEZ3x-QRo"></button>
 
 									<img src="@img/our-works/circle.svg" alt="" class="our-works__decor-circle">
 
@@ -1316,6 +1316,9 @@
 				<!-- <div class="section-map__container">
 				</div> -->
 			</section>
+
+			<button data-popup="#thanks-popup" type="submit"
+				style="display: none; position: absolute; z-index: -1000;"></button>
 
 			<section class="contacts">
 				<div class="contacts__container">

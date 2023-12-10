@@ -116,6 +116,24 @@ quizItems.forEach((quizItem, quizItemIndex) => {
   })
 });
 
+const quizSubmit = document.getElementById('quiz-submit');
+
+const element = document.querySelector('.quiz-form__fieldset_start');
+
+quizSubmit.addEventListener('click', () => {
+  // element.classList.add('_active');
+  // location = 'https://alemx.com/#thanks';
+  // location = 'http://192.168.0.101:8080/#thanks-popup';
+  document.location.reload();
+
+  setTimeout(() => {
+    location = 'http://192.168.0.101:8080/#thanks-popup';
+
+
+  }, 2000);
+});
+
+
 
 /*  Yandex Map   */
 
