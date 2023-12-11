@@ -154,6 +154,7 @@
     left: 50.4%;
     transform: translate(-50%, 170%);
     // bottom: 0;
+    z-index: 10;
 
     gap: toRem(130);
 
@@ -193,6 +194,7 @@
     height: toRem(128);
     background-color: #F0F0F0;
     border-radius: 50%;
+    cursor: pointer;
 
     &::before {
       content: '';

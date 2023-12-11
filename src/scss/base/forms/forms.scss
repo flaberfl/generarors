@@ -22,6 +22,10 @@
 			margin-bottom: toRem(16);
 
 		}
+
+		&.form__line_checkbox {
+			text-align: left;
+		}
 	}
 
 	&__input {
