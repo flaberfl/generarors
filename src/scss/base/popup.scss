@@ -232,6 +232,11 @@ body::after {
 		@include adaptiveValue("margin-top", 39, 23);
 		margin-bottom: toRem(70);
 	}
+
+	&__checkbox {
+		margin-bottom: toRem(20);
+		margin-top: toRem(20);
+	}
 }
 
 
@@ -457,9 +462,9 @@ body::after {
 			letter-spacing: 0.7px;
 		}
 
-		@media (max-width: em(675)){
-			  flex-direction: column;
-				align-items: flex-start;
+		@media (max-width: em(675)) {
+			flex-direction: column;
+			align-items: flex-start;
 		}
 
 	}

@@ -42,7 +42,7 @@ function initSliders() {
 			loop: true,
 			// grabCursor: true,
 			//autoHeight: true,
-			speed: 800,
+			speed: 1300,
 			centeredSlides: true,
 			centeredSlidesBounds: true,
 			// coverflowEffect: {

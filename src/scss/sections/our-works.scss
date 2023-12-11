@@ -4,7 +4,6 @@
 
   background-color: #fff;
 
-
   &__title {
     @include adaptiveValue("margin-bottom", 73, 35);
   }
@@ -27,7 +26,6 @@
     border-radius: toRem(50);
     @include adaptiveValue("margin-bottom", 43, 21);
 
-
     &::before {
       transition: opacity .6s;
       content: '';
@@ -42,10 +40,12 @@
     }
 
     @media (min-width:$mobile) {
+      transition: scale 1.6s;
+
       scale: .8;
 
       .swiper-slide-active & {
-        transition: scale .6s;
+        transition: scale 1.6s;
         scale: 1;
 
         &::before {
@@ -56,13 +56,11 @@
   }
 
   &__decor-circle {
-
     .swiper-slide-active & {
       opacity: 1;
     }
 
     position: absolute;
-
     opacity: 0;
     animation: moving 6s infinite linear;
 
@@ -145,15 +143,9 @@
       letter-spacing: 0.6px;
     }
   }
-
-
 }
 
-
-
-
 .swiper {
-  // max-width: toRem(1920) !important;
   overflow: visible !important;
 }
 
@@ -169,7 +161,7 @@
   transform: translate(0px, -50%);
   z-index: 10;
 
-  transition: all 0.6s;
+  transition: all .6s;
 
   &:hover {
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.06));
