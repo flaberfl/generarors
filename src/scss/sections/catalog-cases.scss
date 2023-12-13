@@ -209,17 +209,22 @@
   &__footer {
     position: absolute;
 
-    @media (min-width:$tablet) {}
+    @media (max-width:$tablet) {
+      display: none;
+    }
   }
 
   &__button {
-    // transform: translate(-50%, 0%);
-    // position: absolute;
-    // left: 50%;
     text-align: center;
     margin-top: toRem(30);
-    // opacity: 0;
     margin-left: auto;
     margin-right: auto;
+
+    @media (min-width:$tablet) {
+      transform: translate(-50%, 0%);
+      position: absolute;
+      left: 50%;
+      opacity: 0;
+    }
   }
 }
