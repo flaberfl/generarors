@@ -53,15 +53,9 @@
 	height: toRem(1);
 }
 
-// rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 
 
 .banner {
 	position: relative;
-	// position: absolute;
-	// width: 100%;
-	// left: 50%;
-	// transform: translate(-50%, -50%);
-	// overflow-x: hidden;
 	margin-top: -8.8%;
 
 	&.banner_3 {
@@ -83,7 +77,6 @@
 		@include adaptiveValue("padding-left", 26, 12);
 		@include adaptiveValue("padding-top", 26, 12);
 		@include adaptiveValue("padding-bottom", 26, 12);
-		// aspect-ratio: 1400/333;
 
 		border-radius: toRem(50);
 		z-index: 30;
@@ -100,7 +93,6 @@
 
 		.banner_3 & {
 			@include adaptiveValue("height", 497, 630);
-			// min-height: toRem(497);
 			background: url('@img/catalog/banner-3.jpg') center / cover no-repeat;
 		}
 	}
@@ -125,14 +117,6 @@
 		}
 	}
 
-	/* .banner__border */
-	&__border {
-		// 	linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 9%, rgba(255, 255, 255, 0) 62%, #ffffff 100%);
-		// border-radius: 9px;
-		// padding: 10px;
-		// box-sizing: border-box;
-	}
-
 	/* .banner__body */
 	&__body {
 		display: flex;
@@ -141,60 +125,10 @@
 		height: 100%;
 		width: 100%;
 
-		border: 1px solid #fff;
+		border: 1px solid rgba(255, 255, 255, .7);
 		border-radius: toRem(50);
 
 		z-index: 20;
-		// border: 2px solid transparent;
-		// border-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 9%, rgba(255, 255, 255, 0) 62%, #ffffff 100%);
-		// border-image-slice: 1;
-
-		// clip-path: circle(100% at 100% 100%);
-		// clip-path: url('#smile');
-		// clip-path: inset(50px);
-		// min-height: 100%;
-
-		// &_img {
-		// 	content: '';
-		// 	position: relative;
-		// 	border-radius: 50px;
-		// 	background: radial-gradient(circle at 100% 100%, #000000 0, #000000 7px, transparent 7px) 0% 0%/9px 9px no-repeat, linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 9%, rgba(255, 255, 255, 0) 62%, #ffffff 100%);
-		// 	width: 100%;
-		// 	height: 100%;
-
-		// 	&-mask {
-		// 		position: absolute;
-		// 		display: block;
-		// 		width: 100%;
-		// 		height: 100%;
-		// 		overflow: hidden;
-
-		// 		z-index: 100;
-
-
-
-		// 		mask-image: url("@img/catalog/ddd.svg");
-		// 		mask-repeat: no-repeat;
-		// 		// mask-position: center;
-		// 		// mask-size: 60%;
-
-
-
-		// 		// &::after {
-		// 		// 	content: '';
-		// 		// 	width: 100px;
-		// 		// 	height: 100px;
-
-		// 		// 	border-radius: 100px;
-		// 		// 	background: rgba(0, 0, 0, 0);
-		// 		// 	position: absolute;
-		// 		// 	top: -100px;
-		// 		// 	left: -40px;
-		// 		// 	border: 40px solid rgba(255, 255, 255, 1);
-		// 		// }
-
-		// 	}
-		// }
 
 		@media (min-width:$tablet) {
 			column-gap: toRem(126);

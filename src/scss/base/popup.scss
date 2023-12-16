@@ -37,6 +37,7 @@ body::after {
 
 .popup_show .popup__content {
 	visibility: visible;
+	opacity: 1;
 	transform: scale(1);
 }
 
@@ -67,15 +68,15 @@ body::after {
 }
 
 .popup__content {
-	visibility: hidden;
-	transform: scale(0);
-	transition: transform 0.3s ease 0s;
 	background-color: $bodyColor;
-	// padding: 20px;
-
 	width: 100%;
 	max-width: toRem(1164);
 	border-radius: toRem(50);
+
+	visibility: hidden;
+	opacity: 0;
+	transform: scale(.6);
+	transition: all 0.6s ease 0s;
 
 	.thanks-popup &,
 	.catalog-popup & {
