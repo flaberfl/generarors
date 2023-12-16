@@ -226,5 +226,11 @@
       left: 50%;
       opacity: 0;
     }
+
+    &_mobile {
+      @media (min-width:$tablet) {
+        display: none;
+      }
+    }
   }
 }

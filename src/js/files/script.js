@@ -7,7 +7,6 @@ import { flsModules } from "./modules.js";
 const btn = document.querySelector('.show-more');
 const cards = Array.from(document.querySelectorAll('.item-catalog-more'));
 
-
 window.addEventListener('resize', event => {
   if (event.target.window.innerWidth > 992) response1();
   if (event.target.window.innerWidth <= 992 && event.target.window.innerWidth > 680) response2();
@@ -37,7 +36,6 @@ function response1() {
 }
 response1()
 
-
 function response2() {
   if (window.innerWidth <= 992 && window.innerWidth > 680) {
 
@@ -54,7 +52,6 @@ function response2() {
 }
 response2()
 
-
 function response3() {
   if (window.innerWidth <= 680) {
 
@@ -70,7 +67,6 @@ function response3() {
   }
 }
 response3()
-
 
 // Функционал квиза
 
@@ -96,7 +92,6 @@ const inputsBtnFinish = quiz.querySelectorAll('.quiz-form__button_finish');
 //     btn_submit.disabled = true;
 //   }
 // });
-
 
 let count = 0;
 quizItems[count].classList.add('_active');
@@ -141,8 +136,6 @@ quizItems.forEach((quizItem, quizItemIndex) => {
       // заблокировать эту кнопку
       btnsNext[quizItemIndex].disabled = true;
     }
-
-
   })
 });
 
