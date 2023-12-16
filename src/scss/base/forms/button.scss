@@ -27,12 +27,28 @@
 		&:disabled {
 			opacity: 0.7;
 			background: grey;
+			cursor: no-drop
 		}
 
 	}
 
-	&_next {
-		
+	&_next {}
+
+
+	&_back {
+		@include adaptiveValue("height", 80, 60);
+		@include adaptiveValue("width", 80, 60);
+		flex-shrink: 0;
+		opacity: 0.7;
+		background: grey;
+
+		&:hover {
+			background: $bgColor;
+		}
+
+		img {
+			transform: rotate(-90deg);
+		}
 	}
 
 	&_catalog {

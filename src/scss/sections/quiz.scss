@@ -140,15 +140,15 @@
   &__image {
     transform: translate(0, 4.4%);
     max-width: 100%;
-    
+
     @media (max-width:$tablet) {
       max-width: toRem(460);
     }
-    
+
     @media (max-width: em(550)) {
       max-width: 100%;
     }
-    
+
     ._finish & {
       transform: translate(0, 12.7%);
     }
@@ -192,6 +192,7 @@
   &__progress-wrapper {
     display: flex;
     align-items: center;
+    justify-content: center;
     max-width: toRem(573);
     padding: toRem(20);
     @include adaptiveValue("gap", 35, 15);
@@ -202,7 +203,7 @@
 
     ._finish & {
       max-width: none;
-      justify-content: space-between;
+      // justify-content: space-between;
       padding: 0;
 
       box-shadow: none;
@@ -213,8 +214,11 @@
   &__button {
     max-width: toRem(164);
 
-    @media (max-width: em(550)) {
-      margin-top: toRem(32);
+    @media (max-width: em(620)) {
+
+      .quiz-form__content_position & {
+        margin-top: toRem(32);
+      }
     }
 
     ._finish & {
@@ -329,6 +333,21 @@
   &__checkbox {
     margin: toRem(50) 0;
   }
+
+  &__footer {
+    @media (max-width: em(620)) {
+      margin-top: toRem(30);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: toRem(40);
+
+      @media (max-width: em(480)){
+         gap: toRem(20); 
+      }
+    }
+  }
+
 }
 
 .wpcf7-form-control {}
