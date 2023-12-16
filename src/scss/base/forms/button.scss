@@ -23,6 +23,16 @@
 		&:hover {
 			// background-color: $bgColorSemi;
 		}
+
+		&:disabled {
+			opacity: 0.7;
+			background: grey;
+		}
+
+	}
+
+	&_next {
+		
 	}
 
 	&_catalog {
