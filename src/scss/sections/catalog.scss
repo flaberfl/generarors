@@ -5,9 +5,6 @@
 
   background-color: #fff;
 
-  /* .catalog__container */
-  &__container {}
-
   /* .catalog__title */
   &__title {
     @include adaptiveValue("margin-bottom", 64, 51);
@@ -42,8 +39,6 @@
   /* .catalog__items */
   &__items {
     display: grid;
-    // grid-template-columns: repeat(auto-fill, 400px);
-    // grid-auto-rows: auto;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     justify-content: center;
@@ -68,25 +63,14 @@
   display: grid;
   justify-items: center;
   @include adaptiveValue("gap", 27, 15);
-  // @include adaptiveValue("width", 453, 313);
   max-width: toRem(453);
-  // @include adaptiveValue("height", 519, 257);
   max-height: toRem(519);
-  // padding-bottom: toRem(42);
   @include adaptiveValue("padding-top", 60, 46);
-  // @include adaptiveValue("padding-bottom", 42, 0, 1920, 992);
   padding-bottom: toRem(42);
-
 
   border-radius: toRem(50);
   border: toRem(6) solid #F0F0F0;
 
-  @media (min-width:$tablet) {}
-
-  // &:hover {
-  //   box-shadow: $shadow;
-  //   border: 0px solid #F0F0F0;
-  // }
 
   /* .item-catalog__image */
   &__image {
@@ -96,7 +80,6 @@
     align-items: center;
     @include adaptiveValue("padding-right", 80, 40);
     @include adaptiveValue("padding-left", 80, 40);
-    // margin-bottom: toRem(42);
 
     img {
       max-width: 100%;

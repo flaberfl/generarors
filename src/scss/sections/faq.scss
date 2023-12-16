@@ -2,14 +2,8 @@
   @include adaptiveValue("padding-top", 137, 100);
   padding-bottom: toRem(139);
 
-  /* .faq__container */
-  &__container {}
-
   /* .faq__title */
   &__title {
     @include adaptiveValue("margin-bottom", 70, 34);
   }
-
-  /* .faq__body */
-  &__body {}
 }

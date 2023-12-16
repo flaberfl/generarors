@@ -70,7 +70,7 @@
   @include adaptiveValue("font-size", 22, 16);
   color: $colorGrey;
   line-height: normal;
-  letter-spacing: 1.1px;
+  letter-spacing: -0.88px;
 }
 
 .quiz-form {
@@ -342,21 +342,13 @@
       justify-content: center;
       gap: toRem(40);
 
-      @media (max-width: em(480)){
-         gap: toRem(20); 
+      @media (max-width: em(480)) {
+        gap: toRem(20);
       }
     }
   }
 
 }
-
-.wpcf7-form-control {}
-
-.wpcf7-radio {}
-
-.wpcf7-list-item {}
-
-.wpcf7-list-item-label {}
 
 .progress-box {
   @include adaptiveValue("width", 304, 247);

@@ -2,8 +2,6 @@
   @include adaptiveValue("padding-top", 122, 80);
   @include adaptiveValue("padding-bottom", 116, 86);
 
-  // background-color: red;
-
   /* .about-case__container */
   &__container {
     display: grid;

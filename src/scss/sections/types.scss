@@ -4,9 +4,6 @@
 
   background-color: #fff;
 
-  /* .types__container */
-  &__container {}
-
   /* .types__title */
   &__title {
     @include adaptiveValue("margin-bottom", 36, 44);
