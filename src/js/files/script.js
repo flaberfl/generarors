@@ -78,6 +78,7 @@ response3()
 const quiz = document.querySelector('.quiz-form');
 const quizItems = quiz.querySelectorAll('.quiz-form__fieldset');
 const btnsNext = quiz.querySelectorAll('.button_next');
+const btnsPrev = quiz.querySelectorAll('.button_back');
 
 let count = 0;
 quizItems[count].classList.add('_active');
@@ -91,6 +92,15 @@ btnsNext.forEach((btn) => {
 
   btn.disabled = true;
 });
+
+btnsPrev.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    count--;
+    initQuiz();
+  });
+});
+
 
 function initQuiz() {
   quizItems.forEach((element, i) => {
