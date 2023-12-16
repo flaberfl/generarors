@@ -72,13 +72,31 @@ function response3() {
 response3()
 
 
-
 // Функционал квиза
 
 const quiz = document.querySelector('.quiz-form');
 const quizItems = quiz.querySelectorAll('.quiz-form__fieldset');
+// const quizItemsNot = quiz.querySelectorAll('.fieldset');
 const btnsNext = quiz.querySelectorAll('.button_next');
 const btnsPrev = quiz.querySelectorAll('.button_back');
+
+const inputsCheckedFinish = quiz.querySelectorAll('.checkbox-real__input');
+const inputsBtnFinish = quiz.querySelectorAll('.quiz-form__button_finish');
+
+
+// const checkbox1 = document.getElementById('accept1');
+// const btn_submit = document.getElementById('quiz-submit1');
+
+
+// btn_submit.disabled = false;
+// checkbox1.addEventListener("change", () => {
+//   if (checkbox1.checked) {
+//     btn_submit.disabled = false;
+//   } else {
+//     btn_submit.disabled = true;
+//   }
+// });
+
 
 let count = 0;
 quizItems[count].classList.add('_active');
@@ -89,7 +107,6 @@ btnsNext.forEach((btn) => {
     count++;
     initQuiz();
   });
-
   btn.disabled = true;
 });
 
@@ -100,7 +117,6 @@ btnsPrev.forEach((btn) => {
     initQuiz();
   });
 });
-
 
 function initQuiz() {
   quizItems.forEach((element, i) => {
@@ -116,13 +132,17 @@ quizItems.forEach((quizItem, quizItemIndex) => {
   quizItem.addEventListener('change', (e) => {
     const target = e.target;
     const inputsChecked = quizItem.querySelectorAll('input:checked');
+
     if (inputsChecked.length > 0) {
       // разблокировать кнопку именно эту
       btnsNext[quizItemIndex].disabled = false;
+      inputsBtnFinish.disabled = false;
     } else {
       // заблокировать эту кнопку
       btnsNext[quizItemIndex].disabled = true;
     }
+
+
   })
 });
 
