@@ -59,6 +59,12 @@
     // top: 50%;
   }
 
+  .quiz-form__options & {
+    &::before {
+      margin-top: 10px;
+    }
+  }
+
   label {
     display: flex;
   }
