@@ -47,8 +47,8 @@ body::after {
 	top: toRem(40);
 
 	@media (max-width:$mobile) {
-		right: toRem(25);
-		top: toRem(20);
+		right: toRem(35);
+		top: toRem(30);
 
 	}
 }
@@ -136,7 +136,7 @@ body::after {
 		}
 
 		@media (max-width:$mobile) {
-			max-width: toRem(380);
+			// max-width: toRem(380);
 		}
 
 		@media (max-width: em(480)) {
