@@ -1,6 +1,7 @@
 .stages {
   @include adaptiveValue("padding-top", 120, 92);
-  @include adaptiveValue("padding-bottom", 120, 92);
+  // @include adaptiveValue("padding-bottom", 120, 92);
+  padding-bottom: toRem(100);
 
   @media (max-width:$mobile) {
     padding-bottom: toRem(50);

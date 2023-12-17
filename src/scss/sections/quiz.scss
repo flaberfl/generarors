@@ -55,13 +55,17 @@
     width: toRem(16);
     height: toRem(2);
     left: toRem(50);
-    margin-top: 15px;
+    margin-top: toRem(15);
     // top: 50%;
   }
 
   .quiz-form__options & {
     &::before {
-      margin-top: 10px;
+      margin-top: toRem(13);
+
+      @media (max-width:$tablet) {
+        margin-top: toRem(10);
+      }
     }
   }
 
