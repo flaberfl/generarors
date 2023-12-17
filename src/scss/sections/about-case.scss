@@ -126,14 +126,14 @@
   /* .list-about__item */
   &__item {
     position: relative;
-    @include adaptiveValue("padding-left", 78, 50);
+    @include adaptiveValue("padding-left", 78, 70);
 
     @include adaptiveValue("font-size", 22, 16);
     line-height: normal;
     letter-spacing: 1.1px;
 
     &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 25, 12);
+      margin-bottom: toRem(25);
     }
 
     @media (max-width:$mobile) {
