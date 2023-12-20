@@ -105,6 +105,10 @@ body::after {
 
 	@media (min-width:$mobile) {
 		padding-bottom: toRem(30);
+
+		.order-popup & {
+			padding-bottom: toRem(50);
+		}
 	}
 }
 
