@@ -152,7 +152,7 @@
 	}
 
 	@media (max-width: em(530)) {
-		transform: translate(0%, 245%);
+		transform: translate(0%, 765%);
 	}
 
 	span {
@@ -173,6 +173,10 @@
 			left: -46px;
 			@include adaptiveValue("left", -46, -34);
 			top: 50%;
+		}
+
+		@media (max-width: em(530)) {
+			display: none;
 		}
 	}
 }
