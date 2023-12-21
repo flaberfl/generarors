@@ -4,6 +4,7 @@ import { isMobile } from "./functions.js";
 import { flsModules } from "./modules.js";
 
 // При нажатии на "Показать еще", появляются все card
+
 const btn = document.querySelector('.show-more');
 const cards = Array.from(document.querySelectorAll('.item-catalog-more'));
 
@@ -67,6 +68,12 @@ function response3() {
   }
 }
 response3()
+
+
+// Активный класс тобам
+
+const itemsTab = document.querySelectorAll('.catalog__label');
+itemsTab[0].classList.add('_tab-active');
 
 // Функционал квиза
 
