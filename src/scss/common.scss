@@ -263,3 +263,15 @@
 [delay120] {
 	transition: all $animSpeed ease 1.2s;
 }
+
+
+
+// .catalog__item {
+// 	display: none;
+// }
+
+.catalog__tabs-body .catalog__items .catalog__item:nth-child(1),
+.catalog__tabs-body .catalog__items .catalog__item:nth-child(2),
+.catalog__tabs-body .catalog__items .catalog__item:nth-child(3) {
+	display: grid !important;
+}

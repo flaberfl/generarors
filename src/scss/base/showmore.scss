@@ -1,14 +1,16 @@
-[data-showmore] {
-}
-[data-showmore-content] {
-}
+[data-showmore] {}
+
+[data-showmore-content] {}
+
 [data-showmore-button] {
 	span {
 		&:last-child {
 			display: none;
 		}
-		._showmore-active & {
+
+		.show & {
 			display: none;
+
 			&:last-child {
 				display: block;
 			}
