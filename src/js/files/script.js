@@ -4,17 +4,39 @@ import { isMobile } from "./functions.js";
 import { flsModules } from "./modules.js";
 
 
+// if (блок.children.length < 2) {
+//   действие;
+// } else {
+//   // Если блок содержит больше 1 элемента, делаем что-то еще
+// }
 const showMoreBtns = document.querySelectorAll('.show-more');
+
+console.log(showMoreBtns);
+const cardItems = document.querySelectorAll('.catalog__items');
+cardItems.forEach(i => {
+  console.log(i.children);
+  if (i.children.length >= 4) {
+    // showMoreBtns.classList.add('hidden-content');
+    console.log('fff');
+  }
+})
+
+
+
 
 showMoreBtns.forEach(btn => {
   btn.addEventListener('click', event => {
     const currentBtn = event.currentTarget;
-    const currentTab = currentBtn.closest('.catalog__tabs-body');
-    const catalogItems = currentTab.querySelector('.catalog__items');
-    const catalogItem = catalogItems.querySelectorAll('.catalog__item');
+    const currentTab = currentBtn.closest('._catalog-body');
+    const catalogItems = currentTab.querySelector('._catalog-items');
+    const catalogItem = catalogItems.querySelectorAll('._catalog-item');
 
     for (let i = 2; i < catalogItem.length; i++) {
       catalogItem[i].classList.toggle('hidden-content');
+      // currentTab.classList.toggle('show');
+      currentBtn.classList.add('hidden-content');
+
+
     }
     currentTab.classList.toggle('show');
   })
