@@ -104,6 +104,10 @@
 	border: 1px solid $colorOrange;
 	font-weight: 700;
 	color: $mainColor;
+
+	.hide & {
+		display: none;
+	}
 }
 
 .button__up-box {

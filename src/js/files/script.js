@@ -4,25 +4,20 @@ import { isMobile } from "./functions.js";
 import { flsModules } from "./modules.js";
 
 
-// if (блок.children.length < 2) {
-//   действие;
-// } else {
-//   // Если блок содержит больше 1 элемента, делаем что-то еще
-// }
-const showMoreBtns = document.querySelectorAll('.show-more');
+// Обозначаем все каталоги
+const cardItems = document.querySelectorAll('._catalog-items');
 
-console.log(showMoreBtns);
-const cardItems = document.querySelectorAll('.catalog__items');
-cardItems.forEach(i => {
-  console.log(i.children);
-  if (i.children.length >= 4) {
-    // showMoreBtns.classList.add('hidden-content');
-    console.log('fff');
+// Перебираем все каталоги
+for (const cardItem of cardItems) {
+  // Если дочерних элементов меньше трех
+  if (cardItem.children.length <= 3) {
+    // То родителю элемента присвоим класс, для того чтобы потом по классу отключить кнопку в этом блоке
+    cardItem.parentNode.classList.add('hide');
   }
-})
+}
 
 
-
+const showMoreBtns = document.querySelectorAll('.show-more');
 
 showMoreBtns.forEach(btn => {
   btn.addEventListener('click', event => {
@@ -33,10 +28,7 @@ showMoreBtns.forEach(btn => {
 
     for (let i = 2; i < catalogItem.length; i++) {
       catalogItem[i].classList.toggle('hidden-content');
-      // currentTab.classList.toggle('show');
-      currentBtn.classList.add('hidden-content');
-
-
+      // currentBtn.classList.add('hidden-content');
     }
     currentTab.classList.toggle('show');
   })
