@@ -42,12 +42,6 @@ showMoreBtns.forEach(btn => {
       // currentBtn.classList.add('hidden-content');
     }
     currentTab.classList.toggle('show');
-
-    // for (let i = 5; i < catalogItemCase.length; i++) {
-    //   catalogItem[i].classList.toggle('hidden-content');
-    //   currentBtn.classList.add('hidden-content');
-    // }
-
   })
 })
 
@@ -197,3 +191,15 @@ dataValue.forEach(inp => {
 //   map.addChild(new YMapDefaultSchemeLayer());
 // }
 
+
+
+
+
+
+ymaps.ready(init);
+function init() {
+  var myMap = new ymaps.Map("map", {
+    center: [55.825087, 37.588171],
+    zoom: 18
+  });
+}
