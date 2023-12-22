@@ -128,6 +128,25 @@ quizSubmit.addEventListener('click', () => {
 });
 
 
+// При увечичении кол-ва товара увеличить цену
+
+const dataValue = document.querySelectorAll('[data-quantity-value]');
+const price = document.querySelectorAll('.item-catalog-name');
+
+console.log(dataValue);
+
+dataValue.forEach(inp => {
+  // inp.addEventListener('change', event => {
+
+
+  inp.addEventListener('change', event => {
+    const currentInp = event.currentTarget;
+    price.innerHTML = inp.value * 2;
+    console.log(currentInp);
+  });
+})
+
+
 
 /*  Yandex Map   */
 

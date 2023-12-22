@@ -252,7 +252,18 @@ export function formQuantity() {
 				}
 			}
 			targetElement.closest('[data-quantity]').querySelector('[data-quantity-value]').value = value;
+			console.log(valueElement.value);
+
+			let popupPrices = document.querySelectorAll('.catalog-popup__price');
+
+			popupPrices.forEach(price => {
+
+
+				price.innerHTML = price.innerHTML * valueElement.value
+				console.log(valueElement);
+			})
 		}
+
 	});
 }
 /* Модуль зіркового рейтингу */
