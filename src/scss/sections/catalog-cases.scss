@@ -5,6 +5,10 @@
 
   background-color: #fff;
 
+  @media (min-width:em(1320)) {
+    padding-bottom: toRem(342);
+  }
+
   /* .catalog-cases__title */
   &__title {
     @include adaptiveValue("margin-bottom", 64, 31);

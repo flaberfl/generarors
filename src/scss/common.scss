@@ -275,3 +275,9 @@
 .catalog__tabs-body .catalog__items .catalog__item:nth-child(3) {
 	display: grid !important;
 }
+
+.catalog-cases__container .catalog-cases__items .catalog-cases__item:nth-child(1),
+.catalog-cases__container .catalog-cases__items .catalog-cases__item:nth-child(2),
+.catalog-cases__container .catalog-cases__items .catalog-cases__item:nth-child(3) {
+	display: grid !important;
+}

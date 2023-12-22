@@ -16,6 +16,15 @@ for (const cardItem of cardItems) {
   }
 }
 
+// Обозначаем все каталоги кожухов
+const cardItemsCases = document.querySelectorAll('._catalog-items-cases');
+for (const cardItem of cardItemsCases) {
+  // Если дочерних элементов меньше трех
+  if (cardItem.children.length <= 6) {
+    // То родителю элемента присвоим класс, для того чтобы потом по классу отключить кнопку в этом блоке
+    cardItem.parentNode.classList.add('hide');
+  }
+}
 
 const showMoreBtns = document.querySelectorAll('.show-more');
 
@@ -26,11 +35,19 @@ showMoreBtns.forEach(btn => {
     const catalogItems = currentTab.querySelector('._catalog-items');
     const catalogItem = catalogItems.querySelectorAll('._catalog-item');
 
+    const catalogItemCase = catalogItems.querySelectorAll('._catalog-item-case');
+
     for (let i = 2; i < catalogItem.length; i++) {
       catalogItem[i].classList.toggle('hidden-content');
       // currentBtn.classList.add('hidden-content');
     }
     currentTab.classList.toggle('show');
+
+    // for (let i = 5; i < catalogItemCase.length; i++) {
+    //   catalogItem[i].classList.toggle('hidden-content');
+    //   currentBtn.classList.add('hidden-content');
+    // }
+
   })
 })
 

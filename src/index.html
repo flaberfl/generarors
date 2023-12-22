@@ -657,14 +657,14 @@
 			</section>
 
 			<section class="catalog-cases">
-				<div class="catalog-cases__container">
+				<div class="catalog-cases__container _catalog-body">
 					<h2 class="catalog-cases__title title-h2" data-watch anim-up-down>Каталог кожухов</h2>
 					<h5 class="catalog-cases__subtitle" data-watch anim-up-down delay10>В стоимость включена услуга по забору
 						генератора и доставки кожуха с
 						генератором обратно</h5>
-					<ul class="catalog-cases__items" data-watch anim-up-down delay30>
+					<ul class="catalog-cases__items _catalog-items" data-watch anim-up-down delay30>
 
-						<li class="catalog-cases__item item-catalog-cases">
+						<li class="catalog-cases__item item-catalog-cases _catalog-item hidden-content">
 							<div class="item-catalog-cases__image">
 								<img data-src="@img/catalog-cases/01.png" alt="Фото кожуха">
 								<span class="item-catalog-cases__badge">-10%</span>
@@ -696,7 +696,7 @@
 								</button>
 							</div>
 						</li>
-						<li class="catalog-cases__item item-catalog-cases">
+						<li class="catalog-cases__item item-catalog-cases _catalog-item hidden-content">
 							<div class="item-catalog-cases__image">
 								<img data-src="@img/catalog-cases/01.png" alt="Фото кожуха">
 								<span class="item-catalog-cases__badge">NEW</span>
@@ -727,7 +727,7 @@
 									data-popup="#order-popup">Заказать</button>
 							</div>
 						</li>
-						<li class="catalog-cases__item item-catalog-cases">
+						<li class="catalog-cases__item item-catalog-cases _catalog-item hidden-content">
 							<div class="item-catalog-cases__image">
 								<img data-src="@img/catalog-cases/01.png" alt="Фото кожуха">
 								<!-- <span class="item-catalog-cases__badge">-10%</span> -->
@@ -758,7 +758,7 @@
 									data-popup="#order-popup">Заказать</button>
 							</div>
 						</li>
-						<li class="catalog-cases__item item-catalog-cases">
+						<li class="catalog-cases__item item-catalog-cases _catalog-item hidden-content">
 							<div class="item-catalog-cases__image">
 								<img data-src="@img/catalog-cases/01.png" alt="Фото кожуха">
 								<!-- <span class="item-catalog-cases__badge">-10%</span> -->
@@ -789,7 +789,7 @@
 									data-popup="#order-popup">Заказать</button>
 							</div>
 						</li>
-						<li class="catalog-cases__item item-catalog-cases">
+						<li class="catalog-cases__item item-catalog-cases _catalog-item hidden-content">
 							<div class="item-catalog-cases__image">
 								<img data-src="@img/catalog-cases/01.png" alt="Фото кожуха">
 								<!-- <span class="item-catalog-cases__badge">-10%</span> -->
@@ -820,10 +820,10 @@
 									data-popup="#order-popup">Заказать</button>
 							</div>
 						</li>
-						<li class="catalog-cases__item item-catalog-cases">
+						<li class="catalog-cases__item item-catalog-cases _catalog-item hidden-content">
 							<div class="item-catalog-cases__image">
 								<img data-src="@img/catalog-cases/01.png" alt="Фото кожуха">
-								<span class="item-catalog-cases__badge">HIT</span>
+								<!-- <span class="item-catalog-cases__badge">-10%</span> -->
 							</div>
 
 							<div class="item-catalog-cases__content">
@@ -847,13 +847,18 @@
 
 							</div>
 							<div class="item-catalog-cases__footer">
-								<button type="button" class="item-catalog-cases__button button"
+								<button type="button" class="item-catalog-cases__button  button"
 									data-popup="#order-popup">Заказать</button>
 							</div>
 						</li>
+
 
 					</ul>
-					<button type="button" class="show-more button catalog-cases__button">Смотреть все</button>
+					<button data-showmore-button class="show-more button" type="button">
+						<!-- <button type="button" class="show-more button catalog-cases__button"> -->
+						<span>Смотреть все </span>
+						<span>Скрыть</span>
+					</button>
 				</div>
 			</section>
 
