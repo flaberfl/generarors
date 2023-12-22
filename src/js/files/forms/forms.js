@@ -263,9 +263,16 @@ export function formQuantity() {
 				// console.log(valueElement);
 
 				// console.log(targetElement.hasAttribute('data-quantity-minus'));
-				price.innerHTML = price.innerHTML * valueElement.value
-			
+
+				// price.innerHTML = price.innerHTML * valueElement.value
+
+				if (targetElement.hasAttribute('data-quantity-plus')) {
+					price.innerHTML = price.innerHTML * valueElement.value
+				}
+
+
 				if (targetElement.hasAttribute('data-quantity-minus')) {
+					price.innerHTML = price.innerHTML / valueElement.value
 					// price.innerHTML = price.innerHTML / valueElement.value
 					// price.innerHTML = price.innerHTML / ;
 				} else {
