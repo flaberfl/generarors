@@ -258,9 +258,13 @@ export function formQuantity() {
 
 			popupPrices.forEach(price => {
 
-
 				price.innerHTML = price.innerHTML * valueElement.value
+
 				console.log(valueElement);
+
+				if (targetElement.hasAttribute('data-quantity-minus')) {
+					price.innerHTML = price.innerHTML / valueElement.value
+				}
 			})
 		}
 
