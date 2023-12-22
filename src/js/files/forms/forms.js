@@ -252,18 +252,24 @@ export function formQuantity() {
 				}
 			}
 			targetElement.closest('[data-quantity]').querySelector('[data-quantity-value]').value = value;
-			console.log(valueElement.value);
+			// console.log(valueElement.value);
 
 			let popupPrices = document.querySelectorAll('.catalog-popup__price');
 
 			popupPrices.forEach(price => {
 
+				// price.innerHTML = price.innerHTML * valueElement.value
+
+				// console.log(valueElement);
+
+				// console.log(targetElement.hasAttribute('data-quantity-minus'));
 				price.innerHTML = price.innerHTML * valueElement.value
-
-				console.log(valueElement);
-
+			
 				if (targetElement.hasAttribute('data-quantity-minus')) {
-					price.innerHTML = price.innerHTML / valueElement.value
+					// price.innerHTML = price.innerHTML / valueElement.value
+					// price.innerHTML = price.innerHTML / ;
+				} else {
+
 				}
 			})
 		}
