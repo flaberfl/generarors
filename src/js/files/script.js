@@ -194,7 +194,7 @@ dataValue.forEach(inp => {
 
 
 
-
+// Yandex карты
 
 ymaps.ready(init);
 function init() {
@@ -203,3 +203,10 @@ function init() {
     zoom: 18
   });
 }
+
+var myPlacemark = new ymaps.GeoObject({
+  geometry: {
+      type: "Point",
+      coordinates: [55.76, 37.56]
+  }
+});
