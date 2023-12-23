@@ -202,11 +202,16 @@ function init() {
     center: [55.825087, 37.588171],
     zoom: 18
   });
-}
 
-var myPlacemark = new ymaps.GeoObject({
-  geometry: {
-      type: "Point",
-      coordinates: [55.76, 37.56]
-  }
-});
+  var myPlacemark = new ymaps.Placemark(
+
+    [55.825087, 37.588171],
+    {},
+    {
+      iconLayout: 'default#image',
+      iconImageHref: './img/map/location-pin.svg',
+      iconImageSize: [59, 78],
+      iconImageOffset: [-30, -78]
+    });
+    myMap.geoObjects.add(myPlacemark);
+}
