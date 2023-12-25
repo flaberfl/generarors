@@ -29,3 +29,17 @@
   // height: 900px;
   width: 100%;
 }
+
+[class*="copyright__link"] {
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+[class*="gototech"] {
+  display: none !important;
+}
+
+[class*="ground-pane"] {
+  // filter: invert(25%) grayscale(2) sepia(60%);
+  filter: invert(25%) sepia(60%);
+}
