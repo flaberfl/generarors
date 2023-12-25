@@ -41,5 +41,7 @@
 
 [class*="ground-pane"] {
   // filter: invert(25%) grayscale(2) sepia(60%);
-  filter: invert(25%) sepia(60%);
+  filter:  invert(80%);
+  // display: none;
+  // opacity: .5;
 }
