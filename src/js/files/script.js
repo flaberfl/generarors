@@ -191,3 +191,32 @@ function init() {
 
   map.geoObjects.add(myPlacemark);
 }
+
+
+// Присвоим попапам и линкам на них порядковые номера
+
+const objPopupGensLink = document.querySelectorAll('.item-catalog__button');
+const objPopupGens = document.querySelectorAll('.catalog-popup');
+
+const objPopupCasesLink = document.querySelectorAll('.item-catalog-cases__button');
+const objPopupCases = document.querySelectorAll('.order-popup');
+
+
+objPopupGensLink.forEach((element, i) =>
+  element.setAttribute('data-popup', '#catalog-popup' + '-' + i));
+
+for (var i = 0, b; b = document.getElementById('catalog-popup'); ++i) {
+  b.id += '-' + i;
+  console.log(b.id);
+}
+
+
+objPopupCasesLink.forEach((element, i) =>
+  element.setAttribute('data-popup', '#order-popup' + ' - ' + i));
+
+for (var i = 0, b; b = document.getElementById('order-popup'); ++i) {
+  b.id += '-' + i;
+}
+
+
+
