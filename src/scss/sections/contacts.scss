@@ -1,11 +1,12 @@
 .contacts {
-  // padding-top: toRem(150);
   @include adaptiveValue("padding-top", 150, 60);
   padding-bottom: toRem(45);
 
   /* .contacts__container */
   &__container {
     position: relative;
+    pointer-events: none;
+    // display: inline-block;
   }
 
   /* .contacts__title */
@@ -69,6 +70,8 @@
   &__value {
     @include adaptiveValue("padding-left", 19, 10);
     padding-top: toRem(6);
+    // cursor: pointer;
+    pointer-events: all;
 
     @include adaptiveValue("font-size", 20, 16);
     letter-spacing: 1px;
