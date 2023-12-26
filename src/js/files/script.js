@@ -198,8 +198,10 @@ function init() {
 const objPopupGensLink = document.querySelectorAll('.item-catalog__button');
 const objPopupGens = document.querySelectorAll('.catalog-popup');
 
-const objPopupCasesLink = document.querySelectorAll('.item-catalog-cases__button');
+const objPopupCasesLinkMob = document.querySelectorAll('.item-catalog-cases__button_mobile');
+const objPopupCasesLinkDesk = document.querySelectorAll('.item-catalog-cases__button_desk');
 const objPopupCases = document.querySelectorAll('.order-popup');
+
 
 
 objPopupGensLink.forEach((element, i) =>
@@ -207,15 +209,17 @@ objPopupGensLink.forEach((element, i) =>
 
 for (var i = 0, b; b = document.getElementById('catalog-popup'); ++i) {
   b.id += '-' + i;
-  console.log(b.id);
 }
 
+objPopupCasesLinkMob.forEach((element, i) =>
+  element.setAttribute('data-popup', '#order-popup' + '-' + i));
 
-objPopupCasesLink.forEach((element, i) =>
-  element.setAttribute('data-popup', '#order-popup' + ' - ' + i));
+objPopupCasesLinkDesk.forEach((element, i) =>
+  element.setAttribute('data-popup', '#order-popup' + '-' + i));
 
 for (var i = 0, b; b = document.getElementById('order-popup'); ++i) {
   b.id += '-' + i;
+  // console.log(b.id);
 }
 
 
