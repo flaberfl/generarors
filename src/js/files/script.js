@@ -219,7 +219,6 @@ objPopupCasesLinkDesk.forEach((element, i) =>
 
 for (var i = 0, b; b = document.getElementById('order-popup'); ++i) {
   b.id += '-' + i;
-  // console.log(b.id);
 }
 
 
