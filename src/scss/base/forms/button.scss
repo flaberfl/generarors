@@ -3,8 +3,6 @@
 
 .button {
 	display: inline-flex;
-	// position: relative;
-	// z-index: 50;
 
 	justify-content: center;
 	align-items: center;
@@ -25,24 +23,15 @@
 		}
 
 		&:disabled {
-			// opacity: 0.7;
-			// background: grey;
 			background: #D9D9D9;
-
-			cursor: no-drop
+			cursor: no-drop;
 		}
-
 	}
-
-	&_next {}
-
 
 	&_back {
 		@include adaptiveValue("height", 80, 60);
 		@include adaptiveValue("width", 80, 60);
 		flex-shrink: 0;
-		// opacity: 0.7;
-		// background: grey;
 		background: #D9D9D9;
 
 		&:hover {
@@ -63,32 +52,6 @@
 		color: rgba(255, 255, 255, 0.97);
 		cursor: pointer;
 	}
-
-	// &--min {}
-
-	// &--icon {
-	// 	span {
-	// 		display: flex;
-	// 		align-items: center;
-	// 		justify-content: center;
-	// 		padding-left: toRem(16);
-	// 		gap: toRem(16);
-
-	// 		&::after {
-	// 			content: '';
-	// 			background: url('@img/icons/phone.svg') center no-repeat;
-	// 			flex: 0 0 toRem(48);
-	// 			width: toRem(48);
-	// 			height: toRem(48);
-	// 			border-radius: 50%;
-	// 			background-color: #fff;
-	// 		}
-	// 	}
-	// }
-
-	// &--fw {
-	// 	width: 100%;
-	// }
 }
 
 .hidden-content {
@@ -122,7 +85,6 @@
 	border-radius: 50%;
 
 	img {
-		// @include adaptiveValue("width", 24, 14);
 		@include adaptiveValue("height", 24, 14);
 
 		z-index: 10;
@@ -144,14 +106,15 @@
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
-	right: -0.9%;
+	// right: -0.9%;
+	right: 1.1%;
 	transform: translate(0%, -38%);
 
 	@include adaptiveValue("gap", 132, 90);
 
 	z-index: 20;
 
-	@media (max-width: em(670)) {
+	@media (max-width: em(690)) {
 		transform: translate(0%, 152%);
 	}
 

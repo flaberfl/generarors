@@ -4,6 +4,10 @@
 
   background-color: #fff;
 
+  @media (max-width:$mobile) {
+    padding-top: toRem(0);
+  }
+
   &__title {
     @include adaptiveValue("margin-bottom", 73, 35);
   }
