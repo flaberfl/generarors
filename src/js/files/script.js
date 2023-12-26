@@ -141,57 +141,21 @@ quizSubmit.addEventListener('click', () => {
 
 // При увечичении кол-ва товара увеличить цену
 
-const dataValue = document.querySelectorAll('[data-quantity-value]');
-const price = document.querySelectorAll('.item-catalog-name');
+// const dataValue = document.querySelectorAll('[data-quantity-value]');
+// const price = document.querySelectorAll('.item-catalog-name');
 
-console.log(dataValue);
+// console.log(dataValue);
 
-dataValue.forEach(inp => {
-  // inp.addEventListener('change', event => {
-
-
-  inp.addEventListener('change', event => {
-    const currentInp = event.currentTarget;
-    price.innerHTML = inp.value * 2;
-    console.log(currentInp);
-  });
-})
+// dataValue.forEach(inp => {
+//   // inp.addEventListener('change', event => {
 
 
-
-/*  Yandex Map   */
-
-
-// initMap();
-
-// async function initMap() {
-//   // Промис `ymaps3.ready` будет зарезолвлен, когда загрузятся все компоненты основного модуля API
-//   await ymaps3.ready;
-
-//   const { YMap, YMapDefaultSchemeLayer } = ymaps3;
-
-//   // Иницилиазируем карту
-//   const map = new YMap(
-//     // Передаём ссылку на HTMLElement контейнера
-//     document.getElementById('map'),
-
-//     // Передаём параметры инициализации карты
-//     {
-//       location: {
-//         // Координаты центра карты
-//         center: [37.588144, 55.733842],
-
-//         // Уровень масштабирования
-//         zoom: 100
-//       }
-//     }
-//   );
-
-//   // Добавляем слой для отображения схематической карты
-//   map.addChild(new YMapDefaultSchemeLayer());
-// }
-
-
+//   inp.addEventListener('change', event => {
+//     const currentInp = event.currentTarget;
+//     price.innerHTML = inp.value * 2;
+//     console.log(currentInp);
+//   });
+// })
 
 
 // Yandex карты
@@ -222,11 +186,8 @@ function init() {
 
   // map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
   // map.controls.remove('zoomControl'); // удаляем контрол зуммирования
-  // map.controls.remove('rulerControl'); // удаляем контрол правил
+  map.controls.remove('rulerControl'); // удаляем контрол правил
   map.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
-
-
-
 
   map.geoObjects.add(myPlacemark);
 }
