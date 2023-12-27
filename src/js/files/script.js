@@ -203,7 +203,7 @@ const objPopupCasesLinkDesk = document.querySelectorAll('.item-catalog-cases__bu
 const objPopupCases = document.querySelectorAll('.order-popup');
 
 const objPopupVideoLink = document.querySelectorAll('.our-works__button');
-const objPopupVideo = document.querySelectorAll('.popup-video');
+const objPopupVideo = document.querySelectorAll('.video-popup');
 
 
 objPopupGensLink.forEach((element, i) =>
@@ -224,9 +224,9 @@ for (var i = 0, b; b = document.getElementById('order-popup'); ++i) {
 }
 
 objPopupVideoLink.forEach((element, i) =>
-  element.setAttribute('data-popup', '#popup-video' + '-' + i));
+  element.setAttribute('data-popup', '#video-popup' + '-' + i));
 
-for (var i = 0, b; b = document.getElementById('popup-video'); ++i) {
+for (var i = 0, b; b = document.getElementById('video-popup'); ++i) {
   b.id += '-' + i;
 }
 
