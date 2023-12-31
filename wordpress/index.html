@@ -1,0 +1,1160 @@
+<?php get_header(); ?>
+
+
+<main class="page">
+
+  <section class="intro" data-prlx-parent>
+    <div class="intro__container">
+      <div class="intro__content">
+        <h1 class="intro__title title-h1" data-watch anim-up-down>
+          <?= CFS()->get('title-h1'); ?>
+        </h1>
+        <h2 class="intro__subtitle subtitle-h2" data-watch anim-up-down delay20>
+          <?= CFS()->get('subtitle-h2'); ?>
+        </h2>
+
+        <div class="intro__buttons">
+
+          <button type="submit" class="intro__button button" data-popup="#submit-popup">Оставить заявку</button>
+          <button data-goto=".catalog" class="intro__button button button_catalog">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M0 10V20H10H20V10V0H10H0V10ZM18.8281 10V18.8281H10H1.17188V10V1.17188H10H18.8281V10ZM2.34375 5.87891V9.41406H5.87891H9.41406V5.87891V2.34375H5.87891H2.34375V5.87891ZM10.5859 5.87891V9.41406H14.1211H17.6562V5.87891V2.34375H14.1211H10.5859V5.87891ZM8.24219 4.70703V5.89844H5.87891H3.51562V4.70703V3.51562H5.87891H8.24219V4.70703ZM16.4844 4.70703V5.89844H14.1211H11.7578V4.70703V3.51562H14.1211H16.4844V4.70703ZM8.24219 7.65625V8.24219H5.87891H3.51562V7.65625V7.07031H5.87891H8.24219V7.65625ZM16.4844 7.65625V8.24219H14.1211H11.7578V7.65625V7.07031H14.1211H16.4844V7.65625ZM2.34375 14.1211V17.6562H5.87891H9.41406V14.1211V10.5859H5.87891H2.34375V14.1211ZM10.5859 14.1211V17.6562H14.1211H17.6562V14.1211V10.5859H14.1211H10.5859V14.1211ZM8.24219 12.9492V14.1406H5.87891H3.51562V12.9492V11.7578H5.87891H8.24219V12.9492ZM16.4844 12.9492V14.1406H14.1211H11.7578V12.9492V11.7578H14.1211H16.4844V12.9492ZM8.24219 15.8984V16.4844H5.87891H3.51562V15.8984V15.3125H5.87891H8.24219V15.8984ZM16.4844 15.8984V16.4844H14.1211H11.7578V15.8984V15.3125H14.1211H16.4844V15.8984Z"
+                fill="#E16C00" />
+            </svg>
+            Смотреть каталог
+          </button>
+        </div>
+      </div>
+
+      <div class="intro__media">
+        <img data-src="<?= CFS()->get('main-image'); ?>" alt="Фото генератора" class="intro__main-image" data-prlx
+          data-direction="-1" data-coefficient="250">
+        <img data-src="<?php bloginfo('template_url'); ?>/img/intro/tree-b.png" alt="Крона дерева"
+          class="intro__dec-image intro__dec-image_1" data-prlx data-direction="-1" data-coefficient="200">
+        <img data-src="<?php bloginfo('template_url'); ?>/img/intro/tree.png" alt="Крона дерева"
+          class="intro__dec-image intro__dec-image_2" data-prlx data-direction="1" data-coefficient="150">
+      </div>
+
+      <div class="intro__mouse-down">
+        <span>листайте вниз</span>
+        <div class="intro__mouse" data-goto=".about">
+          <svg width="18" height="29" viewBox="0 0 18 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M8.15145 0.0200187C6.58533 0.206495 5.14045 0.738246 3.87816 1.59276C3.18566 2.06156 2.05491 3.20145 1.59221 3.89716C0.726625 5.1987 0.221981 6.56772 0.0608413 8.05164C-0.0206059 8.80214 -0.0206059 20.208 0.0608413 20.9585C0.489698 24.9082 3.33769 28.0159 7.30245 28.8605C8.16713 29.0447 9.77609 29.0468 10.6831 28.8649C14.6118 28.0768 17.4834 24.9412 17.9408 20.9398C18.0194 20.2523 18.0194 8.7579 17.9408 8.07036C17.4848 4.08177 14.5953 0.917066 10.7134 0.154601C10.1258 0.0391881 8.64432 -0.0386236 8.15145 0.0200187ZM10.2995 2.11589C13.0209 2.63318 15.1882 4.7312 15.8226 7.46227C15.9913 8.18884 16.0179 9.14577 16.0179 14.5051C16.0179 19.8644 15.9913 20.8213 15.8226 21.5479C15.2647 23.9498 13.4862 25.914 11.1888 26.6654C9.78492 27.1247 8.2162 27.1247 6.81258 26.6656C4.5165 25.9145 2.73524 23.9457 2.17688 21.5417C1.99701 20.7672 1.9742 19.8029 1.99752 13.9663C2.01744 8.99055 2.03312 8.12004 2.10976 7.74238C2.74843 4.59503 5.21115 2.35182 8.40615 2.00711C8.78888 1.96582 9.82239 2.0252 10.2995 2.11589ZM8.56554 6.10816C8.41656 6.17594 8.26963 6.30542 8.16934 6.45724L8.00995 6.69856V8.97126C8.00995 11.0928 8.01714 11.2585 8.11783 11.4617C8.46275 12.1577 9.53815 12.1577 9.88307 11.4617C9.98376 11.2585 9.99095 11.0928 9.99095 8.97132V6.69861L9.83156 6.45724C9.65242 6.18609 9.31475 6.00046 9.00045 6.00046C8.89149 6.00046 8.69577 6.04895 8.56554 6.10816Z"
+              fill="#BCC0CC" />
+          </svg>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="about" data-prlx-parent>
+    <div class="about__container">
+      <div class="about__items">
+        <div class="about__item" data-watch anim-up-down>
+          <svg class="about__border" width="414" height="245" viewBox="0 0 414 245" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.499756" y="0.5" width="413" height="244" rx="35.5" stroke="url(#paint0_linear_1_72)" />
+            <defs>
+              <linearGradient id="paint0_linear_1_72" x1="361.907" y1="40.5395" x2="194.857" y2="224.324"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#BCC0CC" />
+                <stop offset="1" stop-color="#BCC0CC" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <div class="about__box">
+            <div class="about__icon about__icon_1">
+              <img src="<?php bloginfo('template_url'); ?>/img/about/01.svg" alt="">
+            </div>
+            <p class="about__text">
+              <?= CFS()->get('about-text-1'); ?>
+          </div>
+        </div>
+        <div class="about__item" data-watch anim-up-down delay30>
+          <svg class="about__border" width="414" height="245" viewBox="0 0 414 245" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.499756" y="0.5" width="413" height="244" rx="35.5" stroke="url(#paint0_linear_1_72)" />
+            <defs>
+              <linearGradient id="paint0_linear_1_72" x1="361.907" y1="40.5395" x2="194.857" y2="224.324"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#BCC0CC" />
+                <stop offset="1" stop-color="#BCC0CC" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="about__box">
+            <div class="about__icon about__icon_2">
+              <img src="<?php bloginfo('template_url'); ?>/img/about/02.svg" alt="">
+            </div>
+            <p class="about__text">
+              <?= CFS()->get('about-text-2'); ?>
+            </p>
+          </div>
+        </div>
+        <div class="about__item" data-watch anim-up-down delay60>
+          <svg class="about__border" width="414" height="245" viewBox="0 0 414 245" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect x="0.499756" y="0.5" width="413" height="244" rx="35.5" stroke="url(#paint0_linear_1_72)" />
+            <defs>
+              <linearGradient id="paint0_linear_1_72" x1="361.907" y1="40.5395" x2="194.857" y2="224.324"
+                gradientUnits="userSpaceOnUse">
+                <stop stop-color="#BCC0CC" />
+                <stop offset="1" stop-color="#BCC0CC" stop-opacity="0" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="about__box">
+            <div class="about__icon about__icon_3">
+              <img src="<?php bloginfo('template_url'); ?>/img/about/03.svg" alt="">
+            </div>
+            <p class="about__text">
+              <?= CFS()->get('about-text-3'); ?>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__wrapper">
+        <div class="about__media">
+          <img src="<?php bloginfo('template_url'); ?>/img/about/image.png" alt="О компании" class="about__image"
+            data-prlx data-direction="1" data-coefficient="250">
+        </div>
+
+        <div class="about__content">
+          <h2 class="about__title title-h2" data-watch anim-up-down>
+            <?= CFS()->get('about-title'); ?>
+          </h2>
+          <p class="about__text" data-watch anim-up-down delay10>
+            <?= CFS()->get('about-text'); ?>
+          </p>
+          <ul class="about__list list-about">
+
+            <?php
+
+					$loop = CFS()->get('about-list');
+
+					foreach ($loop as $row) {
+
+					?>
+
+            <li class="list-about__item" data-watch anim-up-down delay10>
+              <div class="list-about__box">
+                <img src="<?php bloginfo('template_url'); ?>/img/check.svg" alt="">
+                <div class="about__line list-line"></div>
+              </div>
+              <p class="list-about__text">
+                <?= $row['about-list-item']; ?>
+              </p>
+            </li>
+
+
+            <?php
+					}
+					?>
+
+
+          </ul>
+        </div>
+
+      </div>
+      <div class="about__images">
+        <img src="<?php bloginfo('template_url'); ?>/img/about/about-tree-b.png" alt="Куст"
+          class="about__img about__img_1" data-prlx data-direction="-1" data-coefficient="200">
+        <img src="<?php bloginfo('template_url'); ?>/img/about/about-tree.png" alt="Куст"
+          class="about__img about__img_2" data-prlx data-direction="1" data-coefficient="150">
+      </div>
+    </div>
+  </section>
+
+  <section class="types">
+    <div class="types__container">
+      <h3 class="types__title" data-watch anim-up-down>Поставка и монтаж всех видов генераторов</h3>
+      <div class="types__items">
+        <div class="types__item item-types" data-watch anim-up-down>
+          <div class="item-types__image">
+            <img data-src="<?php bloginfo('template_url'); ?>/img/types/01.png" alt="Тип генератора">
+          </div>
+          <h5 class="item-types__title">бензиновые</h5>
+        </div>
+        <div class="types__item item-types" data-watch anim-up-down>
+          <div class="item-types__image">
+            <img data-src="<?php bloginfo('template_url'); ?>/img/types/02.png" alt="Тип генератора">
+          </div>
+          <h5 class="item-types__title">Дизельные</h5>
+        </div>
+        <div class="types__item item-types" data-watch anim-up-down>
+          <div class="item-types__image">
+            <img data-src="<?php bloginfo('template_url'); ?>/img/types/03.png" alt="Тип генератора">
+          </div>
+          <h5 class="item-types__title">Газовые</h5>
+        </div>
+        <div class="types__item item-types" data-watch anim-up-down>
+          <div class="item-types__image">
+            <img data-src="<?php bloginfo('template_url'); ?>/img/types/04.png" alt="Тип генератора">
+          </div>
+          <h5 class="item-types__title">Генераторы с авр</h5>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="stages" data-prlx-parent>
+    <div class="stages__container">
+      <div class="stages__content">
+        <h2 class="stages__title title-h2" data-watch anim-up-down>
+          <?= CFS()->get('stages-title'); ?>
+        </h2>
+        <ul class="stages__list">
+
+          <?php
+
+					$loop = CFS()->get('stages-list');
+
+					foreach ($loop as $row) {
+
+					?>
+
+          <li class="stages__item" data-watch anim-up-down delay10>
+            <div class="stages__box">
+              <div class="stages__number"></div>
+              <div class="stages__line list-line"></div>
+            </div>
+            <p class="stages__text">
+              <?= $row['stages-list-item']; ?>
+            </p>
+          </li>
+
+          <?php
+					}
+					?>
+
+        </ul>
+
+      </div>
+
+      <div class="stages__media">
+        <img data-src="<?= CFS()->get('stages-image'); ?>" alt="Этапы работы" class="stages__image" data-prlx
+          data-direction="-1" data-coefficient="250">
+      </div>
+    </div>
+  </section>
+
+  <section class="catalog">
+    <div class="catalog__container">
+      <h2 class="catalog__title title-h2" data-watch anim-up-down>
+        <?= CFS()->get('catalog-title'); ?>
+      </h2>
+      <div data-tabs data-tabs-animate="1000" class="catalog__tabs">
+        <nav data-tabs-titles class="catalog__header" data-watch anim-up-down>
+          <button type="button" class="catalog__label">
+            <?= CFS()->get('generator-catalog-1'); ?>
+          </button>
+          <button type="button" class="catalog__label">
+            <?= CFS()->get('generator-catalog-2'); ?>
+          </button>
+          <button type="button" class="catalog__label">
+            <?= CFS()->get('generator-catalog-3'); ?>
+          </button>
+          <button type="button" class="catalog__label">
+            <?= CFS()->get('generator-catalog-4'); ?>
+          </button>
+        </nav>
+
+        <div data-tabs-body class="catalog__tabs-content" data-watch anim-up-down delay20>
+
+          <div class="catalog__tabs-body _catalog-body">
+            <div class="catalog__items _catalog-items">
+
+
+              <?php
+
+						$loop = CFS()->get('generator-types-loops');
+
+						foreach ($loop as $row) {
+
+						?>
+
+              <div class="catalog__item item-catalog _catalog-item hidden-content">
+                <div class="item-catalog__image">
+                  <img data-src="<?= $row['generator-image']; ?>" alt="Генератор">
+
+                  <?php
+									if (!empty($row['generator-badge'])) {
+									?>
+                  <span class="item-catalog__badge">
+                    <?= $row['generator-badge']; ?>
+                  </span>
+                  <?php
+									}
+									?>
+
+                </div>
+                <div class="item-catalog__content">
+                  <h5 class="item-catalog__name">
+                    <?= $row['generator-name']; ?>
+                  </h5>
+                  <div class="item-catalog__price"><span>
+                      <?= $row['generator-price']; ?>
+                    </span> ₽</div>
+                </div>
+                <button data-popup="#catalog-popup" type="button" class="item-catalog__button button">Заказать</button>
+              </div>
+
+              <?php
+						}
+						?>
+
+            </div>
+            <button data-showmore-button class="show-more button" type="button">
+              <span>Больше генераторов</span>
+              <span>Скрыть</span></button>
+          </div>
+          <div class="catalog__tabs-body _catalog-body">
+            <div class="catalog__items _catalog-items">
+
+              <?php
+
+						$loop = CFS()->get('generator-types-loops-2');
+
+						foreach ($loop as $row) {
+
+						?>
+
+              <div class="catalog__item item-catalog _catalog-item hidden-content">
+                <div class="item-catalog__image">
+                  <img data-src="<?= $row['generator-image-2']; ?>" alt="Генератор">
+
+                  <?php
+									if (!empty($row['generator-badge-2'])) {
+									?>
+                  <span class="item-catalog__badge">
+                    <?= $row['generator-badge-2']; ?>
+                  </span>
+                  <?php
+									}
+									?>
+
+                </div>
+                <div class="item-catalog__content">
+                  <h5 class="item-catalog__name">
+                    <?= $row['generator-name-2']; ?>
+                  </h5>
+                  <div class="item-catalog__price"><span>
+                      <?= $row['generator-price-2']; ?>
+                    </span> ₽</div>
+                </div>
+                <button data-popup="#catalog-popup" type="button" class="item-catalog__button button">Заказать</button>
+              </div>
+
+              <?php
+						}
+						?>
+
+
+
+            </div>
+            <button data-showmore-button class="show-more button" type="button">
+              <span>Больше генераторов</span>
+              <span>Скрыть</span></button>
+          </div>
+          <div class="catalog__tabs-body _catalog-body">
+            <div class="catalog__items _catalog-items">
+
+              <?php
+
+						$loop = CFS()->get('generator-types-loops-3');
+
+						foreach ($loop as $row) {
+
+						?>
+
+              <div class="catalog__item item-catalog _catalog-item hidden-content">
+                <div class="item-catalog__image">
+                  <img data-src="<?= $row['generator-image-3']; ?>" alt="Генератор">
+
+                  <?php
+									if (!empty($row['generator-badge-3'])) {
+									?>
+                  <span class="item-catalog__badge">
+                    <?= $row['generator-badge-3']; ?>
+                  </span>
+                  <?php
+									}
+									?>
+
+                </div>
+                <div class="item-catalog__content">
+                  <h5 class="item-catalog__name">
+                    <?= $row['generator-name-3']; ?>
+                  </h5>
+                  <div class="item-catalog__price"><span>
+                      <?= $row['generator-price-3']; ?>
+                    </span> ₽</div>
+                </div>
+                <button data-popup="#catalog-popup" type="button" class="item-catalog__button button">Заказать</button>
+              </div>
+
+              <?php
+						}
+						?>
+
+            </div>
+            <button data-showmore-button class="show-more button" type="button">
+              <span>Больше генераторов</span>
+              <span>Скрыть</span></button>
+          </div>
+          <div class="catalog__tabs-body _catalog-body">
+            <div class="catalog__items _catalog-items">
+
+              <?php
+
+						$loop = CFS()->get('generator-types-loops-4');
+
+						foreach ($loop as $row) {
+
+						?>
+
+              <div class="catalog__item item-catalog _catalog-item hidden-content">
+                <div class="item-catalog__image">
+                  <img data-src="<?= $row['generator-image-4']; ?>" alt="Генератор">
+
+                  <?php
+									if (!empty($row['generator-badge-4'])) {
+									?>
+                  <span class="item-catalog__badge">
+                    <?= $row['generator-badge-4']; ?>
+                  </span>
+                  <?php
+									}
+									?>
+
+                </div>
+                <div class="item-catalog__content">
+                  <h5 class="item-catalog__name">
+                    <?= $row['generator-name-4']; ?>
+                  </h5>
+                  <div class="item-catalog__price"><span>
+                      <?= $row['generator-price-4']; ?>
+                    </span> ₽</div>
+                </div>
+                <button data-popup="#catalog-popup" type="button" class="item-catalog__button button">Заказать</button>
+              </div>
+
+              <?php
+						}
+						?>
+
+            </div>
+            <button data-showmore-button class="show-more button" type="button">
+              <span>Больше генераторов</span>
+              <span>Скрыть</span></button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="banner banner_1" data-prlx-parent>
+    <div class="banner__container">
+      <img class="banner__decor-img banner__decor-img_1"
+        data-src="<?php bloginfo('template_url'); ?>/img/catalog/decor-1.png" alt="" data-prlx data-direction="-1"
+        data-coefficient="200">
+      <img class="banner__decor-img banner__decor-img_2"
+        data-src="<?php bloginfo('template_url'); ?>/img/catalog/decor-2.png" alt="" data-prlx data-direction="-1"
+        data-coefficient="150">
+      <div class="banner__wrapper">
+        <div class="banner__body">
+          <div class="banner__text-block">
+            <h2 class="banner__title title-h2">
+              <?= CFS()->get('banners-title-1'); ?>
+            </h2>
+            <h3 class="banner__subtitle subtitle-h2">
+              <?= CFS()->get('banners-text-1'); ?>
+            </h3>
+          </div>
+          <button class="banner__button button" data-popup="#submit-popup">Оставить заявку</button>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+
+  <section class="about-case" data-prlx-parent>
+    <div class="about-case__container">
+
+      <div class="about-case__media">
+        <div class="about-case__image">
+          <img data-src="<?= CFS()->get('about-cases-image'); ?>" alt="Кожух генератора" data-prlx data-direction="-1"
+            data-coefficient="250">
+          <span class="about-case__badge">
+            <?= CFS()->get('about-case-badge'); ?>
+          </span>
+        </div>
+      </div>
+
+      <div class="about-case__content">
+
+        <h2 class="about-case__title title-h2" data-watch anim-up-down>
+          <?= CFS()->get('about-cases-title'); ?>
+        </h2>
+
+        <ul class="about-case__list list-about-case">
+
+          <?php
+
+					$loop = CFS()->get('about-cases-list');
+
+					foreach ($loop as $row) {
+
+					?>
+
+          <li class="list-about-case__item" data-watch anim-up-down delay10>
+            <div class="list-about-case__box">
+              <img src="<?php bloginfo('template_url'); ?>/img/check.svg" alt="">
+              <div class="about-case__line list-line"></div>
+            </div>
+            <p class="list-about-case__text">
+              <?= $row['about-cases-list-item']; ?>
+            </p>
+          </li>
+
+          <?php
+					}
+					?>
+
+        </ul>
+
+        <div class="about-case__slogan" data-da=".about-case__container, 992" data-watch anim-up-down>
+          <h4>
+            <?= CFS()->get('about-cases-slogan'); ?>
+          </h4>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="catalog-cases">
+    <div class="catalog-cases__container _catalog-body">
+      <h2 class="catalog-cases__title title-h2" data-watch anim-up-down>
+        <?= CFS()->get('cases-title'); ?>
+      </h2>
+      <h5 class="catalog-cases__subtitle" data-watch anim-up-down delay10>
+        <?= CFS()->get('cases-subtitle'); ?>
+      </h5>
+      <ul class="catalog-cases__items _catalog-items" data-watch anim-up-down delay30>
+
+
+        <?php
+
+						$loop = CFS()->get('cases-loop');
+
+						foreach ($loop as $row) {
+
+						?>
+
+        <li class="catalog-cases__item item-catalog-cases _catalog-item hidden-content">
+          <div class="item-catalog-cases__image">
+            <img data-src="<?= $row['cases-image']; ?>" alt="Фото кожуха">
+
+            <?php
+												if (!empty($row['cases-badge'])) {
+												?>
+            <span class="item-catalog-cases__badge">
+              <?= $row['cases-badge']; ?>
+            </span>
+            <?php
+												}
+												?>
+
+
+
+          </div>
+
+          <div class="item-catalog-cases__content">
+            <h5 class="item-catalog-cases__name">
+              <?= $row['cases-name']; ?>
+            </h5>
+            <h5 class="item-catalog-cases__descr">
+              <?= $row['cases-desc']; ?>
+            </h5>
+            <div class="item-catalog-cases__price">
+
+
+              <?php
+												if (!empty($row['cases-old-price'])) {
+												?>
+              <span class="item-catalog-cases__old-price">
+                <?= $row['cases-old-price']; ?>
+              </span>
+              <?php
+												}
+										?>
+
+
+              <span class="item-catalog-cases__current-price">
+                <?= $row['cases-price']; ?> ₽
+              </span>
+            </div>
+
+            <button type="button" class="item-catalog-cases__button item-catalog-cases__button_mobile button"
+              data-popup="#order-popup">Заказать
+            </button>
+
+          </div>
+          <div class="item-catalog-cases__footer">
+
+            <button type="button" class="item-catalog-cases__button item-catalog-cases__button_desk button"
+              data-popup="#order-popup">Заказать
+            </button>
+          </div>
+
+        </li>
+
+        <?php
+						}
+						?>
+
+      </ul>
+      <button data-showmore-button class="show-more button" type="button">
+        <!-- <button type="button" class="show-more button catalog-cases__button"> -->
+        <span>Смотреть все </span>
+        <span>Скрыть</span>
+      </button>
+    </div>
+  </section>
+
+
+  <section class="banner banner_2" data-prlx-parent>
+    <div class="banner__container">
+      <img class="banner__decor-img banner__decor-img_1"
+        data-src="<?php bloginfo('template_url'); ?>/img/catalog/decor-1.png" alt="" data-prlx data-direction="-1"
+        data-coefficient="200">
+      <img class="banner__decor-img banner__decor-img_2"
+        data-src="<?php bloginfo('template_url'); ?>/img/catalog/decor-2.png" alt="" data-prlx data-direction="1"
+        data-coefficient="150">
+      <div class="banner__wrapper">
+        <div class="banner__body">
+          <div class="banner__text-block">
+            <h2 class="banner__title title-h2">
+              <?= CFS()->get('banners-title-2'); ?>
+            </h2>
+            <h3 class="banner__subtitle subtitle-h2">
+              <?= CFS()->get('banners-text-2'); ?>
+            </h3>
+          </div>
+          <button class="banner__button button" data-popup="#submit-popup">Оставить заявку</button>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <section class="quiz" id="quiz">
+    <div class="quiz__container">
+      <h2 class="quiz__title title-h2" data-watch anim-up-down>Поможем подобрать решение</h2>
+      <form class="quiz-form" action="#" data-dev data-popup-message="#thanks-popup" data-watch anim-up-down delay30>
+
+        <fieldset class="quiz-form__fieldset fieldset quiz-form__fieldset_start">
+          <div class="quiz-form__media">
+            <img class="quiz-form__image" data-src="<?php bloginfo('template_url'); ?>/img/quize/011.png" alt="Дом">
+          </div>
+          <div class="quiz-form__content quiz-form__content_position">
+            <h4 class="quiz-form__title">Где требуется установить генератор?</h4>
+
+            <div class="quiz-form__options">
+
+              <span class="wpcf7-form-control wpcf7-radio">
+                <span class="wpcf7-list-item">
+                  <label>
+                    <input type="radio" name="position" value="Загородный дом">
+                    <span class="wpcf7-list-item-label">
+                      Загородный дом
+                    </span>
+                  </label>
+                </span>
+              </span>
+
+              <span class="wpcf7-form-control wpcf7-radio">
+                <span class="wpcf7-list-item">
+                  <label>
+                    <input type="radio" name="position" value="Дача">
+                    <span class="wpcf7-list-item-label">
+                      Дача
+                    </span>
+                  </label>
+                </span>
+              </span>
+
+              <span class="wpcf7-form-control wpcf7-radio">
+                <span class="wpcf7-list-item">
+                  <label>
+                    <input type="radio" name="position" value="Небольшое производство (до N кВт)">
+                    <span class="wpcf7-list-item-label">
+                      Небольшое производство (до N кВт)
+                    </span>
+                  </label>
+                </span>
+              </span>
+
+              <span class="wpcf7-form-control wpcf7-radio">
+                <span class="wpcf7-list-item">
+                  <label>
+                    <input type="radio" name="position" value="Другое">
+                    <span class="wpcf7-list-item-label">
+                      Другое
+                    </span>
+                  </label>
+                </span>
+              </span>
+
+            </div>
+
+            <div class="quiz-form__progress-wrapper">
+              <button type="submit" class="button quiz-form__button button_next"
+                data-da=".quiz-form__content_position,620">Далее</button>
+              <div class="quiz-form__progress-box progress-box">
+                <div class="progress-box__text">Вопрос</div>
+                <div class="progress-box__bar">
+                  <div class="progress-box__progress"></div>
+                </div>
+                <div class="progress-box__values">
+                  <span class="progress-box__number _active">1</span>
+                  <span class="progress-box__number">2</span>
+                  <span class="progress-box__number">3</span>
+                  <span class="progress-box__number">4</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </fieldset>
+
+        <fieldset class="quiz-form__fieldset fieldset">
+          <div class="quiz-form__media">
+            <img class="quiz-form__image" data-src="<?php bloginfo('template_url'); ?>/img/quize/022.png" alt="Дом">
+            <div class="quiz-form__badge quiz-form__badge_5"><span>5</span> кВт</div>
+            <div class="quiz-form__badge quiz-form__badge_10"><span>10</span> кВт</div>
+            <div class="quiz-form__badge quiz-form__badge_15"><span>15</span> кВт</div>
+          </div>
+
+          <div class="quiz-form__content quiz-form__content_power">
+            <h4 class="quiz-form__title">Какую мощность требуется обеспечить?</h4>
+
+            <div class="quiz-form__options">
+
+              <span class="wpcf7-form-control wpcf7-radio">
+                <span class="wpcf7-list-item">
+                  <label>
+                    <input type="radio" name="power" value="до 5 кВт">
+                    <span class="wpcf7-list-item-label">
+                      до 5 кВт
+                    </span>
+                  </label>
+                </span>
+              </span>
+
+              <span class="wpcf7-form-control wpcf7-radio">
+                <span class="wpcf7-list-item">
+                  <label>
+                    <input type="radio" name="power" value="6 - 9 кВт">
+                    <span class="wpcf7-list-item-label">
+                      6 - 9 кВт
+                    </span>
+                  </label>
+                </span>
+              </span>
+
+              <span class="wpcf7-form-control wpcf7-radio">
+                <span class="wpcf7-list-item">
+                  <label>
+                    <input type="radio" name="power" value="10 кВт и более">
+                    <span class="wpcf7-list-item-label">
+                      10 кВт и более
+                    </span>
+                  </label>
+                </span>
+              </span>
+
+              <span class="wpcf7-form-control wpcf7-radio">
+                <span class="wpcf7-list-item">
+                  <label>
+                    <input type="radio" name="power" value="Я не знаю мощность, нужна помощь в подборе">
+                    <span class="wpcf7-list-item-label">
+                      Я не знаю мощность, нужна помощь в подборе
+                    </span>
+                  </label>
+                </span>
+              </span>
+
+            </div>
+
+            <div class="quiz-form__progress-wrapper">
+              <button type="submit" class="button quiz-form__button button_next"
+                data-da=".quiz-form__footer_power,620">Далее</button>
+              <div class="quiz-form__progress-box progress-box">
+                <div class="progress-box__text">Вопрос</div>
+                <div class="progress-box__bar">
+                  <div class="progress-box__progress"></div>
+                  <div class="progress-box__progress"></div>
+                </div>
+                <div class="progress-box__values">
+                  <span class="progress-box__number _active">1</span>
+                  <span class="progress-box__number _active">2</span>
+                  <span class="progress-box__number">3</span>
+                  <span class="progress-box__number">4</span>
+                </div>
+              </div>
+
+              <button class="button button_back" data-da=".quiz-form__footer_power,620"><img
+                  src="<?php bloginfo('template_url'); ?>/img/icons/arrow-up.svg" alt="Стрелка назад"></button>
+            </div>
+            <div class="quiz-form__footer quiz-form__footer_power"></div>
+
+          </div>
+        </fieldset>
+
+        <fieldset class="quiz-form__fieldset fieldset">
+          <div class="quiz-form__media">
+            <img class="quiz-form__image" data-src="<?php bloginfo('template_url'); ?>/img/quize/033.png" alt="Дом">
+          </div>
+
+          <div class="quiz-form__content quiz-form__content_case">
+            <h4 class="quiz-form__title">Требуется ли кожух для генератора?</h4>
+
+            <div class="quiz-form__options">
+
+              <span class="wpcf7-form-control wpcf7-radio">
+                <span class="wpcf7-list-item">
+                  <label>
+                    <input type="radio" name="case" value="Да, нужен кожух">
+                    <span class="wpcf7-list-item-label">
+                      Да, нужен кожух
+                    </span>
+                  </label>
+                </span>
+              </span>
+
+              <span class="wpcf7-form-control wpcf7-radio">
+                <span class="wpcf7-list-item">
+                  <label>
+                    <input type="radio" name="case" value="Нет, нужен генератор без кожуха">
+                    <span class="wpcf7-list-item-label">
+                      Нет, нужен генератор без кожуха
+                    </span>
+                  </label>
+                </span>
+              </span>
+
+              <span class="wpcf7-form-control wpcf7-radio">
+                <span class="wpcf7-list-item">
+                  <label>
+                    <input type="radio" name="case" value="Я не знаю, нужен ли кожух">
+                    <span class="wpcf7-list-item-label">
+                      Я не знаю, нужен ли кожух
+                    </span>
+                  </label>
+                </span>
+              </span>
+
+            </div>
+
+            <div class="quiz-form__progress-wrapper">
+              <button type="submit" class="button quiz-form__button button_next"
+                data-da=".quiz-form__footer_case,620">Далее</button>
+              <div class="quiz-form__progress-box progress-box">
+                <div class="progress-box__text">Вопрос</div>
+                <div class="progress-box__bar">
+                  <div class="progress-box__progress"></div>
+                  <div class="progress-box__progress"></div>
+                  <div class="progress-box__progress"></div>
+                </div>
+                <div class="progress-box__values">
+                  <span class="progress-box__number _active">1</span>
+                  <span class="progress-box__number _active">2</span>
+                  <span class="progress-box__number _active">3</span>
+                  <span class=" progress-box__number">4</span>
+                </div>
+              </div>
+              <button class="button button_back" data-da=".quiz-form__footer_case,620"><img
+                  src="<?php bloginfo('template_url'); ?>/img/icons/arrow-up.svg" alt="Стрелка назад"></button>
+            </div>
+            <div class="quiz-form__footer quiz-form__footer_case"></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="quiz-form__fieldset _finish">
+          <div class="quiz-form__media">
+            <img class="quiz-form__image" data-src="<?php bloginfo('template_url'); ?>/img/quize/044.png" alt="Дом">
+          </div>
+
+          <div class="quiz-form__content quiz-form__content_send">
+            <h4 class="quiz-form__title">Оставьте телефон для связи, перезвоним в течение 15 минут с готовыми
+              вариантами</h4>
+
+            <div class="quiz-form__line quiz-form__line_name">
+              <input autocomplete="off" type="text" name="form[]" data-error="Ошибка" data-placeholder="Ваше имя"
+                placeholder="Ваше имя" class="input quiz-form__input">
+            </div>
+
+            <div class="quiz-form__line quiz-form__line_tel">
+              <input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+                data-placeholder="Контактный номер телефона" placeholder="Контактный номер телефона"
+                class="input quiz-form__input">
+            </div>
+
+            <div class="quiz-form__checkbox">
+
+              <label class="checkbox checkbox_cf7">
+                <span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><input type="checkbox"
+                      name="accept" value="1" class="checkbox__input checkbox-real__input" id="accept"
+                      aria-invalid="false" checked><span></span></span></span>
+                <span class="checkbox__text">Нажимая Оставить заявку, Вы соглашаетесь с
+                  <a href="#!">условиями обработки персональных данных</a></span>
+              </label>
+
+            </div>
+
+            <div class="quiz-form__progress-wrapper">
+              <button id="quiz-submit" type="submit"
+                class="button quiz-form__button button_next quiz-form__button_finish"
+                data-da=".quiz-form__footer_send,620">Оставить заявку</button>
+              <div class="quiz-form__progress-box progress-box">
+                <div class="progress-box__text">Вопрос</div>
+                <div class="progress-box__bar">
+                  <div class="progress-box__progress"></div>
+                  <div class="progress-box__progress"></div>
+                  <div class="progress-box__progress"></div>
+                  <div class="progress-box__progress"></div>
+                </div>
+
+                <div class="progress-box__values">
+                  <span class="progress-box__number _active">1</span>
+                  <span class="progress-box__number _active">2</span>
+                  <span class="progress-box__number _active">3</span>
+                  <span class=" progress-box__number _active">4</span>
+                </div>
+              </div>
+              <button class="button button_back" data-da=".quiz-form__footer_send,620"><img
+                  src="<?php bloginfo('template_url'); ?>/img/icons/arrow-up.svg" alt="Стрелка назад"></button>
+            </div>
+            <div class="quiz-form__footer quiz-form__footer_send"></div>
+
+          </div>
+        </fieldset>
+
+      </form>
+    </div>
+  </section>
+
+  <section class="our-works">
+    <div class="our-works__container">
+      <h2 class="our-works__title title-h2" data-watch anim-up-down>
+        <?= CFS()->get('works-title'); ?>
+      </h2>
+
+
+      <div class="our-works__slider swiper" data-watch anim-up-down delay20>
+        <!-- Частина слайдера, що рухається -->
+        <div class="our-works__wrapper swiper-wrapper">
+          <!-- Слайд -->
+
+          <?php
+
+					$loop = CFS()->get('works-list');
+
+					foreach ($loop as $row) {
+
+					?>
+
+          <div class="our-works__slide swiper-slide">
+            <div class="our-works__box">
+              <img data-src="<?= $row['works-image']; ?>" alt="Фото работы" class="our-works__image">
+
+              <button class="our-works__button" type="button" data-popup="#video-popup"
+                data-popup-youtube="<?= $row['works-video']; ?>"></button>
+
+              <img src="<?php bloginfo('template_url'); ?>/img/our-works/circle.svg" alt=""
+                class="our-works__decor-circle">
+
+            </div>
+            <div class="our-works__text">
+              <div class="our-works__possition">Адрес объекта: <span>
+                  <?= $row['works-address']; ?>
+                </span></div>
+              <div class="our-works__time">Длительность монтажных работ - <span>
+                  <?= $row['works-time']; ?>
+                </span></div>
+            </div>
+          </div>
+
+          <?php
+					}
+					?>
+
+        </div>
+
+        <div class="our-works__pagination swiper-pagination"></div>
+
+        <button type="button" class="our-works-button-prev"></button>
+        <button type="button" class="our-works-button-next"></button>
+
+      </div>
+
+
+
+
+    </div>
+  </section>
+
+  <section class="banner banner_3" data-prlx-parent>
+    <div class="banner__container">
+      <img class="banner__decor-img banner__decor-img_1"
+        data-src="<?php bloginfo('template_url'); ?>/img/catalog/decor-1.png" alt="Куст" data-prlx data-direction="-1"
+        data-coefficient="200">
+      <img class="banner__decor-img banner__decor-img_2"
+        data-src="<?php bloginfo('template_url'); ?>/img/catalog/decor-2.png" alt="Куст" data-prlx data-direction="1"
+        data-coefficient="150">
+      <div class="banner__wrapper">
+        <div class="banner__body">
+          <div class="banner__text-block">
+            <h2 class="banner__title title-h2">
+              <?= CFS()->get('banners-title-3'); ?>
+            </h2>
+            <h3 class="banner__subtitle subtitle-h2">
+              <?= CFS()->get('banners-text-3'); ?>
+            </h3>
+          </div>
+          <button class="banner__button button" data-popup="#submit-popup">Оставить заявку</button>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <section class="faq">
+    <div class="faq__container">
+      <h2 class="faq__title title-h2" data-watch anim-up-down>
+        <?= CFS()->get('faq-title'); ?>
+      </h2>
+      <div class="faq__body">
+
+        <div data-spollers class="spollers">
+
+          <?php
+
+					$loop = CFS()->get('faq-list');
+
+					foreach ($loop as $row) {
+
+					?>
+
+          <details class="spollers__item" data-watch anim-up-down delay10>
+            <summary class="spollers__title">
+              <?= $row['faq-q']; ?>
+              <span class="spollers__circle"></span>
+            </summary>
+            <div class="spollers__body">
+              <?= $row['faq-a']; ?>
+            </div>
+          </details>
+          <?php
+					}
+					?>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section-map">
+    <div class="custom-shape-divider-top-1703578015">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+          class="shape-fill"></path>
+      </svg>
+    </div>
+    <div class="map" id="map">
+    </div>
+    <div class="section-map__container">
+
+      <div class="section-map__map">
+      </div>
+
+    </div>
+
+    <!-- <div class="section-map__container">
+				</div> -->
+  </section>
+
+  <button data-popup="#thanks-popup" type="submit" style="display: none; position: absolute; z-index: -1000;"></button>
+
+  <section class="contacts">
+    <div class="button__up">
+      <a href="#" data-goto=".intro" class="button__up-box">
+        <img src="<?php bloginfo('template_url'); ?>/img/icons/arrow-up.svg" alt="Стрелка вверх">
+      </a>
+      <span>подняться вверх</span>
+    </div>
+    <div class="contacts__container">
+      <h2 class="contacts__title title-h2" data-watch anim-up-down>Контакты</h2>
+      <ul class="contacts__list" data-watch anim-up-down delay10>
+        <li class="contacts__item">
+          <div class="contacts__icon">
+            <img src="<?php bloginfo('template_url'); ?>/img/map/location.svg" alt="Иконка адрес">
+            <div class="list-line"></div>
+          </div>
+          <div class="contacts__value">
+            <span>Адрес</span>
+            <?= CFS()->get('address'); ?>
+          </div>
+        </li>
+        <li class="contacts__item">
+          <div class="contacts__icon">
+            <img src="<?php bloginfo('template_url'); ?>/img/map/time.svg" alt="Иконка время работы">
+            <div class="list-line"></div>
+          </div>
+          <div class="contacts__value">
+            <span>Время работы</span>
+            <?= CFS()->get('open'); ?>
+          </div>
+        </li>
+        <li class="contacts__item">
+          <div class="contacts__icon">
+            <img src="<?php bloginfo('template_url'); ?>/img/map/tel.svg" alt="Иконка Связаться с нами">
+            <div class="list-line"></div>
+          </div>
+          <div class="contacts__value">
+            <span>Связаться с нами</span>
+            <a href="tel:<?= CFS()->get('phone-num'); ?>">
+              <?= CFS()->get('phone-link'); ?>
+            </a>
+            <a class="contacts__mail" href="mailto:<?= CFS()->get('e-mail'); ?>">
+              <?= CFS()->get('e-mail'); ?>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+
+<?php get_footer(); ?>

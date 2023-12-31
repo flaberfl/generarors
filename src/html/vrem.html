@@ -1,0 +1,29 @@
+<form class="form popup__form" action="#" data-dev data-popup-message="#thanks-popup">
+  <h2 class="form__title popup__title title-h2">Оставить заявку</h2>
+  <h3 class="form__subtitle popup__subtitle">Заполните свои данные и мы свяжемся с Вами в ближайшее
+    время!</h3>
+  <div class="form__line form__line_name">
+    <label class="form__label" for="yourname">*</label>
+    <input class="form__input form__input_name popup__input input" aria-required="true" aria-invalid="false"
+      placeholder="Ваше имя" type="text" name="yourname" data-placeholder="Ваше имя">
+  </div>
+  <div class="form__line form__line_phone">
+    <label class="form__label" for="yourphone">*</label>
+    <input type="text" name="yourphone" class="form__input popup__input input" placeholder="Контактный телефон"
+      data-placeholder="Контактный телефон" inputmode="numeric">
+  </div>
+  <div class="form__line form__line_checkbox">
+    <label class="checkbox checkbox_cf7">
+      <span class="wpcf7-form-control wpcf7-acceptance"><span class="wpcf7-list-item"><input type="checkbox"
+            name="accept" value="1" class="checkbox__input checkbox-real__input" id="accept" aria-invalid="false"
+            checked><span></span></span></span>
+      <span class="checkbox__text">Нажимая Оставить заявку, Вы соглашаетесь с
+        <a href="#!">условиями обработки персональных данных</a></span>
+    </label>
+  </div>
+  <div class="popup__wrap-btn">
+    <button type="submit" class="submit-popup__button button">Отправить</button>
+  </div>
+
+
+</form>
